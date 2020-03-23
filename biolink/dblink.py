@@ -14,11 +14,13 @@ class DatabaseLinker(ABC):
         self._database_linking_dictionaries = dict()
         self._database_linking_dictionaries_paths = dict()
 
-    @abstractmethod
     def _load_linking_dictionaries(self):
         """ Load database linking dictionaries
         """
-        raise NotImplementedError("Method is not implemented")
+        self._database_linking_dictionaries_paths = get_database_mapping_sources(self._database_name)
+
+        for mapping_name, mapping_filepath in self._database_linking_dictionaries_paths.items():
+            self._database_linking_dictionaries[mapping_name] = load_data_map(mapping_filepath)
 
     @property
     def mapping_file_paths(self):
@@ -84,14 +86,6 @@ class KEGGLinker(DatabaseLinker):
 
         self._load_linking_dictionaries()
 
-    def _load_linking_dictionaries(self):
-        """ Load database linking dictionaries
-        """
-        self._database_linking_dictionaries_paths = get_database_mapping_sources(self._database_name)
-
-        for mapping_name, mapping_filepath in self._database_linking_dictionaries_paths.items():
-            self._database_linking_dictionaries[mapping_name] = load_data_map(mapping_filepath)
-
     def convert_geneid_to_uniprot(self, geneid_list):
         """ Convert a list of KEGG gene ids to uniprot accessions
 
@@ -135,3 +129,31 @@ class KEGGLinker(DatabaseLinker):
         All available drug ids in the database
         """
         return self._get_keys_of_target_dictionary("geneid_to_name")
+
+
+class GeneNameLinker(DatabaseLinker):
+    """ Gene name database linker class
+    """
+
+    def __init__(self):
+        """ Initialize an object of the class GeneNameLinker
+        """
+        super(GeneNameLinker, self).__init__()
+        self._database_name = "gene_name"
+
+        self._load_linking_dictionaries()
+
+    def convert_gene_name_to_uniprot(self, gene_name_list):
+        """ Convert a list of gene names to uniprot accessions
+
+        Parameters
+        ----------
+        gene_name_list : list
+            a list of gene names e.g. ['LATS1', 'COX2']
+
+        Returns
+        -------
+        list
+            a list of uniprot accession codes
+        """
+        return self._convert_ids_using_target_dictionary(gene_name_list, "gene_name_to_uniprot")
