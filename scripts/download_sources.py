@@ -3,7 +3,10 @@ import gzip
 from biolink.fileio import *
 from biolink.config import file_open
 from tqdm import tqdm
-
+import requests
+from collections import defaultdict
+from zipfile import ZipFile
+import xml.etree.ElementTree as ET
 # ================================================================================
 # Loading UNIPROT mapping for human accession ids
 # ================================================================================
@@ -312,7 +315,7 @@ sider_targets = {
     'ChEBI': 'chebi',
     'ChEMBL': 'chembl',
     'DrugBank': 'drugbank',
-    'kegg': 'kegg',
+    'KEGG': 'kegg',
     'pc': 'pubchem_compound',
     'ps': 'pubchem_substance',
     'ATC': 'atc'
@@ -358,7 +361,3 @@ for target, target_map in tqdm(sider_target_map.items(), 'Exporting Sider mappin
             mapped.add('-')
         writer.write(f'{sid}\t{";".join(mapped)}\n')
     writer.close()
-    
-
-
-
