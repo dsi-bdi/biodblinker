@@ -1,0 +1,132 @@
+br08901	KEGG pathway maps
+br08902	BRITE hierarchy files
+br08904	BRITE table files
+br08907	KEGG networks
+ko00001	KEGG Orthology (KO)
+ko00002	KEGG modules
+ko00003	KEGG reaction modules
+ko01000	Enzymes
+ko01001	Protein kinases
+ko01009	Protein phosphatases and associated proteins
+ko01002	Peptidases and inhibitors
+ko01003	Glycosyltransferases
+ko01005	Lipopolysaccharide biosynthesis proteins
+ko01011	Peptidoglycan biosynthesis and degradation proteins
+ko01004	Lipid biosynthesis proteins
+ko01008	Polyketide biosynthesis proteins
+ko01006	Prenyltransferases
+ko01007	Amino acid related enzymes
+ko00199	Cytochrome P450
+ko00194	Photosynthesis proteins
+ko03000	Transcription factors
+ko03021	Transcription machinery
+ko03019	Messenger RNA biogenesis
+ko03041	Spliceosome
+ko03011	Ribosome
+ko03009	Ribosome biogenesis
+ko03016	Transfer RNA biogenesis
+ko03012	Translation factors
+ko03110	Chaperones and folding catalysts
+ko04131	Membrane trafficking
+ko04121	Ubiquitin system
+ko03051	Proteasome
+ko03032	DNA replication proteins
+ko03036	Chromosome and associated proteins
+ko03400	DNA repair and recombination proteins
+ko03029	Mitochondrial biogenesis
+ko02000	Transporters
+ko02044	Secretion system
+ko02042	Bacterial toxins
+ko02022	Two-component system
+ko02035	Bacterial motility proteins
+ko04812	Cytoskeleton proteins
+ko04147	Exosome
+ko02048	Prokaryotic defense system
+ko04030	G protein-coupled receptors
+ko04050	Cytokine receptors
+ko04054	Pattern recognition receptors
+ko03310	Nuclear receptors
+ko04040	Ion channels
+ko04031	GTP-binding proteins
+ko04052	Cytokines and growth factors
+ko04515	Cell adhesion molecules
+ko04090	CD molecules
+ko00535	Proteoglycans
+ko00536	Glycosaminoglycan binding proteins
+ko00537	Glycosylphosphatidylinositol (GPI)-anchored proteins
+ko04091	Lectins
+ko01504	Antimicrobial resistance genes
+ko03200	Viral proteins
+ko03100	Non-coding RNAs
+br08001	Compounds with biological roles
+br08002	Lipids
+br08003	Phytochemical compounds
+br08021	Glycosides
+br08005	Bioactive peptides
+br08006	Endocrine disrupting compounds
+br08007	Pesticides
+br08008	Carcinogens
+br08009	Natural toxins
+br08010	Target-based classification of compounds
+br08201	Enzymatic reactions
+br08202	IUBMB reaction hierarchy
+br08204	Reaction class
+br08203	Glycosyltransferase reactions
+br08303	Anatomical Therapeutic Chemical (ATC) classification
+br08302	USP drug classification
+br08301	Therapeutic category of drugs in Japan
+br08313	Classification of Japanese OTC drugs
+br08312	Risk category of Japanese OTC drugs
+br08316	Pharmaceutical additives in Japan
+br08310	Target-based classification of drugs
+br08311	Drugs listed in the Japanese Pharmacopoeia
+br08331	Animal drugs in Japan
+br08304	Traditional Chinese Medicine in Japan
+br08305	Crude drugs
+br08321	Essential oils
+br08322	Medicinal herbs
+br08323	Major components of natural products
+br08402	Human diseases
+br08401	Infectious diseases
+br08403	Human diseases in ICD-11 classification
+br08411	ICD-11 International Classification of Diseases
+br08410	ICD-10 International Classification of Diseases
+br08420	ICD-O-3 International Classification of Diseases for Oncology
+br08601	KEGG organisms
+br08610	KEGG organisms in the NCBI taxonomy
+br08620	KEGG viruses in the NCBI taxonomy
+br08602	Animal classification
+br08603	Plant classification
+br08605	Plant pathogens
+br08607	Endosymbionts
+br08501	Human organ systems
+br08502	Human cells
+br01553	Antimicrobial resistance: beta-lactamase genes
+br01554	Antimicrobial resistance: aminoglycoside resistance genes
+br01556	Antimicrobial resistance: tetracycline resistance genes
+br01555	Antimicrobial resistance: macrolide resistance genes
+br01557	Antimicrobial resistance: others
+br01800	Sequence data for EC numbers
+br01810	Sequence data for CYP nomenclature
+br01610	Ribosomal proteins
+br01611	RNA polymerases
+br01612	DNA polymerases
+br01613	Aminoacyl-tRNA synthetases
+br01601	Enzymes of 2-oxocarboxylic acid metabolism
+br01602	Dioxygenases
+br01600	Antimicrobial resistance: KEGG signatures
+br01620	Photosynthetic and chemosynthetic capacities
+br08340	Antineoplastics
+br08350	Antiinfectives
+br08317	Topical steroids potency
+br08319	New drug approvals in the USA
+br08329	New drug approvals in Europe
+br08318	New drug approvals in Japan
+br08328	New drug approvals in the USA, Europe and Japan
+br08315	Rx-to-OTC switch list in the USA
+br08314	Rx-to-OTC switch list in Japan
+br08341	Pharmacogenomic biomarkers
+br08324	Prodrugs
+br08442	Tumor markers
+br08441	Cancer-accociated carbohydrates
+br08431	Carbohydrates in viral and bacterial infections

@@ -1,0 +1,2274 @@
+DG00001	Chlorhexidine
+DG00002	Oxyquinoline
+DG00003	Neomycin
+DG00004	Miconazole
+DG00005	Tetracycline
+DG00006	Metronidazole
+DG00007	Chlortetracycline
+DG00008	Doxycycline
+DG00009	Minocycline
+DG00010	Triamcinolone
+DG00011	Dexamethasone
+DG00012	Hydrocortisone
+DG00013	Epinephrine
+DG00014	Benzydamine
+DG00015	Acetylsalicylic acid
+DG00016	Adrenalone
+DG00017	Cimetidine
+DG00018	Ranitidine
+DG00019	Roxatidine
+DG00020	Omeprazole
+DG00021	Pantoprazole
+DG00022	Rabeprazole
+DG00023	Esomeprazole
+DG00024	Carbenoxolone
+DG00025	Sucralfate
+DG00026	Pirenzepine
+DG00027	Bismuth subcitrate
+DG00028	Alginic acid
+DG00029	Oxyphencyclimine
+DG00030	Mebeverine
+DG00031	Trimebutine
+DG00032	Dicycloverine
+DG00033	Dihexyverine
+DG00034	Piperidolate
+DG00035	Propantheline
+DG00036	Methantheline
+DG00037	Tridihexethyl
+DG00038	Isopropamide
+DG00039	Hexocyclium
+DG00040	Mepenzolate
+DG00041	Timepidium bromide
+DG00042	Tiropramide
+DG00043	Papaverine
+DG00044	Drotaverine
+DG00045	Moxaverine
+DG00046	Alosetron
+DG00047	Cilansetron
+DG00048	Proxazole
+DG00049	Alverine
+DG00050	Phloroglucinol
+DG00051	Silicone
+DG00052	Atropine
+DG00053	Hyoscyamine
+DG00054	Belladonna total alkaloid
+DG00055	Metoclopramide
+DG00056	Cisapride
+DG00057	Domperidone
+DG00058	Alizapride
+DG00059	Clebopride
+DG00060	Ondansetron
+DG00061	Granisetron
+DG00062	Tropisetron
+DG00063	Dolasetron
+DG00064	Palonosetron
+DG00065	Scopolamine
+DG00066	Aprepitant
+DG00067	Liquid paraffin
+DG00068	Oxyphenisatine
+DG00069	Bisacodyl
+DG00070	Phenolphthalein
+DG00071	Castor oil
+DG00072	Sodium picosulfate
+DG00073	Bisoxatin
+DG00074	Lactitol
+DG00075	Sodium sulfate
+DG00076	Macrogol
+DG00077	Sodium phosphate
+DG00078	Naloxegol
+DG00079	Linaclotide
+DG00080	Prucalopride
+DG00081	Tegaserod
+DG00082	Streptomycin
+DG00083	Polymyxin B
+DG00084	Paromomycin
+DG00085	Kanamycin
+DG00086	Vancomycin
+DG00087	Colistin
+DG00088	Succinylsulfathiazole
+DG00089	Attapulgite
+DG00090	Diphenoxylate
+DG00091	Opium
+DG00092	Loperamide
+DG00093	Prednisolone
+DG00094	Prednisone
+DG00095	Betamethasone
+DG00096	Tixocortol
+DG00097	Beclometasone
+DG00098	Cromoglicic acid
+DG00099	Olsalazine
+DG00100	Balsalazide
+DG00101	Lactic acid producing organism
+DG00102	Phentermine
+DG00103	Fenfluramine
+DG00104	Amfepramone
+DG00105	Dexfenfluramine
+DG00106	Cathine
+DG00107	Mefenorex
+DG00108	Sibutramine
+DG00109	Diastase
+DG00110	Hydrochloric acid
+DG00111	Citric acid
+DG00112	Phenformin
+DG00113	Metformin
+DG00114	Buformin
+DG00115	Tolbutamide
+DG00116	Rosiglitazone
+DG00117	Pioglitazone
+DG00118	Sitagliptin
+DG00119	Saxagliptin
+DG00120	Pramlintide
+DG00121	Benfluorex
+DG00122	Dapagliflozin
+DG00123	Retinol (vit A)
+DG00124	Calcifediol
+DG00125	Thiamine (vit B1)
+DG00126	Ascorbic acid (vitamin C)
+DG00127	Nicotinamide
+DG00128	Pyridoxine (vit B6)
+DG00129	Tocopherol (vit E)
+DG00130	Riboflavin (vit B2)
+DG00131	Biotin
+DG00132	Pyridoxal phosphate
+DG00133	Calcium pantothenate
+DG00134	Calcium phosphate
+DG00135	Calcium gluconate
+DG00136	Calcium lactate
+DG00137	Calcium chloride
+DG00138	Zinc sulfate
+DG00139	Magnesium chloride
+DG00140	Metenolone
+DG00141	Prasterone
+DG00142	Nandrolone
+DG00143	Levocarnitine
+DG00144	Ademetionine
+DG00145	Betaine
+DG00146	Thioctic acid
+DG00147	Sapropterin
+DG00148	Eliglustat
+DG00149	Warfarin
+DG00150	Heparin
+DG00154	Cloricromen
+DG00155	Clopidogrel
+DG00156	Ticlopidine
+DG00157	Epoprostenol
+DG00158	Iloprost
+DG00159	Tirofiban
+DG00160	Beraprost
+DG00161	Treprostinil
+DG00162	Urokinase
+DG00163	Argatroban
+DG00164	Dabigatran
+DG00165	Camostat
+DG00166	Menadione
+DG00167	Human fibrinogen
+DG00168	Oxidized cellulose
+DG00169	Thrombin
+DG00170	Blood coagulation factor VIII
+DG00171	Blood coagulation factor IX
+DG00172	Blood coagulation factor VII
+DG00173	Carbazochrome
+DG00174	Ferrous sulfate
+DG00175	Hydroxocobalamin
+DG00176	Folic acid
+DG00177	Erythropoietin
+DG00178	Peginesatide
+DG00179	Albumin
+DG00180	Dextran
+DG00181	Gelatin agent
+DG00182	Hemoglobin glutamer (bovine)
+DG00183	Carbamide
+DG00184	Cetylpyridinium
+DG00185	Mandelic acid
+DG00186	Ethacridine
+DG00187	Sodium citrate
+DG00188	Glucose
+DG00189	Arginine hydrochloride
+DG00190	Hyaluronidase
+DG00191	Metildigoxin
+DG00192	Quinidine
+DG00193	Procainamide
+DG00194	Disopyramide
+DG00195	Sparteine
+DG00196	Lidocaine
+DG00197	Mexiletine
+DG00198	Tocainide
+DG00199	Aprindine
+DG00200	Propafenone
+DG00201	Flecainide
+DG00202	Lorcainide
+DG00203	Encainide
+DG00204	Amiodarone
+DG00205	Ibutilide
+DG00206	Tedisamil
+DG00207	Dronedarone
+DG00208	Moricizine;Moracizine
+DG00209	Cibenzoline
+DG00210	Etilefrine
+DG00211	Isoprenaline
+DG00212	Norepinephrine
+DG00213	Dopamine
+DG00214	Norfenefrine
+DG00215	Phenylephrine
+DG00216	Dobutamine
+DG00217	Oxedrine
+DG00218	Metaraminol
+DG00219	Methoxamine
+DG00220	Mephentermine
+DG00221	Prenalterol
+DG00222	Dopexamine
+DG00223	Ibopamine
+DG00224	Midodrine
+DG00225	Octopamine
+DG00226	Fenoldopam
+DG00227	Ephedrine
+DG00228	Amrinone
+DG00229	Milrinone
+DG00230	Bucladesine
+DG00231	Xamoterol
+DG00232	Prenylamine
+DG00233	Oxyfedrine
+DG00234	Carbocromen
+DG00235	Etafenone
+DG00236	Heptaminol
+DG00237	Dilazep
+DG00238	Nesiritide
+DG00239	Alprostadil
+DG00240	Camphora
+DG00241	Indometacin
+DG00242	Fructose
+DG00243	Adenosine
+DG00244	Trimetazidine
+DG00245	Ibuprofen
+DG00246	Ivabradine
+DG00247	Ranolazine
+DG00248	Methyldopa (levorotatory)
+DG00249	Clonidine
+DG00250	Guanfacine
+DG00251	Trimetaphan
+DG00252	Mecamylamine
+DG00253	Prazosin
+DG00254	Indoramin
+DG00255	Trimazosin
+DG00256	Doxazosin
+DG00257	Urapidil
+DG00258	Guanethidine
+DG00259	Debrisoquine
+DG00260	Dihydralazine
+DG00261	Hydralazine
+DG00262	Endralazine
+DG00263	Nitroprusside
+DG00264	Pargyline
+DG00265	Ketanserin
+DG00266	Bosentan
+DG00267	Sitaxentan
+DG00268	Chlorothiazide
+DG00269	Indapamide
+DG00270	Fenquizone
+DG00271	Cicletanine
+DG00272	Furosemide
+DG00273	Torasemide
+DG00274	Etacrynic acid
+DG00275	Amiloride
+DG00276	Conivaptan
+DG00277	Isoxsuprine
+DG00278	Buphenine
+DG00279	Bamethan
+DG00280	Phentolamine
+DG00281	Tolazoline
+DG00282	Nicotinic acid
+DG00283	Nicergoline
+DG00284	Dihydroergocristine
+DG00285	Phenoxybenzamine
+DG00286	Vincamine
+DG00287	Moxisylyte
+DG00288	Bencyclane
+DG00289	Buflomedil
+DG00290	Naftidrofuryl
+DG00291	Cetiedil
+DG00292	Ifenprodil
+DG00293	Fasudil
+DG00294	Fluorometholone
+DG00295	Fluocortolone
+DG00296	Tetracaine
+DG00297	Dibucaine;Cinchocaine
+DG00298	Procaine
+DG00299	Oxetacaine
+DG00300	Pramocaine
+DG00301	Phenol
+DG00302	Rutoside
+DG00303	Alprenolol
+DG00304	Oxprenolol
+DG00305	Propranolol
+DG00306	Timolol
+DG00307	Sotalol
+DG00308	Carteolol
+DG00309	Tertatolol
+DG00310	Bopindolol
+DG00311	Bupranolol
+DG00312	Penbutolol
+DG00313	Metoprolol
+DG00314	Acebutolol
+DG00315	Betaxolol
+DG00316	Bisoprolol
+DG00317	Celiprolol
+DG00318	Esmolol
+DG00319	Nebivolol
+DG00320	Labetalol
+DG00321	Carvedilol
+DG00322	Amlodipine
+DG00323	Nicardipine
+DG00324	Manidipine
+DG00325	Barnidipine
+DG00326	Lercanidipine
+DG00327	Benidipine
+DG00328	Mibefradil
+DG00329	Verapamil
+DG00330	Gallopamil
+DG00331	Diltiazem
+DG00332	Fendiline
+DG00333	Bepridil
+DG00334	Perhexiline
+DG00335	Enalapril
+DG00336	Lisinopril
+DG00337	Perindopril
+DG00338	Quinapril
+DG00339	Benazepril
+DG00340	Cilazapril
+DG00341	Fosinopril
+DG00342	Spirapril
+DG00343	Delapril
+DG00344	Moexipril
+DG00345	Temocapril
+DG00346	Zofenopril
+DG00347	Imidapril
+DG00348	Losartan
+DG00349	Eprosartan
+DG00350	Candesartan
+DG00351	Azilsartan
+DG00352	Aliskiren
+DG00353	Pravastatin
+DG00354	Fluvastatin
+DG00355	Atorvastatin
+DG00356	Cerivastatin
+DG00357	Rosuvastatin
+DG00358	Clofibrate
+DG00359	Colestipol
+DG00360	Colextran
+DG00361	Colesevelam
+DG00362	Lomitapide
+DG00363	Econazole
+DG00364	Chlormidazole
+DG00365	Isoconazole
+DG00366	Sulconazole
+DG00367	Oxiconazole
+DG00368	Fenticonazole
+DG00369	Omoconazole
+DG00370	Sertaconazole
+DG00371	Fluconazole
+DG00372	Eberconazole
+DG00373	Undecylenic acid
+DG00374	Ciclopirox
+DG00375	Terbinafine
+DG00376	Amorolfine
+DG00377	Naftifine
+DG00378	Butenafine
+DG00379	Aminobenzoic acid
+DG00380	Hyaluronic acid
+DG00381	Thonzylamine
+DG00382	Mepyramine
+DG00383	Tripelennamine
+DG00384	Chloropyramine
+DG00385	Promethazine
+DG00386	Dimetindene
+DG00387	Clemastine
+DG00388	Bamipine
+DG00389	Isothipendyl
+DG00390	Diphenhydramine
+DG00391	Chlorphenoxamine
+DG00392	Oxybuprocaine
+DG00393	Quinisocaine
+DG00394	Calcipotriol
+DG00395	Tacalcitol
+DG00396	Demeclocycline
+DG00397	Oxytetracycline
+DG00398	Fusidic acid
+DG00399	Chloramphenicol
+DG00400	Bacitracin
+DG00401	Gentamicin
+DG00402	Mupirocin
+DG00403	Amikacin
+DG00404	Mafenide
+DG00405	Tromantadine
+DG00406	Aciclovir
+DG00407	Inosine
+DG00408	Penciclovir
+DG00409	Lysozyme
+DG00410	Methylprednisolone
+DG00411	Clobetasone
+DG00412	Flumetasone
+DG00413	Fluocortin
+DG00414	Fluprednidene
+DG00415	Alclometasone
+DG00416	Clocortolone
+DG00417	Diflucortolone
+DG00418	Diflorasone
+DG00419	Mometasone
+DG00420	Fluticasone
+DG00421	Ulobetasol
+DG00422	Clobetasol
+DG00423	Dibrompropamidine
+DG00424	Propamidine
+DG00425	Iodine
+DG00426	Dequalinium
+DG00427	Cetrimonium
+DG00428	Cetrimide
+DG00429	Silver nitrate
+DG00430	Ethanol
+DG00431	Aluminium chlorohydrate
+DG00432	Bithionol
+DG00433	Tretinoin
+DG00434	Isotretinoin
+DG00435	Clindamycin
+DG00436	Erythromycin
+DG00437	Meclocycline
+DG00438	Resorcinol
+DG00439	Tacrolimus
+DG00440	Eflornithine
+DG00441	Diclofenac
+DG00442	Brimonidine
+DG00443	Carfecillin
+DG00444	Butoconazole
+DG00445	Methylergometrine
+DG00446	Ergometrine
+DG00447	Dinoprost
+DG00448	Dinoprostone
+DG00449	Carboprost
+DG00450	Ritodrine
+DG00451	Fenoterol
+DG00452	Bromocriptine
+DG00453	Lisuride
+DG00454	Quinagolide
+DG00455	Naproxen
+DG00456	Norethisterone
+DG00457	Megestrol
+DG00458	Medroxyprogesterone
+DG00459	Ulipristal
+DG00460	Testosterone
+DG00461	Ethinylestradiol
+DG00462	Estradiol
+DG00463	Estriol
+DG00464	Estrone
+DG00465	Conjugated estrogen
+DG00466	Diethylstilbestrol
+DG00467	Hydroxyprogesterone
+DG00468	Nomegestrol
+DG00469	Chlormadinone
+DG00470	Etynodiol
+DG00472	Human menopausal gonadotrophin
+DG00474	Clomifene
+DG00475	Cyproterone
+DG00476	Raloxifene
+DG00477	Flavoxate
+DG00478	Oxybutynin
+DG00479	Propiverine
+DG00480	Tolterodine
+DG00481	Solifenacin
+DG00482	Darifenacin
+DG00483	Fesoterodine
+DG00484	Sildenafil
+DG00485	Yohimbin
+DG00486	Apomorphine
+DG00487	Vardenafil
+DG00488	Phenazopyridine
+DG00489	Alfuzosin
+DG00490	Tamsulosin
+DG00491	Terazosin
+DG00492	Corticotropin
+DG00493	Tetracosactide
+DG00494	Sermorelin
+DG00495	Tesamorelin
+DG00496	Vasopressin
+DG00497	Desmopressin
+DG00498	Terlipressin
+DG00499	Gonadorelin
+DG00500	Nafarelin
+DG00501	Octreotide
+DG00502	Vapreotide
+DG00503	Pasireotide
+DG00504	Ganirelix
+DG00505	Cetrorelix
+DG00506	Fludrocortisone
+DG00507	Desoxycortone
+DG00508	Paramethasone
+DG00509	Cortisone
+DG00510	Levothyroxine
+DG00511	Glucagon
+DG00512	Teriparatide
+DG00513	Cinacalcet
+DG00514	Metacycline
+DG00515	Rolitetracycline
+DG00516	Thiamphenicol
+DG00517	Ampicillin
+DG00518	Pivampicillin
+DG00519	Carbenicillin
+DG00520	Amoxicillin
+DG00521	Carindacillin
+DG00522	Bacampicillin
+DG00523	Pivmecillinam
+DG00524	Azlocillin
+DG00525	Mezlocillin
+DG00526	Piperacillin
+DG00527	Ticarcillin
+DG00528	Metampicillin
+DG00529	Talampicillin
+DG00530	Sulbenicillin
+DG00531	Temocillin
+DG00532	Hetacillin
+DG00533	Aspoxicillin
+DG00534	Benzylpenicillin;Penicillin G
+DG00535	Phenoxymethylpenicillin;Penicillin V
+DG00536	Propicillin
+DG00537	Azidocillin
+DG00538	Pheneticillin
+DG00539	Clometocillin
+DG00540	Dicloxacillin
+DG00541	Cloxacillin
+DG00542	Oxacillin
+DG00543	Flucloxacillin
+DG00544	Nafcillin
+DG00545	Sulbactam
+DG00546	Tazobactam
+DG00547	Sultamicillin
+DG00548	Cefalexin
+DG00549	Cephalothin;Cefalotin
+DG00550	Cefazolin
+DG00551	Cefadroxil
+DG00552	Cefatrizine
+DG00553	Cefapirin
+DG00554	Cefacetrile
+DG00555	Cefroxadine
+DG00556	Ceftezole
+DG00557	Cefoxitin
+DG00558	Cefuroxime
+DG00559	Cefamandole
+DG00560	Cefaclor
+DG00561	Cefotetan
+DG00562	Cefonicid
+DG00563	Cefotiam
+DG00564	Loracarbef
+DG00565	Cefmetazole
+DG00566	Cefprozil
+DG00567	Cefminox
+DG00568	Cefbuperazone
+DG00569	Flomoxef
+DG00570	Cefotaxime
+DG00571	Ceftazidime
+DG00572	Cefsulodin
+DG00573	Ceftriaxone
+DG00574	Cefmenoxime
+DG00575	Moxalactam;Latamoxef
+DG00576	Ceftizoxime
+DG00577	Cefixime
+DG00578	Cefodizime
+DG00579	Cefetamet
+DG00580	Cefpiramide
+DG00581	Cefoperazone
+DG00582	Cefpodoxime
+DG00583	Ceftibuten
+DG00584	Cefditoren
+DG00585	Cefcapene
+DG00586	Cefepime
+DG00587	Cefpirome
+DG00588	Cefozopran
+DG00589	Aztreonam
+DG00590	Carumonam
+DG00591	Meropenem
+DG00592	Ertapenem
+DG00593	Doripenem
+DG00594	Faropenem
+DG00595	Trimethoprim
+DG00596	Iclaprim
+DG00597	Sulfadimidine
+DG00598	Sulfisoxazole;Sulfafurazole
+DG00599	Sulfadiazine
+DG00600	Sulfadimethoxine
+DG00601	Sulfamethoxypyridazine
+DG00602	Spiramycin
+DG00603	Oleandomycin
+DG00604	Josamycin
+DG00605	Clarithromycin
+DG00606	Azithromycin
+DG00607	Lincomycin
+DG00608	Tobramycin
+DG00609	Netilmicin
+DG00610	Sisomicin
+DG00611	Dibekacin
+DG00612	Ribostamycin
+DG00613	Isepamicin
+DG00614	Arbekacin
+DG00615	Bekanamycin
+DG00616	Ofloxacin
+DG00617	Ciprofloxacin
+DG00618	Pefloxacin
+DG00619	Enoxacin
+DG00620	Norfloxacin
+DG00621	Lomefloxacin
+DG00622	Rufloxacin
+DG00623	Grepafloxacin
+DG00624	Levofloxacin
+DG00625	Trovafloxacin
+DG00626	Moxifloxacin
+DG00627	Gemifloxacin
+DG00628	Gatifloxacin
+DG00629	Pazufloxacin
+DG00630	Nalidixic acid
+DG00631	Pipemidic acid
+DG00632	Oritavancin
+DG00633	Fosfomycin
+DG00634	Spectinomycin
+DG00635	Methenamine
+DG00636	Caspofungin
+DG00637	Micafungin
+DG00638	Aminosalicylic acid
+DG00639	Rifampicin
+DG00640	Rifamycin
+DG00641	Capreomycin
+DG00642	Isoniazid
+DG00643	Ethambutol
+DG00644	Bedaquiline
+DG00645	Vidarabine
+DG00646	Ganciclovir
+DG00647	Valaciclovir
+DG00648	Cidofovir
+DG00649	Valganciclovir
+DG00650	Rimantadine
+DG00651	Foscarnet
+DG00652	Fosfonet
+DG00653	Saquinavir
+DG00654	Indinavir
+DG00655	Nelfinavir
+DG00656	Fosamprenavir
+DG00657	Atazanavir
+DG00658	Tipranavir
+DG00659	Darunavir
+DG00660	Abacavir
+DG00661	Entecavir
+DG00662	Delavirdine
+DG00663	Rilpivirine
+DG00664	Zanamivir
+DG00665	Oseltamivir
+DG00666	Raltegravir
+DG00667	Dolutegravir
+DG00668	Diphtheria antitoxin
+DG00669	Tetanus antitoxin
+DG00670	Tetanus immunoglobulin
+DG00671	Diphtheria toxoid
+DG00672	Pneumococcus, purified polysaccharides antigen conjugated
+DG00673	Tetanus toxoid
+DG00674	Influenza, inactivated, whole virus
+DG00675	Cyclophosphamide
+DG00676	Melphalan
+DG00677	Chlormethine
+DG00678	Bendamustine
+DG00679	Nimustine
+DG00680	Dacarbazine
+DG00681	Methotrexate
+DG00682	Pemetrexed
+DG00683	Mercaptopurine
+DG00684	Tioguanine
+DG00685	Fludarabine
+DG00686	Cytarabine
+DG00687	Fluorouracil
+DG00688	Gemcitabine
+DG00689	Vinblastine
+DG00690	Vincristine
+DG00691	Vindesine
+DG00692	Vinorelbine
+DG00693	Etoposide
+DG00694	Docetaxel
+DG00695	Cabazitaxel
+DG00696	Doxorubicin
+DG00697	Daunorubicin
+DG00698	Epirubicin
+DG00699	Aclarubicin
+DG00700	Idarubicin
+DG00701	Mitoxantrone
+DG00702	Pirarubicin
+DG00703	Amrubicin
+DG00704	Pixantrone
+DG00705	Bleomycin
+DG00706	Procarbazine
+DG00707	Methyl aminolevulinate
+DG00708	Aminolevulinic acid
+DG00709	Efaproxiral
+DG00710	Imatinib
+DG00711	Erlotinib
+DG00712	Sunitinib
+DG00713	Sorafenib
+DG00714	Dasatinib
+DG00715	Lapatinib
+DG00716	Nilotinib
+DG00717	Afatinib
+DG00718	Bosutinib
+DG00719	Ruxolitinib
+DG00720	Regorafenib
+DG00721	Dabrafenib
+DG00722	Ponatinib
+DG00723	Trametinib
+DG00724	Estramustine
+DG00725	Topotecan
+DG00726	Irinotecan
+DG00727	Anagrelide
+DG00728	Oblimersen
+DG00729	Buserelin
+DG00730	Leuprorelin
+DG00731	Goserelin
+DG00732	Triptorelin
+DG00733	Histrelin
+DG00734	Tamoxifen
+DG00735	Toremifene
+DG00736	Degarelix
+DG00737	Interferon gamma
+DG00738	BCG vaccine
+DG00739	Mycophenolic acid
+DG00740	Gusperimus
+DG00741	Fingolimod
+DG00742	Tofacitinib
+DG00743	Azathioprine
+DG00744	Lenalidomide
+DG00745	Phenylbutazone
+DG00746	Oxyphenbutazone
+DG00747	Tolmetin
+DG00748	Bumadizone
+DG00749	Lonazolac
+DG00750	Proglumetacin
+DG00751	Ketorolac
+DG00752	Piroxicam
+DG00753	Ketoprofen
+DG00754	Fenoprofen
+DG00755	Flurbiprofen
+DG00756	Dexibuprofen
+DG00757	Flufenamic acid
+DG00758	Meclofenamic acid
+DG00759	Parecoxib
+DG00760	Glucosamine
+DG00761	Tenidap
+DG00762	Chondroitin sulfate
+DG00763	Penicillamine
+DG00764	Felbinac
+DG00765	Bendazac
+DG00766	Tolperisone
+DG00767	Tubocurarine
+DG00768	Suxamethonium
+DG00769	Pancuronium
+DG00770	Vecuronium
+DG00771	Atracurium
+DG00772	Botulinum toxin
+DG00773	Tizanidine
+DG00774	Pridinol
+DG00775	Cyclobenzaprine
+DG00776	Eperisone
+DG00777	Fenyramidol
+DG00778	Dantrolene
+DG00779	Allopurinol
+DG00780	Etidronic acid
+DG00781	Clodronic acid
+DG00782	Pamidronic acid
+DG00783	Alendronic acid
+DG00784	Tiludronic acid
+DG00785	Ibandronic acid
+DG00786	Risedronic acid
+DG00787	Zoledronic acid
+DG00788	Hydroquinine
+DG00789	Methohexital
+DG00790	Thiopental
+DG00791	Fentanyl
+DG00792	Alfentanil
+DG00793	Sufentanil
+DG00794	Anileridine
+DG00795	Remifentanil
+DG00796	Ketamine
+DG00797	Propofol
+DG00798	Hydroxybutyric acid
+DG00799	Xenon
+DG00800	Chloroprocaine
+DG00801	Bupivacaine
+DG00802	Mepivacaine
+DG00803	Prilocaine
+DG00804	Etidocaine
+DG00805	Articaine
+DG00806	Ropivacaine
+DG00807	Levobupivacaine
+DG00808	Cocaine
+DG00809	Dyclonine
+DG00810	Morphine
+DG00811	Hydromorphone
+DG00812	Nicomorphine
+DG00813	Oxycodone
+DG00814	Dihydrocodeine
+DG00815	Ketobemidone
+DG00816	Pethidine
+DG00817	Dextromoramide
+DG00818	Dextropropoxyphene;Propoxyphene
+DG00819	Pentazocine
+DG00820	Buprenorphine
+DG00821	Butorphanol
+DG00822	Nalbuphine
+DG00823	Tilidine
+DG00824	Tramadol
+DG00825	Meptazinol
+DG00826	Tapentadol
+DG00827	Metamizole sodium
+DG00828	Propacetamol
+DG00829	Viminol
+DG00830	Nefopam
+DG00831	Flupirtine
+DG00832	Ziconotide
+DG00833	Dihydroergotamine
+DG00834	Ergotamine
+DG00835	Methysergide
+DG00836	Sumatriptan
+DG00837	Naratriptan
+DG00838	Rizatriptan
+DG00839	Almotriptan
+DG00840	Eletriptan
+DG00841	Frovatriptan
+DG00842	Pizotifen
+DG00843	Dimetotiazine
+DG00844	Oxetorone
+DG00845	Phenobarbital
+DG00846	Phenytoin
+DG00847	Fosphenytoin
+DG00848	Eslicarbazepine
+DG00849	Valproic acid
+DG00850	Tiagabine
+DG00851	Trihexyphenidyl
+DG00852	Biperiden
+DG00853	Metixene
+DG00854	Procyclidine
+DG00855	Profenamine
+DG00856	Dexetimide
+DG00857	Mazaticol
+DG00858	Tropatepine
+DG00859	Benzatropine
+DG00860	Amantadine
+DG00861	Pergolide
+DG00862	Ropinirole
+DG00863	Pramipexole
+DG00864	Selegiline
+DG00865	Rasagiline
+DG00866	Budipine
+DG00867	Chlorpromazine
+DG00868	Levomepromazine
+DG00869	Promazine
+DG00870	Acepromazine
+DG00871	Triflupromazine
+DG00872	Cyamemazine
+DG00873	Chlorproethazine
+DG00874	Fluphenazine
+DG00875	Perphenazine
+DG00876	Prochlorperazine
+DG00877	Trifluoperazine
+DG00878	Acetophenazine
+DG00879	Thioproperazine
+DG00880	Butaperazine
+DG00881	Perazine
+DG00882	Thioridazine
+DG00883	Mesoridazine
+DG00884	Pipotiazine
+DG00885	Haloperidol
+DG00886	Trifluperidol
+DG00887	Melperone
+DG00888	Moperone
+DG00889	Pipamperone
+DG00890	Bromperidol
+DG00891	Molindone
+DG00892	Ziprasidone
+DG00893	Flupentixol
+DG00894	Chlorprothixene
+DG00895	Tiotixene
+DG00896	Zuclopenthixol
+DG00897	Loxapine
+DG00898	Olanzapine
+DG00899	Quetiapine
+DG00900	Sultopride
+DG00901	Tiapride
+DG00902	Remoxipride
+DG00903	Lithium
+DG00904	Prothipendyl
+DG00905	Mosapramine
+DG00906	Aripiprazole
+DG00907	Paliperidone
+DG00908	Chlordiazepoxide
+DG00909	Medazepam
+DG00911	Adinazolam
+DG00912	Hydroxyzine
+DG00913	Buspirone
+DG00914	Etifoxine
+DG00915	Pentobarbital
+DG00916	Amobarbital
+DG00917	Secobarbital
+DG00918	Cyclobarbital
+DG00919	Flurazepam
+DG00920	Midazolam
+DG00921	Loprazolam
+DG00922	Zolpidem
+DG00923	Clomethiazole
+DG00924	Propiomazine
+DG00925	Triclofos
+DG00926	Dexmedetomidine
+DG00927	Desipramine
+DG00928	Imipramine
+DG00929	Clomipramine
+DG00930	Opipramol
+DG00931	Trimipramine
+DG00932	Lofepramine
+DG00933	Dibenzepin
+DG00934	Amitriptyline
+DG00935	Nortriptyline
+DG00936	Protriptyline
+DG00937	Doxepin
+DG00938	Melitracen
+DG00939	Butriptyline
+DG00940	Dosulepin
+DG00941	Maprotiline
+DG00942	Fluoxetine
+DG00943	Citalopram
+DG00944	Paroxetine
+DG00945	Sertraline
+DG00946	Fluvoxamine
+DG00947	Escitalopram
+DG00948	Phenelzine
+DG00949	Tranylcypromine
+DG00950	Iproniazide
+DG00951	Mianserin
+DG00952	Trazodone
+DG00953	Nefazodone
+DG00954	Minaprine
+DG00955	Bifemelane
+DG00956	Viloxazine
+DG00957	Bupropion
+DG00958	Tianeptine
+DG00959	Venlafaxine
+DG00960	Milnacipran
+DG00961	Reboxetine
+DG00962	Duloxetine
+DG00963	Desvenlafaxine
+DG00964	Vilazodone
+DG00965	Vortioxetine
+DG00966	Amfetamine
+DG00967	Dexamfetamine
+DG00968	Metamfetamine
+DG00969	Methylphenidate
+DG00970	Atomoxetine
+DG00971	Fenetylline;Fenethylline
+DG00972	Dexmethylphenidate
+DG00973	Lisdexamfetamine
+DG00974	Caffeine
+DG00975	Meclofenoxate
+DG00976	Pyritinol
+DG00977	Deanol
+DG00978	Citicoline
+DG00979	Pirisudanol
+DG00980	Nizofenone
+DG00981	Pramiracetam
+DG00982	Tacrine
+DG00983	Donepezil
+DG00984	Rivastigmine
+DG00985	Galantamine
+DG00986	Memantine
+DG00987	Neostigmine
+DG00988	Pyridostigmine
+DG00989	Distigmine
+DG00990	Ambenonium
+DG00991	Bethanechol
+DG00992	Pilocarpine
+DG00993	Cevimeline
+DG00994	Nicotine
+DG00995	Varenicline
+DG00996	Acamprosate
+DG00997	Naltrexone
+DG00998	Nalmefene
+DG00999	Methadone
+DG01000	Levacetylmethadol
+DG01001	Lofexidine
+DG01002	Levomethadone
+DG01003	Diamorphine
+DG01004	Betahistine
+DG01005	Cinnarizine
+DG01006	Flunarizine
+DG01007	Tirilazad
+DG01008	Xaliproden
+DG01009	Tafamidis
+DG01010	Diloxanide
+DG01011	Emetine
+DG01012	Mepacrine
+DG01013	Trimetrexate
+DG01014	Chloroquine
+DG01015	Hydroxychloroquine
+DG01016	Primaquine
+DG01017	Amodiaquine
+DG01018	Proguanil
+DG01019	Quinine
+DG01020	Mefloquine
+DG01021	Halofantrine
+DG01022	Albendazole
+DG01023	Piperazine
+DG01024	Diethylcarbamazine
+DG01025	Pyrantel
+DG01026	Levamisole
+DG01027	Pyrvinium
+DG01028	Pyrethrum
+DG01029	Oxymetazoline
+DG01030	Tetrahydrozoline;Tetryzoline
+DG01031	Xylometazoline
+DG01032	Naphazoline
+DG01033	Tramazoline
+DG01034	Tymazoline
+DG01035	Levocabastine
+DG01036	Azelastine
+DG01037	Antazoline
+DG01038	Nedocromil
+DG01039	Olopatadine
+DG01040	Flunisolide
+DG01041	Phenylpropanolamine
+DG01042	Pseudoephedrine
+DG01043	Gramicidin
+DG01044	Metaproterenol;Orciprenaline
+DG01045	Albuterol;Salbutamol
+DG01046	Terbutaline
+DG01047	Hexoprenaline
+DG01048	Pirbuterol
+DG01049	Tretoquinol
+DG01050	Tulobuterol
+DG01051	Salmeterol
+DG01052	Formoterol
+DG01053	Clenbuterol
+DG01054	Reproterol
+DG01055	Procaterol
+DG01056	Bitolterol
+DG01057	Indacaterol
+DG01058	Olodaterol
+DG01059	Fenspiride
+DG01060	Bambuterol
+DG01061	Theophylline
+DG01062	Aminophylline
+DG01063	Etamiphylline
+DG01064	Bamifylline
+DG01065	Pranlukast
+DG01066	Montelukast
+DG01067	Senega
+DG01068	Guaiacolsulfonate
+DG01069	Acetylcysteine
+DG01070	Bromhexine
+DG01071	Carbocisteine
+DG01072	Eprazinone
+DG01073	Ambroxol
+DG01074	Ethylmorphine
+DG01075	Hydrocodone
+DG01076	Codeine
+DG01077	Noscapine
+DG01078	Dextromethorphan
+DG01079	Thebacon
+DG01080	Dimemorfan
+DG01081	Benproperine
+DG01082	Clobutinol
+DG01083	Isoaminile
+DG01084	Pentoxyverine
+DG01085	Oxolamine
+DG01086	Oxeladin
+DG01087	Clofedanol
+DG01088	Butamirate
+DG01089	Dibunate
+DG01090	Prenoxdiazine
+DG01091	Cloperastine
+DG01092	Tipepidine
+DG01093	Dimethoxanate
+DG01094	Diphenylpyraline
+DG01095	Carbinoxamine
+DG01096	Doxylamine
+DG01097	Brompheniramine
+DG01098	Dexchlorpheniramine
+DG01099	Chlorphenamine
+DG01100	Pheniramine
+DG01101	Alimemazine
+DG01102	Thiethylperazine
+DG01103	Methdilazine
+DG01104	Buclizine
+DG01105	Cyclizine
+DG01106	Meclozine
+DG01107	Cetirizine
+DG01108	Levocetirizine
+DG01109	Cyproheptadine
+DG01110	Phenindamine
+DG01111	Triprolidine
+DG01112	Azatadine
+DG01113	Mebhydrolin
+DG01114	Deptropine
+DG01115	Ketotifen
+DG01116	Epinastine
+DG01117	Fexofenadine
+DG01118	Rupatadine
+DG01119	Doxapram
+DG01120	Almitrine
+DG01121	Dimefline
+DG01122	Dihydrostreptomycin
+DG01123	Micronomicin
+DG01124	Sulfacetamide
+DG01125	Fomivirsen
+DG01126	Sodium propionate
+DG01127	Loteprednol
+DG01128	Bromfenac
+DG01129	Dipivefrine
+DG01130	Apraclonidine
+DG01131	Ecothiopate
+DG01132	Physostigmine
+DG01133	Acetylcholine
+DG01134	Acetazolamide
+DG01135	Dorzolamide
+DG01136	Levobunolol
+DG01137	Metipranolol
+DG01138	Befunolol
+DG01139	Unoprostone
+DG01140	Dapiprazole
+DG01141	Cyclopentolate
+DG01142	Homatropine
+DG01143	Lodoxamide
+DG01144	Emedastine
+DG01145	Proxymetacaine
+DG01146	Fluorescein
+DG01147	Rose bengal sodium
+DG01148	Hypromellose
+DG01149	Guaiazulen
+DG01150	Alum
+DG01151	Nalorphine
+DG01152	Edetate
+DG01153	Pralidoxime
+DG01154	Protamine
+DG01155	Naloxone
+DG01156	Methylthioninium chloride
+DG01157	Methionine
+DG01158	Glutathione
+DG01159	Deferoxamine
+DG01160	Polystyrene sulfonate
+DG01161	Sevelamer
+DG01162	Dexrazoxane
+DG01163	Amifostine
+DG01164	Oxygen
+DG01165	Ceruletide
+DG01166	Metyrapone
+DG01167	Corticorelin
+DG01168	Somatorelin
+DG01169	Sulfobromophthalein
+DG01170	Aminohippuric acid
+DG01171	Protirelin
+DG01172	Diatrizoic acid
+DG01173	Metrizoic acid
+DG01174	Iodamide
+DG01175	Iotalamic acid
+DG01176	Ioxitalamic acid
+DG01177	Iocarmic acid
+DG01178	Diodone
+DG01179	Ioxaglic acid
+DG01180	Iodoxamic acid
+DG01181	Iotroxic acid
+DG01182	Gadopentetic acid
+DG01183	Gadoteric acid
+DG01184	Gadodiamide
+DG01185	Mangafodipir
+DG01186	Gadobenic acid
+DG01187	Gadoxetic acid
+DG01188	Gadofosveset
+DG01189	Indium (111In) pentetic acid
+DG01190	Technetium (99mTc) medronic acid
+DG01191	Technetium (99mTc) pyrophosphate
+DG01192	Technetium (99mTc) human albumin
+DG01193	Iobenguane (123I)
+DG01194	Iobenguane (131I)
+DG01195	Iodine (131I) human albumin
+DG01196	Samarium (153Sm) lexidronam
+DG01197	Tetracycline antibiotic
+DG01198	Omadacycline
+DG01199	Eravacycline
+DG01200	Astromicin
+DG01201	Laninamivir
+DG01203	Kitasamycin
+DG01204	Sulfamonomethoxine
+DG01205	Cefaloglycin
+DG01206	Cefoselis
+DG01207	Cefpimizole
+DG01208	Cefteram
+DG01209	Ceftobiprole
+DG01210	Ceftolozane
+DG01211	Cefuzonam
+DG01212	Imipenem
+DG01213	Sulopenem
+DG01214	Alatrofloxacin
+DG01215	Delafloxacin
+DG01216	Sarafloxacin
+DG01217	Tosufloxacin
+DG01218	Clorazepic acid
+DG01219	Enviomycin
+DG01220	Puromycin
+DG01221	Monensin
+DG01222	Semduramicin
+DG01223	Tenofovir
+DG01224	Adefovir
+DG01225	Oxmetidine
+DG01226	Amifloxacin
+DG01227	Danofloxacin
+DG01228	Difloxacin
+DG01229	Methylephedrine
+DG01230	Guanabenz
+DG01231	Setiptiline
+DG01232	Abediterol
+DG01233	Arformoterol
+DG01234	Isoetharine
+DG01235	Levosalbutamol;Levalbuterol
+DG01236	Vilanterol
+DG01237	Amibegron
+DG01238	Ethaverine
+DG01239	Ramosetron
+DG01240	Itasetron
+DG01241	Denaverine
+DG01242	Methylatropine
+DG01243	Atropine oxide
+DG01244	Ablukast
+DG01245	Gabapentin
+DG01246	Simeprevir
+DG01247	Amylocaine
+DG01248	Ipragliflozin
+DG01249	Amfenac
+DG01250	Piketoprofen
+DG01251	Loxoprofen
+DG01252	Orphenadrine
+DG01253	Umeclidinium
+DG01254	Tiemonium
+DG01255	Pipethanate
+DG01256	Ozagrel
+DG01257	Pilsicainide
+DG01258	Gisadenafil
+DG01259	Lazabemide
+DG01260	Safinamide
+DG01261	Clavulanic acid
+DG01262	Motesanib
+DG01263	Oximonam
+DG01264	Cenicriviroc
+DG01265	Droloxifene
+DG01266	Incadronic acid
+DG01267	Etirinotecan pegol
+DG01268	Amonafide
+DG01269	Ixazomib
+DG01270	Isosorbide nitrate
+DG01271	Limaprost
+DG01272	Piroheptine
+DG01273	Diprenorphine
+DG01274	Saridegib;Patidegib
+DG01275	Boldenone
+DG01276	Methandriol
+DG01277	Pirlindole
+DG01278	Pruvanserin
+DG01279	Naluzotan
+DG01280	Duvoglustat
+DG01281	Carmegliptin
+DG01282	Dutogliptin
+DG01283	Teneligliptin
+DG01284	Trelagliptin
+DG01285	Mosapride
+DG01286	Sofinicline
+DG01287	Lobeline
+DG01288	Pozanicline
+DG01289	Carpronium
+DG01290	Methacholine
+DG01291	Aclatonium
+DG01292	Fadrozole
+DG01293	Liarozole
+DG01294	Cangrelor
+DG01295	Elinogrel
+DG01296	Benserazide
+DG01297	Croconazole
+DG01298	Tiaramide
+DG01299	Calcium acetate
+DG01300	Xanomeline
+DG01301	Benzetimide
+DG01302	Amosulalol
+DG01303	Arotinolol
+DG01304	Bifeprunox
+DG01305	Cariprazine
+DG01306	Tandospirone
+DG01307	Rilmazafone
+DG01308	Butabarbital
+DG01309	Esreboxetine
+DG01310	Edivoxetine
+DG01311	Tedatioxetine
+DG01312	Carpipramine
+DG01313	Clocapramine
+DG01314	Elzasonan
+DG01315	Orvepitant
+DG01316	Bunazosin
+DG01317	Medroxalol
+DG01318	Detomidine
+DG01319	Lergotrile
+DG01320	Medetomidine
+DG01321	Xylazine
+DG01322	Tilisolol
+DG01323	Indenolol
+DG01324	Pardoprunox
+DG01325	Pridopidine
+DG01326	Talipexole
+DG01327	Bepotastine
+DG01328	Homochlorcyclizine
+DG01329	Dihydroergocryptine
+DG01330	Irdabisant
+DG01331	Dexpramipexole
+DG01332	Lasmiditan
+DG01333	Sarpogrelate
+DG01334	Temanogrel
+DG01335	Naronapride
+DG01336	Velusetrag
+DG01337	Cerlapirdine
+DG01338	Ulimorelin
+DG01339	Carfentanil
+DG01340	Eptazocine
+DG01341	Levorphanol
+DG01342	Naldemedine
+DG01343	Oxymorphone
+DG01344	Giractide
+DG01345	Elagolix
+DG01346	Fertirelin
+DG01347	Montirelin
+DG01348	Atopaxar
+DG01349	Vorapaxar
+DG01350	Ifetroban
+DG01351	Otenabant
+DG01352	Davalintide
+DG01353	Telcagepant
+DG01354	Arbaclofen
+DG01355	Aspartame
+DG01356	Saccharin
+DG01357	Varlitinib
+DG01359	Mecasermin
+DG01360	Cediranib
+DG01361	Crenolanib
+DG01362	Lenvatinib
+DG01363	Toceranib
+DG01364	Quizartinib
+DG01365	Tozasertib
+DG01366	Momelotinib
+DG01367	Golvatinib
+DG01368	Rebastinib
+DG01370	Vercirnon
+DG01371	Elubrixin
+DG01372	Liothyronine
+DG01373	Brivanib
+DG01374	Nintedanib
+DG01375	Tivozanib
+DG01376	Halopredone
+DG01377	Thiamylal
+DG01378	Dexmecamylamine
+DG01379	Latrepirdine
+DG01380	Tiletamine
+DG01381	Pirmenol
+DG01382	Efonidipine
+DG01383	Morantel
+DG01384	Budiodarone
+DG01385	Menthol
+DG01386	Amitifadine
+DG01387	Levomilnacipran
+DG01388	Lesinurad
+DG01389	Lifitegrast
+DG01390	Tecarfarin
+DG01391	Cindunistat
+DG01392	Forodesine
+DG01393	Indanazoline
+DG01394	Varespladib
+DG01395	Itopride
+DG01396	Olprinone
+DG01397	Cilastatin
+DG01398	Edoxaban
+DG01399	Pegnivacogin
+DG01400	Gabexate
+DG01401	Sivelestat
+DG01402	Abexinostat
+DG01403	Panobinostat
+DG01404	Mocetinostat
+DG01406	Sotrastaurin
+DG01407	Quisinostat
+DG01408	Afuresertib
+DG01409	Dilmapimod
+DG01410	Pimasertib
+DG01411	Verubulin
+DG01412	Batabulin
+DG01413	Cevipabulin
+DG01414	Selumetinib
+DG01415	Fosbretabulin
+DG01416	Rigosertib
+DG01417	Volasertib
+DG01418	Saracatinib
+DG01419	Fostamatinib
+DG01420	Lamifiban
+DG01421	Recainam
+DG01422	Peplomycin
+DG01426	Eritoran
+DG01427	Brilacidin
+DG01428	Agatolimod
+DG01430	Paclitaxel
+DG01431	Gataparsen
+DG01432	Lenampicillin
+DG01433	Cefquinome
+DG01434	Ceftiofur
+DG01435	Tilmicosin
+DG01436	Tylosin
+DG01437	Tiamulin
+DG01438	Valnemulin
+DG01439	Arabinofuranosyl type antineoplastic
+DG01440	Arabinofuranosyl type antiviral
+DG01441	Radezolid
+DG01442	Tedizolid
+DG01443	Coumermycin
+DG01444	Racepinephrine
+DG01445	Brovanexine
+DG01446	Framycetin
+DG01447	Aminoglycoside antibiotic
+DG01448	alpha1-Adrenergic receptor agonist
+DG01449	alpha2-Adrenergic receptor agonist
+DG01450	alpha-Adrenergic receptor agonist
+DG01451	beta1-Adrenergic receptor agonist
+DG01452	beta2-Adrenergic receptor agonist
+DG01453	beta3-Adrenergic receptor agonist
+DG01454	Monobactam
+DG01455	beta-Adrenergic receptor agonist
+DG01456	Adrenergic receptor agonist
+DG01457	alpha1-Adrenergic receptor antagonist
+DG01458	Carbapenem
+DG01459	Oxacephem
+DG01460	alpha2-Adrenergic receptor antagonist
+DG01461	beta1-Adrenergic receptor antagonist
+DG01462	beta2-Adrenergic receptor antagonist
+DG01463	beta3-Adrenergic receptor antagonist
+DG01464	beta-Adrenergic receptor antagonist
+DG01465	alpha-Adrenergic receptor antagonist
+DG01466	Adrenergic receptor antagonist
+DG01467	Dopamine D1-receptor agonist
+DG01468	Dopamine D2-receptor agonist
+DG01469	Dopamine D3-receptor agonist
+DG01470	Dopamine D4-receptor agonist
+DG01471	Dopamine D5-receptor agonist
+DG01472	Dopamine agonist
+DG01473	Dopamine D1-receptor antagonist
+DG01474	Dopamine D2-receptor antagonist
+DG01475	Dopamine D3-receptor antagonist
+DG01476	Dopamine D4-receptor antagonist
+DG01477	Dopamine D5-receptor antagonist
+DG01478	Dopamine antagonist
+DG01479	beta-Lactamase inhibitor
+DG01480	Penam;Penicillin
+DG01481	Histamine receptor H2 antagonist
+DG01482	Histamine receptor H1 antagonist
+DG01483	5-HT1A-receptor agonist
+DG01484	5-HT1B-receptor agonist
+DG01485	5-HT1D-receptor agonist
+DG01486	Penem
+DG01487	Oxapenam;Clavam
+DG01488	Cephalosporin;Cephem
+DG01489	5-HT3-receptor antagonist
+DG01490	Muscarinic cholinergic receptor agonist
+DG01491	Anticholinergic agent;Muscarinic cholinergic receptor antagonist
+DG01492	Imagabalin
+DG01493	Glucagon-like peptide 1 receptor agonist;GLP-1 receptor agonist
+DG01494	Gonadotropin-releasing hormone receptor agonist
+DG01495	Angiotensin II receptor antagonist
+DG01496	Calcium channel L type blocker
+DG01497	Catechol O-methyltransferase inhibitor
+DG01498	NMDA receptor antagonist
+DG01499	Adenylate cyclase activator
+DG01500	Adenosine deaminase inhibitor
+DG01501	Angiotensin-converting enzyme inhibitor
+DG01502	Endothelin receptor antagonist
+DG01503	Xanthine dehydrogenase inhibitor
+DG01504	Nonsteroidal anti-inflammatory drug (NSAID)
+DG01506	Arginine vasopressin receptor 2 (AVPR2) antagonist
+DG01507	Phosphodiesterase III inhibitor
+DG01508	Sulfonylurea receptor agonist
+DG01509	Phosphodiesterase V inhibitor
+DG01510	Aceglutamide
+DG01511	Thrombin inhibitor
+DG01512	Monoamine oxidase B inhibitor
+DG01513	Rosaramicin
+DG01514	Palifosfamide
+DG01515	Nicametate
+DG01516	Thromboxane A2 synthase inhibitor
+DG01517	Thromboxane A2 receptor antagonist
+DG01518	5-HT1B/1D-receptor agonist
+DG01519	Non-selective monoamine oxidase inhibitor
+DG01520	Cinitapride
+DG01521	Azasetron
+DG01522	CYP3A/CYP3A4 inhibitor
+DG01523	Triazole antifungal
+DG01524	Triazole antineoplastic
+DG01525	CYP2A6 inhibitor
+DG01526	Topoisomerase I inhibitor
+DG01527	Topoisomerase II inhibitor
+DG01528	Topoisomerase IV inhibitor
+DG01529	Topoisomerase inhibitor
+DG01530	Furazolium
+DG01531	Clonixin
+DG01532	Nicotinic cholinergic receptor agonist
+DG01533	Flunixin
+DG01534	Carbonic anhydrase inhibitor
+DG01535	Tiamenidine
+DG01536	Fenproporex
+DG01537	Phendimetrazine
+DG01538	Samidorphan
+DG01539	Zicronapine
+DG01540	Plasmin inhibitor
+DG01541	Cysteinyl leukotriene receptor antagonist
+DG01542	Imipraminoxide
+DG01543	Epelsiban
+DG01544	Olmesartan
+DG01545	Resocortol
+DG01546	Trimecaine
+DG01547	Fibrates
+DG01548	Fenofibrate
+DG01549	New quinolone;Fluoroquinolone
+DG01550	Quinolone
+DG01551	Macrolide antibiotic
+DG01552	Hydantoin type nitrofuran
+DG01553	5-Nitrofuran antibacterial
+DG01554	5-Nitrofuran antiprotozoal
+DG01555	5-Nitrofuran antifungal
+DG01556	Histamine receptor H3 antagonist
+DG01557	Histamine receptor antagonist
+DG01558	Monoamine oxidase A inhibitor
+DG01559	5-HT4-receptor antagonist
+DG01560	Sigma receptor agonist
+DG01561	delta-Opioid receptor agonist
+DG01562	kappa-Opioid receptor agonist
+DG01563	mu-Opioid receptor agonist
+DG01564	Opioid receptor agonist
+DG01565	GABA-B receptor agonist
+DG01566	Smoothened (Smo) antagonist
+DG01567	GABA-A receptor agonist
+DG01568	MAO inhibitor;Monoamine oxidase inhibitors
+DG01569	AMPA receptor antagonist
+DG01570	Nicotinic cholinergic receptor agonist
+DG01571	Nicotinic cholinergic receptor partial agonist
+DG01572	Calcium channel N type blocker
+DG01573	Calcium channel T type blocker
+DG01574	Calcium channel alpha-2 delta blocker
+DG01575	Calcium channel blocker
+DG01576	Amphenicol type antibacterial
+DG01577	Pirlimycin
+DG01578	Lincosamide antibiotic
+DG01579	Polypeptide antibiotic
+DG01580	Glycopeptide antibiotic
+DG01581	Trimethoprim antibacterial
+DG01583	ATP-sensitive potassium channel opener
+DG01584	Estrogen receptor agonist
+DG01585	Estrogen receptor antagonist
+DG01586	Opioid receptor antagonist
+DG01587	Opioid receptor agonist/antagonist
+DG01588	Somatostatin receptor agonist
+DG01589	Melatonin receptor agonist
+DG01590	Androgen receptor agonist
+DG01591	Androgen receptor antagonist
+DG01592	COMT substrate
+DG01593	Acetylcholinesterase inhibitor
+DG01594	Butyrylcholinesterase inhibitor
+DG01595	Cholinesterase inhibitor
+DG01596	Aromatase inhibitor
+DG01597	mTOR inhibitor
+DG01598	Rifamycin antibiotic
+DG01599	Medronic acid
+DG01600	Bisphosphonate
+DG01601	DPP-4 inhibitor
+DG01602	Menadiol
+DG01603	Vitamin K
+DG01604	Retinoid;Retinol derivative
+DG01605	Anabolic steroid
+DG01606	Activated vitamin D3
+DG01607	Vitamin D receptor agonist;Vitamin D derivatives
+DG01608	Thyroid hormone replenisher
+DG01609	Xanthine-type bronchodilator
+DG01610	Xanthine-type cardiotonics
+DG01611	Prostaglandin E1 derivative
+DG01612	Xanthine-type central nervous system stimulant
+DG01613	Xantine-type antiparkinsonian agent
+DG01614	Xanthine-type vasodilator
+DG01615	Xanthine-type diuretic
+DG01616	Xanthine derivative
+DG01617	Catecholamine synthesis inhibitors;Catecholamine depletors
+DG01618	Organophosphate insecticide
+DG01619	Clomifene and tamoxifen derivative
+DG01620	Tamoxifene-type antineoplastic
+DG01621	Cloimifene-type osteoporosis agent
+DG01622	ABCB1 (P-GP) inhibitor
+DG01623	Steroid-type antiandrogen
+DG01624	Flutamide-type antiandrogen
+DG01625	Alectinib
+DG01626	Acorafloxacin;Avarofloxacin
+DG01627	Batefenterol
+DG01628	Cabotegravir
+DG01629	Adrenocorticotropic hormone (ACTH)
+DG01630	beta-Estrogen receptor agonist
+DG01631	Trenbolone
+DG01632	Clostebol
+DG01634	CYP1A2 inhibitor
+DG01635	CYP3A/CYP3A4 inducer
+DG01636	Insulin and analog
+DG01637	CYP1A2 inducer
+DG01638	CYP2A6 substrate
+DG01639	CYP2C19 substrate
+DG01640	CYP2C8 inducer
+DG01641	CYP2C8 inhibitor
+DG01642	CYP2C9 substrate
+DG01643	CYP2C9 inhibitor
+DG01644	CYP2D6 substrate
+DG01645	CYP2D6 inhibitor
+DG01646	Proton pump inhibitor (PPI)
+DG01647	HIV protease inhibitor
+DG01648	Class III antiarrhythmic agent
+DG01649	Class Ia antiarrhythmic agent
+DG01650	Class Ic antiarrhythmic agent
+DG01651	Class Ib antiarrhythmic agent
+DG01652	Class I antiarrhythmic agent
+DG01653	Antiarrhythmics
+DG01654	alpha1-Adrenergic receptor specific agonist
+DG01655	alpha2-adrenergic receptor specific agonist
+DG01656	HIV reverse transcriptase inhibitor
+DG01657	Nitrovasodilator
+DG01658	Serotonin and norepinephrine reuptake inhibitor (SNRI)
+DG01659	Selective serotonin reuptake inhibitor (SSRI)
+DG01660	HMG-CoA reductase inhibitor
+DG01661	Parathyroid hormone
+DG01662	Factor Xa inhibitor
+DG01663	alpha-Glucosidase inhibitor
+DG01664	Tissue plasminogen activator (t-PA)
+DG01665	ABCB1 (P-GP) substrate
+DG01666	Progesterone receptor agonist
+DG01667	Progesterone receptor antagonist
+DG01668	Aminosalicylic acid derivative
+DG01669	Daclatasvir
+DG01670	Cabozantinib
+DG01671	Trimethobenzamide
+DG01672	Amino acid
+DG01673	Amide type local anesthetic
+DG01674	Esterified local anesthetic
+DG01675	Local anesthetic
+DG01676	Spironolactone derivative;Aldosterone antagonist
+DG01677	Alkylating agent
+DG01678	Nitrogen mustard analog
+DG01679	Platinum compound
+DG01680	Aluminum compounds antacid
+DG01681	Fasiglifam
+DG01682	Anthracycline antineoplastic
+DG01683	Thiazolidinedione;Thiazolidinedione type PPAR agonist
+DG01684	Biguanide antidiabetic
+DG01685	Insulin sensitizer
+DG01686	Inactivated vaccine
+DG01687	Parenteral live vaccine
+DG01688	Oral live vaccine
+DG01689	Live vaccine
+DG01690	Sulfonamide diuretic
+DG01691	Iron chelator
+DG01692	Chelator
+DG01693	Iodine preparation
+DG01694	Iron preparation
+DG01695	Ganglion-blocking antiadrenergic
+DG01696	Peripherally-acting muscle relaxant
+DG01697	Digitalis cardiac glycoside
+DG01698	Cardiac glycoside
+DG01699	Catecholamine cardiotonic
+DG01700	Nasaruplase
+DG01701	Urokinase-type plasminogen activator
+DG01702	Phenethylamine cardiotonic
+DG01703	Cardiotonic
+DG01704	Phenethylamine anorexic
+DG01705	Anoretic
+DG01706	Antiobesity
+DG01707	Fibrinolytic
+DG01708	Vitamin K antagonist;Coumarin anticoagulant
+DG01709	Heparin anticoagulant
+DG01710	beta-Lactam antibiotic
+DG01711	Carbacephem
+DG01712	Antiplatelet agent;Platelet aggregation inhibitor
+DG01713	Penicillin skeleton group
+DG01714	Cephalosporin skeleton group
+DG01715	Drugs for nicotine dependence
+DG01716	Drugs for alcohol dependence
+DG01717	Drugs for opioid dependence
+DG01718	Drugs for addictive disorder
+DG01719	Parasympathomimetic agent
+DG01720	Isophosphoramide mustard analog
+DG01721	Methanesulfonate derivative
+DG01722	Thiotepa type ethylene imine
+DG01723	Ethylene imine
+DG01724	Nitrosourea
+DG01725	Epoxide
+DG01726	Aldoxorubicin
+DG01727	Anthraquinone antineoplastic
+DG01728	Tricyclic antidepressant
+DG01729	Tetracyclic antidepressant
+DG01730	Non-selective monoamine reuptake inhibitor
+DG01732	Non-thiazolidinedione type PPAR agonist
+DG01733	PPAR agonist
+DG01734	Sulfonamide type sulfonylurea receptor agonist
+DG01735	Glinide;Short acting insulin secretagogues
+DG01736	Deferitazole
+DG01737	Rauwolfia alkaloid
+DG01738	Centrally-acting antiadrenergic
+DG01739	Peripherally-acting antiadrenergic
+DG01740	Curare alkaloid
+DG01741	Scilla glycoside
+DG01742	Quaternary ammonium compound type muscle relaxant
+DG01743	Strophantus glycoside
+DG01744	digestive enzyme
+DG01745	Anticholinergic antiparkinson agent
+DG01746	Piretanide type diuretic
+DG01747	Furosemide type diuretic
+DG01748	Loop diuretic
+DG01749	Thiazide diuretic
+DG01750	Interferon alpha
+DG01751	Interferon beta
+DG01752	Interferone
+DG01753	Colony stimulating factor;Leukocyte growth factor
+DG01754	Cannabinoid receptor inverse agonist
+DG01755	Benzfetamine
+DG01756	Ondelopran;Odelepran
+DG01757	Amrinone type cardiotonic
+DG01758	Pimobendan type cardiotonic
+DG01759	Dicumarol type coumarin derivative
+DG01760	Warfarin and analog
+DG01761	Phenindion type coumarin derivative
+DG01762	Antiemetic
+DG01763	Propulsive
+DG01764	Emollient laxative
+DG01765	Contact laxative
+DG01766	Bulk-forming laxative
+DG01767	Osmotic laxative
+DG01768	Opioid-induced laxative
+DG01769	Enema
+DG01770	Laxative
+DG01771	Docusate
+DG01772	Carmellose
+DG01773	Berberine
+DG01774	First-generation cephalosporin
+DG01775	Second-generation cephalosporin
+DG01776	Third-generation cephalosporin
+DG01777	Fourth-generation cephalosporin
+DG01778	beta-Lactamase sensitive penicillin
+DG01779	beta-Lactamase resistant penicillin
+DG01780	Extended spectrum penicillin
+DG01781	Granulocyte colony stimulating factor (G-CSF)
+DG01782	Granulocyte macrophage colony-stimulating factors (GM-CSF)
+DG01783	Sulpiride type antiemetic;Benzamide type antiemetic
+DG01784	Short-acting sulfonamide
+DG01785	Intermediate-acting sulfonamide
+DG01786	Long-acting sulfonamide
+DG01787	Sulfonamide antibacterial
+DG01788	Thiocarbamide derivative
+DG01789	Oxazolidinone antibiotic
+DG01790	Sulfonamide hypoglycemic
+DG01791	Hydroquinidine
+DG01792	Pregnenolone
+DG01793	Dacomitinib
+DG01794	SGLT2 inhibitor
+DG01795	PPAR gamma agonist
+DG01796	Insulin analog, fast-acting
+DG01797	Insulin analog, long-acting
+DG01798	Human insulin, fast-acting
+DG01799	Human insulin, intermediate-acting
+DG01800	Human insulin, long-acting
+DG01801	Insulin analog
+DG01802	Human insulin
+DG01803	Antidiabetic, alpha-glucosidase inhibitor
+DG01804	Oxyimino beta-lactam
+DG01805	Mediator release inhibitor
+DG01806	Propranolol type antiarrhythmic;Class II antiarrhythmic agent
+DG01807	Phenylalkylamine derivative
+DG01808	Thienopyridine
+DG01809	P2Y12 receptor antagonist
+DG01810	Prostacycline derivative;Prostaglandin I2 (PGI2) derivatives
+DG01811	Fibrinogen receptor antagonist
+DG01812	Sanfetrinem
+DG01813	Pleuromutilin
+DG01814	Mazipredone
+DG01815	Danoprevir
+DG01816	Deldeprevir;Neceprevir
+DG01818	Ledipasvir
+DG01819	Ombitasvir
+DG01820	Paritaprevir
+DG01821	Metomidate
+DG01822	Aftobetin
+DG01823	Buparlisib
+DG01824	Beclabuvir
+DG01825	Cobimetinib
+DG01826	Dactolisib
+DG01827	Defactinib
+DG01828	Deleobuvir
+DG01829	Esketamine
+DG01830	Methylsamidorphan
+DG01831	Palbociclib
+DG01832	Pevonedistat
+DG01833	Plazomicin
+DG01834	Tafenoquine
+DG01835	Benzodiazepine sedative-hypnotics
+DG01836	Non-benzodiazepine sedative-hypnotics
+DG01837	Barbiturate sedative-hypnotics
+DG01838	Pitavastatin
+DG01839	Esuberaprost
+DG01840	Isavuconazonium
+DG01841	Lubabegron
+DG01842	Luminespib
+DG01843	Mupafostat
+DG01844	Orilotimod
+DG01845	Rimegepant
+DG01846	Pradigastat
+DG01847	Ralimetinib
+DG01848	Sarecycline
+DG01849	Bradanicline
+DG01850	Benzhydrocodone
+DG01851	Briciclib
+DG01852	Encenicline
+DG01853	Peficitinib
+DG01854	Sonidegib
+DG01855	Alisertib
+DG01856	Etelcalcetide;Velcalcetide
+DG01857	Axelopran
+DG01858	Centanafadine
+DG01859	Ferric citrate
+DG01860	Temsavir
+DG01861	Lanopepden
+DG01862	Rabacfosadine
+DG01863	Spebrutinib
+DG01864	Rucaparib
+DG01865	Talazoparib
+DG01866	Toreforant
+DG01867	Verosudil
+DG01868	Rolapitant
+DG01869	Ecabet
+DG01870	Cetraxate
+DG01871	Irsogladine
+DG01872	Aluminum silicate
+DG01873	Para-aminosalicylate
+DG01874	14-membered ring macrolide antibiotic
+DG01875	15-Membered ring macrolide antibiotic
+DG01876	16-Membered ring macrolide antibiotic
+DG01877	Benexate
+DG01878	Idalopirdine
+DG01879	Macimorelin
+DG01880	Retaspimycin
+DG01881	Ulodesine
+DG01882	Aldose reductase inhibitor
+DG01883	Imidazole antifungal
+DG01884	Metronidazole type antiprotozoal;Imidazole antiprotozoal
+DG01885	Potassium-sparing diuretic
+DG01886	Dasabuvir
+DG01887	Drisapersen
+DG01888	Octenidine
+DG01889	Non-nucleoside reverse transcriptase inhibitor (NNRTI)
+DG01890	Nucleoside reverse transcriptase inhibitor (NRTI)
+DG01891	CYP1A1 substrate
+DG01892	CYP1A2 substrate
+DG01893	ABCB1 (P-GP) inducer
+DG01894	Evatanepag
+DG01895	Taprenepag
+DG01896	Nafamostat
+DG01898	Anti-inflammatory drug, phenylacetic acid derivatives
+DG01899	Anti-inflammatory drug, indoleacetic acid derivatives
+DG01901	Perampanel
+DG01902	Pentamidine
+DG01903	Midecamycin
+DG01904	Barbiturate antiepileptics;Barbiturate anticonvulsants
+DG01905	Phenothiazine antipsychotics
+DG01906	Anti-inflammatory drug, acetic acid derivatives
+DG01907	Anti-inflammatory drug, coxibs
+DG01908	Anti-inflammatory drug, propionic acid derivatives
+DG01909	Anti-inflammatory drug, salicylic acid derivatives
+DG01910	Anti-inflammatory drug, oxicams
+DG01911	Anti-inflammatory drug, anthranilic acid derivatives;Anti-inflammatory drug, fenamic acid derivatives
+DG01912	Gold preparations
+DG01913	ABCG2 (BCRP) substrate
+DG01914	Anxiolytics, benzodiazepine derivatives
+DG01915	CYP3A5 inhibitor
+DG01916	Amuvatinib
+DG01917	Receptor tyrosine kinase inhibitor
+DG01918	Tyrosine kinase inhibitor
+DG01919	Propylhexedrine
+DG01920	Thiosalicylic acid
+DG01921	Diethazine
+DG01922	Selective COX2 inhibitor
+DG01923	Renin inhibitor
+DG01924	Elobixibat
+DG01925	Renin-angiotensin system inhibitor
+DG01926	Copanlisib
+DG01927	Sultosilic acid
+DG01928	Dihydropyridine calcium channel blocker
+DG01929	Imidocarb
+DG01930	Dihydrofolate reductase inhibitor, antineoplastic
+DG01931	Dihydrofolate reductase inhibitor, antibacterial;Trimethoprim derivative
+DG01932	Dihydrofolate reductase inhibitor, antiprotozoal;Antifolate, antiprotozoal
+DG01933	CYP2C19 inhibitor
+DG01934	Antithyroid agent
+DG01935	Fluoropyrimidine antineoplastic
+DG01936	TNF inhibitor
+DG01937	Anti-cytomegalovirus agent
+DG01938	CYP2D6 inducer
+DG01940	Butyrophenone derivative
+DG01941	Benzamide antipsychotic
+DG01942	Iminobenzyl antipsychotic
+DG01943	5-HT1B/1D-receptor agonist, antimigraine drug;Triptan
+DG01944	Todralazine
+DG01945	Bile acid sequestrant
+DG01946	Hypolipidemic agent
+DG01947	Anti-inflammatory drug, pyrazolone
+DG01948	Gilteritinib
+DG01949	Anti-inflammatory drug, phenylbutazones
+DG01950	Antithrombotic agent;Anticoagulant
+DG01951	Catecholamine adrenergic receptor agonist
+DG01952	Vasopressin analog
+DG01953	Thyroid preparation
+DG01954	Antacid
+DG01955	Corticosteroid
+DG01956	Bile acid preparation
+DG01957	Antidiarrheal
+DG01958	Nucleic acid derivative, antineoplastic
+DG01959	Prostaglandin E2 derivative
+DG01960	Prostaglandin F derivative
+DG01961	Prostaglandin derivative
+DG01962	alpha-Glucosidase inhibitor, antiviral
+DG01963	Vasodilator, ergot alkaloid
+DG01964	Ergot alkaloid
+DG01965	Antineoplastic, vinca alkaloid
+DG01966	Antitubercular
+DG01967	Antiparkinson agent
+DG01968	Agents for Alzheimer-type dementia
+DG01969	Racetam derivative, nootropic
+DG01970	Agents for ADHD
+DG01971	Agents for narcolepsy
+DG01973	Carbamate muscle relaxant
+DG01975	Agents for peptic ulcer
+DG01976	Avatrombopag
+DG01977	Dihydroergotoxine
+DG01978	Folic acid analog
+DG01979	Magnesium containing preparation
+DG01980	Calcium
+DG01981	Anti-inflammatory drug, anilide derivatives
+DG01982	Antimigraine, ergot alkaloid
+DG01983	Glecaprevir
+DG01984	Opioid analgesics
+DG01985	Disease modifying anti-rheumatic drugs (DMARDs)
+DG01986	Estrogen
+DG01987	Eglumegad;Eglumetad
+DG01988	Ciraparantag
+DG01989	Dasotraline
+DG01990	Serine protease inhibitor
+DG01991	Filgotinib
+DG01992	Enclomiphene
+DG01993	Thyroid
+DG01994	Halogenated hydrocarbons
+DG01995	Ciramadol
+DG01996	Magnesium silicate
+DG01997	Guadecitabine
+DG01998	Gepotidacin
+DG01999	NS5A inhibitor
+DG02000	NS5B inhibitor
+DG02001	NS3/4A inhibitor
+DG02002	Nusinersen
+DG02003	Amifampridine
+DG02004	Progesterone
+DG02005	Oclacitinib
+DG02006	Testosterone
+DG02007	Antianxiety, carbamate derivatives
+DG02008	Gastric mucosal protectant
+DG02009	Pyrazinamide derivative
+DG02010	Fominoben
+DG02011	Glaucine
+DG02012	Antifibrinolytic
+DG02013	Blood coagulation factor
+DG02014	Blood coagulation accelerant
+DG02015	Vascular reinforcement
+DG02016	Hemostatics
+DG02018	Antimetabolite
+DG02020	Janus kinase inhibitor;JAK inhibitor
+DG02021	Src inhibitor
+DG02023	Aganepag
+DG02024	Simenepag
+DG02025	Barbiturate anesthetics
+DG02026	Opioid anesthetics
+DG02027	General anesthetics
+DG02028	Inhalational anaesthetics
+DG02030	Anesthetics
+DG02031	Hydantoin anticonvulsants;Hydantoin antiepileptics
+DG02032	Oxazolidine anticonvulsants;Oxazolidine antiepileptics
+DG02033	Succinimide anticonvulsants;Succinimide antiepileptics
+DG02034	Carboxamide antiepileptics;Carboxamide anticonvulsants
+DG02035	Fatty acid antiepileptics;Fatty acid anticonvulsants
+DG02036	Antiepileptics, benzodiazepine derivatives;Anticonvulsants, benzodiazepine derivative
+DG02037	GABA mimetic anticonvulsants;GABA mimetic antiepileptics
+DG02038	Piracetam antiepileptics;Piracetam anticonvulsants
+DG02039	Fiboflapon
+DG02040	Aladorian
+DG02041	Alvocidib
+DG02042	Uricosurics
+DG02043	Bavisant
+DG02044	Hypoglycemics
+DG02045	Acexamic acid
+DG02046	Hydrazinophthalazine derivative
+DG02068	Glucocorticoid
+DG02069	Atiprimod
+DG02073	Leucovorin;Folinic acid
+DG02077	Difeterol
+DG02078	Anivamersen
+DG02081	Capmatinib
+DG02084	Ribociclib
+DG02094	Delcasertib
+DG02115	Valbenazine
+DG02199	Valtorcitabine
+DG02201	Pomaglumetad methionil
+DG02225	Larazotide
+DG02303	Neratinib
+DG02399	Amiselimod
+DG02404	Bictegravir
+DG02442	Tylvalosin
+DG02443	Dexisometheptene
+DG02444	Etrasimod
+DG02467	Glycopyrronium
+DG02500	Methicillin
+DG02573	Prostanoid derivative
+DG02580	Aceneuramic acid
+DG02658	Cysteamine;Mercaptamine
+DG02691	Migalastat
+DG02692	Netarsudil
+DG02693	Inotersen
+DG02694	Mongersen
+DG02805	Patiromer
+DG02809	Telotristat
+DG02827	Ozanimod
+DG02828	Segesterone
+DG02829	Upadacitinib
+DG02830	Volixibat
+DG02831	Omidenepag
+DG02832	Maralixibat
+DG02833	Itacitinib
+DG02834	Lanabecestat
+DG02835	Atosiban
+DG02836	Ertugliflozin
+DG02837	Enasidenib
+DG02838	Mirtazapine
+DG02839	Osilodrostat
+DG02840	Herpesvirus DNA polymerase inhibitor
+DG02841	Viral uncoating inhibitor
+DG02842	Neuraminidase inhibitor
+DG02843	Netupitant
+DG02844	Ravuconazole
+DG02845	Olanexidine
+DG02846	Clemizole
+DG02847	Hexestrol
+DG02848	Sulfamethoxazole
+DG02851	Ipatasertib
+DG02852	CYP3A inhibitor
+DG02853	CYP3A inducer
+DG02862	ABCG2 (BCRP) inhibitor
+DG02863	SLC22A2 (OCT2) inhibitor
+DG02864	SLC47A1 (MATE1) inhibitor
+DG02865	SLCO1B1 (OATP1B1) inhibitor
+DG02866	SLC22A8 (OAT3) inhibitor
+DG02867	ABCC2 (MRP2) inhibitor
+DG02868	Zinostatin
+DG02869	Indeloxazine
+DG02870	Lidamidine
+DG02871	Cyclamic acid
+DG02872	Methylparaben
+DG02873	Propylparaben
+DG02874	Cloprostenol
+DG02875	Butamben
+DG02876	Capobenate
+DG02877	Colforsin
+DG02878	Febuxostat
+DG02879	Dezaguanine
+DG02880	Diphenidol
+DG02881	SLC22A3 (OCT3) inhibitor
+DG02882	ABCB11 inhibitor
+DG02883	SLC22A7 (OAT2) inhibitor
+DG02884	CYP2E1 inhibitor
+DG02885	CYP2C19 inducer
+DG02886	CYP2C9 inducer
+DG02887	UGT inhibitor
+DG02888	Fluprednisolone
+DG02889	Gluceptate
+DG02890	Halofuginone
+DG02891	CYP2B6 inducer
+DG02892	CYP2B6 inhibitor
+DG02893	Linogliride
+DG02894	Mefenidil
+DG02895	Palmoxirate
+DG02896	Motexafin
+DG02897	Oxychlorosene
+DG02898	Pipoxolan
+DG02899	Piriprost
+DG02900	Piroctone
+DG02901	SLC22A6 (OAT1) inhibitor
+DG02902	Robenidine
+DG02903	Talabostat
+DG02904	Tetramisole
+DG02905	Tiacrilast
+DG02906	Trecetilide
+DG02907	SLCO1B3 (OATP1B3) inhibitor
+DG02908	SLC22A1 (OCT1) inhibitor
+DG02909	COMT inhibitor
+DG02910	ABCG2 (BCRP) inducer
+DG02911	SLCO1B1 (OATP1B1) inducer
+DG02912	Glasdegib
+DG02914	Difelikefalin
+DG02915	Ingenol
+DG02916	Olmutinib
+DG02921	Avadomide
+DG02922	Iberdomide
+DG02923	Larotrectinib
+DG02926	Deudextromethorphan
+DG02927	Leniolisib
+DG02929	Pemirolast
+DG02930	Butetamate
+DG02931	Brovincamine
+DG02934	Cocarboxylase
+DG02935	Delmadinone
+DG02936	Dichlorisone
+DG02937	Lumateperone
+DG02938	Immune checkpoint inhibitor
+DG02939	Diisopropylamine
+DG02940	Dimecrotic acid
+DG02941	Flavin adenine dinucleotide
+DG02942	Poly (ADP-ribose) polymerase inhibitor;PARP inhibitor
+DG02943	CDK4/6 inhibitor
+DG02944	Vixotrigine
+DG02945	Ralaniten
+DG02946	Rezafungin
+DG02947	Mirogabalin
+DG02948	Relenopride
+DG02949	Tavilermide
+DG02951	FMO inhibitor
+DG02952	AOX inhibitor
+DG02955	Patisiran
+DG02956	Fexapotide
+DG02957	Seladelpar
+DG02958	Roluperidone
+DG02959	Diclofenac etalhyaluronate
+DG02960	Pexidartinib
+DG02961	Rosiptor
+DG02962	Baloxavir
+DG02963	Bivalirudin
+DG02966	Rivoceranib
+DG02967	Asalhydromorphone
+DG02968	Fedratinib
+DG02969	Contezolid
+DG02976	Cefiderocol
+DG02985	Nevanimibe
+DG02986	Rodatristat
+DG02987	Vatinoxan
+DG02988	Umbralisib
+DG02989	Sorliamfetol
+DG02990	Uproleselan
+DG02991	Afamelanotide
+DG02993	Molibresib
+DG02994	Reltecimod
+DG02995	Nemiralisib
+DG02996	Ensartinib
+DG02997	Abivertinib
+DG02998	Pimodivir
+DG02999	Fosnetupitant
+DG03000	Edicotinib
+DG03003	Levofolinate;Levoleucovorin
+DG03004	Asciminib
+DG03005	Serotonin-dopamine antagonist (SDA)
+DG03006	Guanylate cyclase activator
+DG03008	SLCO1A2 (OATP1A2) inhibitor
+DG03009	Lifirafenib
+DG03010	Linrodostat
+DG03011	Troriluzole
+DG03012	Tebipenem pivoxil
+DG03013	Oxycodegol
+DG03014	Hydromethylthionine
+DG03015	Nazartinib
+DG03016	Nirogacestat
+DG03017	Onvansertib
+DG03018	Siponimod
+DG03019	Tomivosertib
+DG03020	Tazemetostat
+DG03021	Pitolisant
+DG03022	Arimoclomol
+DG03023	Vecabrutinib
+DG03024	Tilsotolimod
+DG03025	Parsaclisib
+DG03026	Miransertib
+DG03027	Estetrol
+DG03028	Flavodic acid
+DG03029	Anti-influenza virus agent
+DG03030	Combination of carbonic anhydrase inhibitor and beta blocking agent
+DG03031	Combination of carbonic anhydrase inhibitor and prostaglandin derivative
+DG03043	Bamocaftor
+DG03044	Brepocitinib
+DG03045	Sitravatinib
+DG03046	Elamipretide
+DG03047	Ibrexafungerp
+DG03048	Blarcamesine
+DG03049	Tecovirimat
+DG03050	Abaloparatide
+DG03051	Grazoprevir
+DG03052	Lorcaserin
+DG03053	Cefdinir
+DG03054	Difenoxin
+DG03055	Vasodilator, vinca alkaloid
+DG03056	Serotonin antagonist and reuptake inhibitor (SARI)
+DG03057	Durlobactam
+DG03058	Zotiraciclib
+DG03059	Noradrenalin and dopamine reuptake inhibitor (NDRI)
+DG03060	Leriglitazone
+DG03061	Linzagolix
+DG03062	Infigratinib
+DG03063	Bremelanotide
+DG03064	Atypical antipsychotic
+DG03065	GST substrate
+DG03066	Lefamulin
+DG03067	Venglustat
+DG03068	Tasipimidine
+DG03069	Lanraplenib
+DG03070	Volanesorsen
+DG03071	Trientine
+DG03072	Tenapanor
+DG03073	Duvelisib
+DG03074	Tolvaptan
+DG03075	Valemetostat
+DG03076	Clazosentan
+DG03077	Noradrenergic and specific serotonergic antidepressant (NaSSA)
+DG03078	Elacestrant
+DG03079	Berotralstat
+DG03080	Gusacitinib
+DG03081	Ampreloxetine
+DG03082	Tirbanibulin
+DG03083	Gefapixant
+DG03084	Givosiran
+DG03085	Norepinephrine reuptake inhibitor (NRI)
+DG03086	Vocacapsaicin
+DG03087	Tepotinib
+DG03088	Taniborbactam
+DG03089	Acalabrutinib
+DG03090	Rovafovir
+DG03091	Levamlodipine
+DG03092	Nerinetide
+DG03093	Dubermatinib
+DG03094	Telaglenastat
+DG03095	Lazucernon
+DG03096	Fostemsavir
+DG03097	Filanesib
+DG03098	Necuparanib
+DG03099	Onalespib
+DG03100	Asenapine
+DG03101	Tesevatinib
+DG03102	Fosdenopterin
+DG03103	Encequidar
+DG03104	Vonoprazan
+DG03105	Remimazolam
+DG03106	Mivavotinib
+DG03107	Anti-HIV agent
