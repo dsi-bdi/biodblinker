@@ -44,12 +44,12 @@ def load_data_map(filepath):
     if isfile(filepath):
         with file_open(filepath) as data_fd:
             for line in data_fd:
-                key_val = line.strip().split("\t")
-                if len(key_val) == 2:
-                    key, val = key_val
+                key, val = line.strip().split("\t")
+                if val == '-':
+                    data_dict[key] = []
                 else:
-                    key, val = key_val[0], ""
-                data_dict[key] = val
+                    vals = val.split(';')
+                    data_dict[key] = vals
 
     else:
         raise FileNotFoundError(f"The file ({filepath}) does not exist.")

@@ -1,0 +1,864 @@
+E00001	Coptis rhizome (JP17)
+E00002	Evodia fruit (JP17)
+E00003	Saffron (JP17)
+E00004	Agar (JP17/NF)
+E00005	Tragacanth (JP17/NF)
+E00006	Gypsum (JP17)
+E00007	Acacia (JP17/NF)
+E00008	Belladonna (USP);Belladonna extract (JP17)
+E00009	Benzoin (JP17/USP);Benzoin tincture
+E00010	Belladonna root (JP17)
+E00011	Cherry bark extract
+E00012	Senna (USP);Senna extract (JAN)
+E00013	Cascara sagrada (USP);Cascara sagrada fluidextract
+E00014	Capsicum (JP17/USP);Cayenne papper
+E00015	Cardamom seed (NF);Cardamon (JP17)
+E00016	Melilot extract (JAN)
+E00017	Opium (USP)
+E00018	Clove (JP17)
+E00020	Quercus salicina extract (JAN)
+E00021	Ipecac (JP17/USP)
+E00022	Scopolia extract (JP17)
+E00023	Fennel oil, bitter;Fennel oil (JP17/NF)
+E00024	Senega (JP17)
+E00025	Apricot kernel water (JP17)
+E00026	Geranium herb (JP17)
+E00027	Licorice (NF);Liquorice;Glycyrrhizae radix;Glycyrrhiza (JP17)
+E00028	Nux vomica (JP17)
+E00029	Condurango extract;Condurango fluidextract (JP17)
+E00030	Swertia herb (JP17)
+E00031	Bitter orange peel (JP17);Orange peel, bitter
+E00032	Cinnamon fruit
+E00033	Mallotus bark (JP17)
+E00034	Forsythia fruit (JP17)
+E00035	Macrotomiae radix;Lithospermum root (JP17)
+E00036	Cantharides tincture (JAN)
+E00037	Yellow beewax (JP17);Wax, Yellow (NF)
+E00038	White beeswax (JP17);Wax, white (NF)
+E00039	Orange oil (JP17/NF)
+E00040	Rice starch (JP17);Starch, rice (NF)
+E00041	Malt extract (JAN)
+E00042	Lard (JP17)
+E00043	Poison oak extract (USAN)
+E00044	Eucalyptus oil (JP17)
+E00045	Mentha herb (JP17);Peppermint (NF)
+E00046	Ispaghula;Plantago seed (JP17/USP)
+E00047	Capsicum extract;Capsicum tincture (JP17)
+E00048	Mentha oil (JP17)
+E00049	Castor oil (JP17/USP)
+E00050	Nux vomica tincture (JP17)
+E00051	Orange peel tincture, sweet (NF);Orange peel tincture (JP17)
+E00052	Cinnamomum obtusifolium bark
+E00053	Gambir (JP17)
+E00054	Sweet hydrangea leaf (JP17)
+E00055	Aloe (JP17)
+E00056	Artemisia capillaris flower (JP17);Artemisiae capillaris flos
+E00057	Fennel (JP17)
+E00058	Bearberry leaf (JP17)
+E00059	Rose fruit (JP17)
+E00060	Corydalis tuber (JP17)
+E00061	Astragalus root (JP17)
+E00062	Scutellaria root (JP17)
+E00063	Phellodendron bark (JP17)
+E00064	Polygala root (JP17)
+E00065	Prunella spike (JP17)
+E00066	Zedoary (JP17)
+E00067	Pueraria root (JP17)
+E00068	Clematis root (JP17)
+E00069	Termeric (JP17);Turmeric rhizome
+E00070	Lindera root (JP17)
+E00071	Polygonum root (JP17)
+E00072	Japanese valerian (JP17)
+E00073	Trichosanthes root (JP17);Trichosanthes root (China, South Korea)
+E00074	Processed ginger (JP17)
+E00075	Platycodon root (JP17)
+E00076	Chrysanthemum flower (JP17)
+E00077	Catalpa fruit (JP17)
+E00078	Immature orange (JP17)
+E00079	Notopterygium rhizome (JP17)
+E00080	Apricot kernel (JP17)
+E00081	Lycium fruit (JP17)
+E00082	Sophora root (JP17)
+E00083	Schizonepeta spike (JP17)
+E00084	Cinnamon bark (JP17)
+E00085	Cinnamon oil (JP17);Cinnamon bark oil
+E00086	Cassia seed (JP17)
+E00087	Pharbitis seed (JP17)
+E00088	Gentian (JP17)
+E00089	Safflower (JP17)
+E00090	Red ginseng (JP17);Red ginseng (Japan)
+E00091	Cyperus rhizome (JP17)
+E00092	Magnolia bark (JP17)
+E00093	Oriental bezoar (JP17)
+E00094	Achyranthes bidentata root
+E00095	Burdock fruit (JP17)
+E00096	Schisandra fruit (JP17)
+E00097	Calumba (JP17)
+E00098	Condurango (JP17)
+E00099	Bupleurum root
+E00100	Asiasarum root (JP17)
+E00101	Smilax rhizome (JP17)
+E00102	Gardenia fruit (JP17)
+E00103	Cornus fruit (JP17);Corni fructus pulveratus
+E00104	Zanthoxylum fruit (JP17)
+E00105	Jujube seed (JP17)
+E00106	Dioscorea rhizome (JP17)
+E00107	Rehmannia root (JP17);Rehmanniae radix pulverata;Rehmanniae radix
+E00108	Lycium bark (JP17)
+E00109	Tribulus fruit (JP17)
+E00110	Peony root (JP17)
+E00111	Cnidium monnieri fruit (JP17)
+E00112	Plantago herb (JP17)
+E00113	Houttuynia herb (JP17)
+E00114	Amomum seed (JP17)
+E00115	Ginger (JP17)
+E00116	Cimicifuga rhizome (JP17)
+E00117	Magnolia flower (JP17);Magnolia flower bud (China)
+E00118	Cinnamomum burmannii bark
+E00119	Cnidium rhizome (JP17);Cnidium officinale rhizome
+E00120	Nuphar rhizome (JP17)
+E00121	Toad venom (JP17)
+E00122	Senna leaf (JP17)
+E00123	Atractylodes lancea rhizome (JP17)
+E00124	Mulberry bark (JP17)
+E00125	Sappan wood (JP17)
+E00126	Perilla herb (JP17)
+E00127	Rheum palmatum, Rheum tanguticum rhizome
+E00128	Jujube (JP17)
+E00129	Alisma rhizome (JP17)
+E00130	Panax rhizome (JP17)
+E00131	Anemarrhena rhizome (JP17)
+E00132	Uncaria hook (JP17)
+E00133	Polyporus sclerotium
+E00134	Citrus unshiu peel (JP17)
+E00135	Gastrodia tuber (JP17)
+E00136	Asparagus tuber (JP17)
+E00137	Benincasa seed (JP17)
+E00138	Japanese angelica root (JP17)
+E00139	Peach kernel (JP17)
+E00140	Eucommia bark (JP17)
+E00141	Picrasma wood (JP17)
+E00142	Panax ginseng root
+E00143	Lonicera leaf and stem (JP17)
+E00144	Fritillaria bulb (JP17)
+E00145	Ophiopogon tuber (JP17)
+E00146	Honey, purified (NF);Honey (JP17)
+E00147	Glehnia root (JP17)
+E00148	Pinellia tuber (JP17)
+E00149	Angelica dahurica root (JP17)
+E00150	Atractylodes rhizome (JP17)
+E00151	Loquat leaf (JP17)
+E00152	Areca (JP17)
+E00153	Poria sclerotium (JP17)
+E00154	Processed aconitum carmicha daughter root
+E00155	Sinomenium stem (JP17)
+E00156	Imperata rhizome (JP17)
+E00157	Saposhnikovia root (JP17)
+E00158	Moutan bark (JP17)
+E00159	Oyster shell (JP17)
+E00160	Ephedra herb (JP17)
+E00161	Digenea (JP17)
+E00162	Hemp fruit (JP17)
+E00163	Akebia stem (JP17)
+E00164	Saussurea root (JP17)
+E00165	Bitter cardamon (JP17)
+E00166	Bear bile (JP17)
+E00167	Coix seed (JP17);Coix extract
+E00168	Longgu (JP17)
+E00169	Japanese gentian (JP17)
+E00170	Alpinia offcinarum rhizome (JP17)
+E00171	Nelumbo seed (JP17)
+E00172	Colofonium;Rosin (JP17)
+E00173	Scopolia rhizome (JP17)
+E00174	Epimedium herb (JP17)
+E00175	Uva ursi fluidextract (JP17)
+E00176	Polygonatum rhizome (JP17)
+E00177	Glycyrrhiza extract (JP17);Crude glycyrrhiza extract (JP17)
+E00178	Platycodon fluidextract (JP17)
+E00179	Dolichos seed (JP17)
+E00180	Eleuthero;Eleutherococcus senticosus rhizome (JP17);Siberian ginseng
+E00181	Exsiccated gypsum (JP17)
+E00182	Clove oil (JP17/NF)
+E00183	Cinnamomum sieboldii bark
+E00184	Nux vomica extract (JP17)
+E00185	Pyrethrum extract (USP);Chrysanthemum cinerariaefolium extract
+E00186	Dokkatsu;Aralia rhizome (JP17)
+E00187	Lily bulb;Byakugo;Lilium bulb (JP17)
+E00188	Pogostemon herb (JP17)
+E00189	Ass hide glue;Akyo;Donkey glue (non-JP);Asini corii collas
+E00190	Cherry bark (JP17);Ohi;Pruni jamasakura cortex
+E00191	Artemisia leaf (JP17);Gaiyo;Artemisiae folium
+E00192	Kasseki;Hydrated halloysite;Aluminum silicate hydrate with silicon dioxide (JP17);Talcum crystallinum
+E00193	Trichosanthis semen;Trichosanthes seed (non-JP);Karonin
+E00194	Kippi;Citrus peel (non-JP)
+E00195	Crataegus fruit (JP17);Crataegi fructus;Sanzashi
+E00196	Peucedani radix;Peucedanum root (JP17);Zenko
+E00197	Cicada larva exuvia;Cicadae periostracum;Cicada slough (non-JP);Zentai
+E00198	Bamboo culm (non-JP);Tikujyo;Bambusae caulis
+E00199	Arisaematis tuber;Tennansho;Arisaema tuber (non-JP)
+E00200	Quercus cortex;Quercus bark (JP17);Quercus acutissima bark;Oak bark;Bokusoku
+E00201	Leonuri herba;Yakumoso;Leonurus herb (JP17)
+E00202	Ryuganniku;Longan aril (JP17);Longan arillus
+E00203	Kaki calyx;Persimmon calyx (non-JP);Persimmon calyx
+E00204	Scrophularia root (non-JP);Scroplulariae radix;Ningpo figwort root
+E00205	Aster root (non-JP);Aster root and rhizome;Asteris radix
+E00206	Myrobalan fruit (non-JP);Myrobalan;Chebulae fructus
+E00207	Lonicera flower (non-JP);Lonicera flower bud;Lonicerae flos
+E00208	Adenophora root (non-JP);Adenophrae radix
+E00209	Lumbricus;Earthworm (non-JP)
+E00210	Acorus gramineus rhizome (non-JP);Acori graminei rhizoma
+E00211	Areca pericarp (non-JP);Areca fruit peel;Arecae pericarpium
+E00212	Myricae cortex pulveratus;Myrica bark;Myricae cortex;Myrica rubra bark (non-JP)
+E00213	Viticis fructus;Shrub chaste tree fruit (non-JP);Vitex fruit
+E00214	Chaenomeles sinensis fruit
+E00215	Isodon herb (non-JP);Plectranthi herba;Rabdosia herb
+E00216	Aralia elata root bark (non-JP);Araliae cortex
+E00217	Nandina fruit (non-JP);Nandinae fructus
+E00218	Prunus mume (non-JP);Mume fructus
+E00219	Nutmeg (JP17);Myristicae semen
+E00220	Trapae fructus;Water chestnut (non-JP)
+E00221	Sophorae flos;Sophora japonica flower bud;Sophora japoinca flower (non-JP)
+E00222	Sophora subprostrata root (non-JP);Sophorae subprostratae radix
+E00223	Ligusticum sinese rhizome (non-JP);Ligusticum root and rhizome;Ligustici rhizoma
+E00224	Perilla frutescens fruit;Perillae fructus;Perilla fruit (non-JP)
+E00225	Amyda carapace;Soft shell turtle carapace (non-JP);Amydae testudo
+E00226	Osmorhiza rhizome (non-JP);Osmorhizae rhizoma
+E00227	Sennae fructus;Senna fruit;Senna pods (non-JP)
+E00228	Angelica pubescens root (non-JP);Angelicae pubescentis radix
+E00229	Belladonna leaf (USP)
+E00230	Digitalis (USP)
+E00231	Podophyllum (USP);Podophylum rhizome
+E00232	Rauwolfia extract;Rauwolfia serpentina (USP)
+E00233	Opium tincture (JP17)
+E00234	Tolu balsam (USP);Tolu balsam oil
+E00235	Sweet almond oil;Almond oil (NF)
+E00236	Anise oil (NF);Star anise oil (China)
+E00237	Caraway oil (NF)
+E00238	Cardamom oil (NF)
+E00239	Tolu balsam tincture (NF)
+E00240	Lemon oil (NF);Lemon tincture (NF)
+E00241	Peppermint oil (NF)
+E00242	Rose otto;Bulgarian rose oil;Rose oil (NF)
+E00243	Catharsius molossus;Catharsius;Xylotropes dichotomus
+E00244	Sweet basil oil;Basil oil
+E00245	Bay oil
+E00246	Black pepper oil
+E00247	Rosewood oil;Bois de rose oil
+E00248	Plantago herb extract
+E00249	Cinamomi ramulus;Cinnamon twig (non-JP);Cinnamon branch;Keishi
+E00250	Malt extract;Koi (JP17);Saccharum granorum
+E00251	Brown rice (JP17);Kobei
+E00252	Goma;Sesame (JP17);Sesami semen
+E00253	Shobaku;Wheat seed;Tritici semen
+E00254	Chayo;Theae folium;Saicha
+E00255	Germinated barley;Bakuga;Hordei fructus germinatus;Malt (JP17)
+E00256	Aconitum carmichaeli mother root
+E00257	Cinchona bark
+E00258	Passiflora extact
+E00259	Camptotheca acuminata
+E00260	Stephaura cepharantha Hayata extraction alkaloid
+E00261	Rosskastanien extract
+E00262	Nardostachys root;Nardostachytis rhizoma
+E00263	Tortoise plastron;Fresh-water turtle plastron;Turtle shell
+E00264	Dianthus above ground part
+E00265	Melia bark
+E00266	Citron
+E00267	Gecko
+E00268	Polygonum cuspidatum root
+E00269	Coriandrum sativum fruit
+E00270	Walnut
+E00271	Gallnut;Sumac gallnut
+E00272	Trogopterus feces;Flying squirrel feces
+E00273	Fenugreek seed
+E00274	Cynomorium herb
+E00275	Sparganium tuber
+E00276	Quisqualis fruit;Rangoon creeper fruit
+E00277	Magnetite
+E00278	Musk
+E00279	Medicated leaven
+E00280	Gentiana macrophylla root (non-JP);Gentianae macrophyllae radix;Large gentian root
+E00281	Agarwood (non-JP);Aquilariae resinatum lignum
+E00282	Prepared soybean
+E00283	Pyrrosia leaf
+E00284	Dendrobium
+E00285	Elder
+E00286	Rubia root;Madder root
+E00287	Inula flower
+E00288	Mantidae mantis egg-case
+E00289	Star anise
+E00290	Salvia root
+E00291	Sanguisorbae radix;Burnet root;Sanguisorba root
+E00292	Dayflower
+E00293	Descurainia seed;Lepidium seed
+E00294	Agglomerative substance of Bamboo
+E00295	Zanthoxylum schinifolium fruit;Sichuan-pepper
+E00296	Male seal sex organ
+E00297	Hippocampus;Seahorse
+E00298	Codonopsis root
+E00299	Rush;Common rush (non-JP)
+E00300	Cordyceps sinensis;Vegetative wasp;Plant worm
+E00301	Dodder seed;Cuscuta seed
+E00302	Oriental arborvitae kernel
+E00303	Dictamnus root bark
+E00304	Morinda root
+E00305	Chinese lobelia
+E00306	Dioscorea hypoglauca, Dioscorea tokoro rhizome
+E00307	Indian long pepper fruit
+E00308	Bombyx batryticatus;Stiff silkworm (non-JP)
+E00309	Sandalwood
+E00310	Ampelopsis root
+E00311	Boneset
+E00312	Typha pollen
+E00313	Myrrh;Somali myrrh
+E00314	Blackberry lily root
+E00315	Clove fruit
+E00316	Curculigo rhizome
+E00317	Meliae fructus;Melia fruit (non-JP)
+E00318	Valerian rhizome
+E00319	Deer velvet
+E00320	Chinese angelica root
+E00321	Chinese cnidium rhizome
+E00322	German chamomile flower (non-JP);Chamomillae flos;Chamomile (NF XXI)
+E00323	Lycium leaf (non-JP);Lycii folium
+E00324	Dipsacus asperoides root
+E00325	Brassica juncea seed
+E00326	Otogiriso;Hypericum herb
+E00327	Hematite
+E00328	Inula root
+E00329	Corn silk
+E00330	Psoralea seed
+E00331	Glechoma hederacea herb
+E00332	Cervus male sex organ
+E00333	Sargassum herb
+E00334	Cowberry leaf
+E00335	Black pepper
+E00336	Rhinoceros unicornis, Rhinoceros sondaicus horn
+E00337	Ligustrum lucidum fruit
+E00338	Immature citrus unshiu peel (non-JP);Citri unshiu pericarpium immaturus;Citrus immature fruit and fruit peel
+E00339	Viscum stem
+E00340	Xanthium fruit
+E00341	Sprouted soybeans
+E00342	Cistanche stem
+E00343	Boswellia gum substance
+E00344	Amomi rotundi fructus;Amomum fruit
+E00345	Tussilago farfara flower bud
+E00346	Taraxacum root
+E00347	Allium leaf sheath
+E00348	Hibiscus syriacus bark
+E00349	Actinidia polygama gall
+E00350	Saxifraga stolonifera herb
+E00351	Tremolite
+E00352	Polygonati odorati rhizoma
+E00353	Kaempferia galanga rhizome
+E00354	Trachycarpus fortunei leaf
+E00355	Artemisia annua stem and leaf
+E00356	Haliotis shell
+E00357	Agrimonia herb
+E00358	Albizzia bark
+E00359	Aconitum japonicum tuberous root
+E00360	Aristolochia root
+E00361	Speranskia herb
+E00362	Isatis root
+E00363	Indigo
+E00364	Kochia scoparia fruit
+E00365	Liquidambar formosana fruit
+E00366	Morus leaf
+E00367	Nelumbo leaf
+E00368	Croton seed
+E00369	Cynanchum root
+E00370	Daphne flower bud
+E00371	Dioscorea bulbifera tuber
+E00372	Panax notoginseng root (non-JP);Panacis notoginseng radix
+E00373	Patrinia villosa root
+E00374	Periploca sepium root bark
+E00375	Picrorhiza rhizome
+E00376	Platycladus orientalis branch
+E00377	Manis pentadactyla cuirass
+E00378	Pulsatillae radix;Pulsatilla root
+E00379	Punica granatum fruit peel
+E00380	Raphanus sativus seed
+E00381	Rhus verniciflua tree sap
+E00382	Rosa laevigata fruit
+E00383	Daemonorops draco resin
+E00384	Eclipta prostrata herb
+E00385	Elsholtzia herb
+E00386	Equisetum herb
+E00387	Erythrina indica bark
+E00388	Euphorbia kansui radix;Euphorbia kansui root
+E00389	Ganoderma lucidum fruit body
+E00390	Scutellaria barbata herb
+E00391	Vaccaria pyramidata seed
+E00392	Phytolacca esculenta root
+E00393	Euphorbia helioscopia stem and leaf
+E00394	Morus alba shoot
+E00395	Tetrapanax papyriferus stem
+E00396	Veratrum root
+E00397	Curare
+E00398	Coca leaf
+E00399	Colchicum seed;Colchicum bulb
+E00400	Wormseed;Santonica
+E00401	Camphor tree
+E00402	Jaborandi leaf
+E00403	Yew
+E00404	Madagascar periwinkle
+E00405	Plau-noi
+E00406	Panax quinquefolius root;American ginseng
+E00407	Rhizoma anemone;Anemone altaica rhizome
+E00408	Knoxia valerianoides root
+E00409	Pleione pseudobulb
+E00410	Homalomena rhizome;Homalonemae rhizoma
+E00411	Semiaquilegia adoxoides root;Semiaquilegiae radix
+E00412	Pseudostellariae radix;Pseudostellaria heterophylla tuberous root
+E00413	Bletilla striata corm;Bletillae tuber
+E00414	Cynanchi stauntoni rhizoma et radix;Cynanchum root and rhizome
+E00415	Stemonae radix;Stemona root
+E00416	Cibotium barometz rhizome
+E00417	Pharagmitis rhizoma;Phragmites communis rhizome and stem
+E00418	Tinospora tuberous root;Tinosporae radix
+E00419	Boehmeriae radix;Boehmeria nivea root
+E00420	Anemones raddeanae rhizoma;Anemone raddeana root
+E00421	Processed changium smyrnioides root
+E00422	Stellaria dichotoma root
+E00423	Alocasia odora rhizome
+E00424	Drynariae rhizoma;Drynaria rhizome
+E00425	Dryopteris, Athyrium rhizome
+E00426	Dichroae radix;Dichroa febrifuga root
+E00427	Allii chinensis bulbus;Allium chinense bulb (non-JP)
+E00428	Echinops latifolius root
+E00429	Physalis alkekengi root and rhizoma;Physalitis rhizoma et radix
+E00430	Cirsium root, rhizome or herb
+E00431	Hydnocarpus anthelmintica seed;Hydnocarpi semen
+E00432	Aristolochia fruit;Aristolochiae fructus
+E00433	Gleditsia sinensis seed
+E00434	Anethum graveolens fruit;Anethi fructus
+E00435	Momordica cochinchinensis seed;Momordicae semen
+E00436	Astragalus complanatus seed;Astragali semen
+E00437	Alpiniae galangae fructus;Alpinia galanga fruit
+E00438	Amomi tsaoko fructus;Amomum tsaoko fruit
+E00439	Alpinia katsumadai seed (non-JP);Alpiniae katsumadaii semen
+E00440	Litchi semen;Litchi chinensis seed
+E00441	Citrus medica fruit peel
+E00442	Prunus humilis, Prunus japonica seed
+E00443	Euphorbia lathyris seed;Euphorbiae lathyridis semen
+E00444	Allii tuberosi semen;Allium tuberosum seed
+E00445	Celosia argentea seed;Celosiae semen
+E00446	Lini semen;Flaxseed;Linum usitatissimum seed
+E00447	Hoveniae semen seu fructus;Hovenia dulcis fruit or seed
+E00448	Sterculia seed;Sterculiae semen
+E00449	Cubrbae fructus;Piper cubeba fruit
+E00450	Phaseoli semen;Vigna angularis seed
+E00451	Euryales semen;Euryale ferox seed
+E00452	Ricini semen;Ricinus communis seed
+E00453	Firmiana platanifolia seed;Firmianae semen
+E00454	Broussonetiae fructus;Broussonetia papyrifera fruit
+E00455	Daucus carota fruit
+E00456	Morus alba syncarp;Mori fructus
+E00457	Torreyae semen;Torreya grandis seed
+E00458	Akebia fruit;Akebiae fructus
+E00459	Abutili semen;Abutilon seed
+E00460	Prinsepia uniflora putamen;Prinsepiae semen
+E00461	Oroxylum indicum seed;Oroxyli semen
+E00462	Iris pallasii seed;Iridis semen
+E00463	Momordicae fructus;Momordica grosvenori fruit
+E00464	Viola harb
+E00465	Verbena officinalis herb;Verbenae herba
+E00466	Stellariae herba;Stellaria media herb
+E00467	Portulaca oleracea herb;Portulacae herba
+E00468	Conandri herba;Conandron ramondioides herb
+E00469	Ottelia alismoides herb;Otteliae herba
+E00470	Tetragoniae herba
+E00471	Desmodii herba;Desmodium styracifolium herb
+E00472	Licopi herba;Lycopus lucidus herb
+E00473	Potentilla discolor herb
+E00474	Selaginellae herba;Selaginella tamariscina herb
+E00475	Spiroelae herba;Spirodela polyrrhiza herb;Pistiae herba
+E00476	Pyrolae herba;Pyrola herb (China)
+E00477	Lysimachia foenum-graecum herb;Lysimachiae herba
+E00478	Polygonum herb
+E00479	Abrus cantoniensis herb;Abri herba
+E00480	Lepisorus herb;Lepisori herba
+E00481	Ajugae herba
+E00482	Photinia serrulata leaf
+E00483	Vitis-idaea;Vaccinium vitis-idaea leaf
+E00484	Lophatherum gracile herb
+E00485	Querci folium;Quercus salicina leaf (non-JP)
+E00486	Celosiae flos;Celosia flower cluster
+E00487	Puerariae flos;Pueraria flower
+E00488	Prunus mume flower bud;Mume flos
+E00489	Chimonanthus praecox flower bud;Chimonanthi flos
+E00490	Eriocaulon herb
+E00491	Buddleja officinalis flower bud or inflorescence;Buddleiae flos
+E00492	Rosae rugosae flos;Rosa rugosa flower bud
+E00493	Campsitis flos;Campsis grandiflora flower
+E00494	Nelumbo nucifera stamen;Nelumbinis stamen
+E00495	Granati cortex;Punica granatum bark or root bark;Gratati radix cortex
+E00496	Pseudolari cortex;Pseudolarix kaempferi bark
+E00497	Piper wallichii stem with leaf;Piperis wallichii caulis
+E00498	Spatholobus suberectus, Mucuna birdwoodiana stem
+E00499	Gleditsia sinensis spine;Gleditsiae spina
+E00500	Aralia elata bark, tree, and root bark;Araliae cortex, lignum et radicis cortex
+E00501	Ficus pumila leaf and stem;Ficis pumilae caulis
+E00502	Asa foetida;Ferula assa-foetida resin
+E00503	Styrax liquidus;Liquidambar orientalis balsam;Styrax
+E00504	Indicae mastiche;Pistacia khinjuk gum resin;Resina pistacia
+E00505	Ulmi pasta;Grinded paste of Ulmus macrocarpia key fruit with flower and leaf
+E00506	Galla halepensis;Quercus infectoria galls
+E00507	Cicada flammata larva
+E00508	Polyporus mylittae sclerotium;Omphalia
+E00509	Ganoderma applanatum fruit body;Elfvingia
+E00510	Leech;Hirudo
+E00511	Leporidae feces;Faeces leporum
+E00512	Scorpion
+E00513	Bat faeces;Vespertilionum faeces
+E00514	Antelopis cornu;Saiga tatarica horn
+E00515	Viperidae Agkistrodon halys organ;Agkistrodon japonicae
+E00516	Agkistrodon acutus
+E00517	Colubridae slough (China)
+E00518	Solegnathus hardwickii
+E00519	Ambra grisea;Ambergris
+E00520	Eretmochelys imbricata carapace;Eretmochelyos carapax
+E00521	Sepiae os;Cuttlefish oracle bones;Sepia esculenta Hoyle
+E00522	Cypraeae concha;Cypraeidae shell
+E00523	Margarita;Pearl
+E00524	Hominis placenta;Human placenta
+E00525	Galli stomachichum corium;Chicken stomach lining
+E00526	Tiger skeleton;Tigridis os
+E00527	Eupolyphaga;Blattidae
+E00528	Centipede;Scolopendra
+E00529	Silkworm feces;Bombycis faeces
+E00530	Huechys
+E00531	Tabanus;Hematophagous tabanid
+E00532	Tiger beetle;Mylabris
+E00533	Chrysomya megacephala larva;Chrysomyae vermiculus
+E00534	Holotrichiae vermiculus;Holotrichia larva
+E00535	Vispae nidus;Polistes, Vespa and Vespula nest
+E00536	Protohermis vermiculus;Protohermes grandis larva
+E00537	Aspongopus;Stink bug
+E00538	Xylocopa;Xylocopidae
+E00539	Hydrozincitum;Zinc ore
+E00540	Fluorite;Amethyst
+E00541	Mica mineral clay;Halloysitum rubrum
+E00542	Limonitum;Limonit
+E00543	Orpiment;Orpimentum
+E00544	Realgar
+E00545	Calcitum;Glauberite;Calcite;Glauberitum
+E00546	Pumice stone
+E00547	Porites nigrescens skeleton
+E00548	Chlorite schist;Lapis chloriti
+E00549	Loess;Terra flava usta
+E00550	Dryobalanops aromatica resin
+E00551	Coriandrum sativum herb
+E00552	Jasmine oil
+E00553	Neroli oil;Orange flower oil
+E00554	Lavender oil
+E00555	Lavandin oil
+E00556	Geranium oil
+E00557	Citronella oil (Java)
+E00558	Lime oil
+E00559	Bergamot oil
+E00560	Grapefruit oil
+E00561	Amyris oil
+E00562	Bitter orange oil
+E00563	Cananga oil
+E00564	Magnolia salicifolia flower bud (Japan)
+E00565	Magnolia denudata flower bud (South Korea)
+E00566	Cinnamomum zeylanicum bark
+E00567	Cylindrical Cinnamon bark
+E00568	Bupleurum chinense root
+E00569	Bupleurum scorzonerifolium root
+E00570	Wild cherry bark extract;Extract of wild cherry
+E00571	Bupleurum longiradiatum root
+E00572	Processed aconitum carmicha daughter root
+E00573	Processed aconitum carmicha daughter root
+E00574	Processed aconitum carmicha daughter root
+E00575	Aconitum carmichael daughter root
+E00576	Aconitum tuberous root
+E00577	Aconitum triphyllum tuberous root
+E00579	Processed aconitum japonicum tuberous root
+E00580	Aconitum coreanum tuberous root
+E00581	Typhonium giganteum corm
+E00582	Dianthus herb
+E00583	Dioscorea septemloba, Dioscorea futschauensis rhizome
+E00584	Arabian myrrh
+E00585	Bissabol myrrh
+E00586	Brassica hirta seed
+E00587	Brassica nigra seed
+E00588	Rhinoceros bicornis, Rhinoceros simus, Rhinoceros sumatrensis horn
+E00589	Liquidambar formosana fruit resin
+E00590	Thlaspi arvense herb
+E00591	Sonchus brachyotus herb
+E00592	Sonchus oleraceus, Ixeris chinensis, Paraixeris denticulata herb
+E00593	Acanthopanax gracilistylus root bark
+E00594	Acanthopanax giraldii shaft bark
+E00595	Euphorbia pekinensis root
+E00596	Tulipa edulis bulb
+E00597	Asarum sagittarioides herb
+E00598	Woodwardia unigemmata, Woodwardia japonica rhizome
+E00599	Changium smyrnioides root
+E00600	Arenaria juncea, Silene fortunei, Silene jenisensis, Gypsophila oldhamiana root
+E00601	Stellera chamaejasme root
+E00602	Euphorbia root
+E00603	Woodwardia rhizome
+E00604	Osmunda rhizome
+E00605	Struthiopteris niponica rhizome
+E00606	Sphaeropteris lepifera rhizome
+E00607	Orixa japonica root
+E00608	Mussaenda root
+E00609	Clerodendrum trichotomum root
+E00610	Clerodendrum canescens root
+E00611	Clerodendrum yunnanense root
+E00612	Hydrangea root
+E00613	Berberis root
+E00614	Dioscorea nipponica root
+E00615	Scilla scilloides bulb
+E00616	Allium macrostemon bulb
+E00617	Rhaponticum uniflorum root
+E00618	Echinops grijisii root
+E00619	Breea, Cirsium, Ixeris root, rhizome or herb
+E00620	Cirsium radix
+E00621	Gleditsia sinensis fruit
+E00622	Citrus medica flower
+E00623	Prunus tomentosa, Prunus triloba seed
+E00624	Torilis japonica fruit
+E00625	Carpesium abrotanoides fruit
+E00626	Lappula echinata fruit
+E00627	Amblytropis multiflora root or herb
+E00628	Corydalis bungeana herb
+E00629	Gentiana lourerii herb
+E00630	Polygala japonica herb
+E00631	Osbeckia chinensis herb
+E00632	Pyrola herb (Japan)
+E00633	Ocimum herb
+E00634	Euphorbia herb
+E00635	Rhododendron leaf
+E00636	Phyllostachys leaf
+E00637	Arenaria serpyllifolia herb
+E00638	Eriocaulon capitulum
+E00639	Millettia nitida stem
+E00640	Millettia dielsiana stem
+E00641	Sargentodoxa cuneata stem
+E00642	Platypleura kaempferi larva
+E00643	Monodon monoceros maxillary incisor
+E00644	Bungarus multicinctus, Elaphe moellendorffi
+E00645	Zaocys dhumnades
+E00646	Colubridae slough (Japan)
+E00647	Syngnathoides biaculeatus
+E00648	Syngnathus acus
+E00649	Unionidae shell
+E00650	Chinese cinnamon oil;Cinnamon oil (JP17);Cassia oil
+E00651	Curcuma longa tuberous root
+E00652	Curcuma wenyujin rhizome
+E00653	Curcuma wenyujin tuberous root
+E00654	Curcuma tuberous root
+E00655	Curcuma aeruginosa tuberous root
+E00656	Cedarleaf oil;Thuja oil
+E00657	Cedarwood oil (Texas)
+E00658	Curcuma kwangsiensis rhizome
+E00659	Clary sage oil
+E00660	Allolobophora caliginosa
+E00661	Coriander oil
+E00662	Chaenomeles speciosa fruit
+E00663	Galbanum oil
+E00664	Ginger oil
+E00665	Menispermum dauricum rhizome
+E00666	Indigofera root
+E00667	Ardisia crenata root
+E00668	Juniper oil
+E00669	Ardisia hortorum root
+E00670	Ardisia mamillata root
+E00671	Cistus oil;Labdanum oil
+E00672	Processed panax ginseng root
+E00673	Red ginseng (South Korea)
+E00674	Bolboschoenus fluviatilis tuber
+E00675	Ligusticum sinense rhizome
+E00676	Ligusticum tenuissimum root and rhizome
+E00677	Myrrh oil
+E00678	Rheum officinale rhizome
+E00679	Rheum coreanum rhizome
+E00680	Nutmeg oil (Indonesia)
+E00681	Oakmoss oil (Yugoslavia)
+E00682	Frankincense;Olibanum oil (Arabia and Somalia)
+E00683	Chrysanthemum lavandulaefolium capitulum
+E00684	Rheum undulatum rhizome
+E00685	Rheum rhaponticum rhizome
+E00686	Rheum emodi, Rheum spiciforme rhizome
+E00687	Oregano oil Spanish;Origanum oil
+E00688	Rheum compactum, Rheum franzenbachii, Rheum collinianum rhizome
+E00689	Achyranthes fauriei root
+E00690	Cyathula officinalis root
+E00691	Cyathula capitata root
+E00692	Achyranthes obtusifolia, Achyranthes rubrofusca, Achyranthes longifolia root
+E00693	Achyranthes aspera, Achyranthes longifolia, Achyranthes bidentata root
+E00694	Cucubalus baccifer root
+E00695	Strobilanthes nemorosus root
+E00696	Cimicifuga rhizome (China)
+E00697	Serratula chinensis rhizome
+E00698	Astilbe rhizome
+E00699	Vladimiria souliei root
+E00700	Trichosanthes root (Japan)
+E00701	Phlomis umbrosa root
+E00702	Phlomis maximowiczii, Lamium album root
+E00703	Cirsium root
+E00704	White pepper
+E00705	Artemisia capillaris, Artemisia scoparia stem and leaf
+E00706	Leonurus fruit
+E00707	Kochia sieversiana fruit
+E00708	Chenopodium album fruit
+E00709	Chenopodium ficifolium fruit
+E00710	Melilotus suaveolens fruit
+E00711	Talc
+E00712	Aniseed oil;Anise oil
+E00713	Star anise oil (Vietnam)
+E00714	Cedarwood oil (Virginia)
+E00715	Citronella oil (Ceylon)
+E00716	Frankincense;Olibanum oil (Somalia)
+E00717	Orris oil
+E00718	Osmanthus
+E00719	Palmarosa oil (India)
+E00720	Patchouli oil
+E00721	Petitgrain oil;Petitgrain bigarade oil
+E00722	Allspice oil;Pimento berry oil
+E00723	Pine oil
+E00724	Roman chamomile oil;Chamomile oil
+E00725	Rosemary oil
+E00726	Sage oil (Dalmatian)
+E00727	Sandalwood oil (East Indian)
+E00728	Spearmint oil
+E00729	Lavender oil spike;Spike oil
+E00730	Tagetes oil
+E00731	Thyme oil
+E00732	Tobacco oil
+E00733	Cinnamon leaf oil
+E00734	Turpentine oil
+E00735	Vetiver oil
+E00736	Wintergreen oil
+E00737	Ylang Ylang oil
+E00738	Sage oil (Spanish)
+E00739	Dracaena resin
+E00740	Hypericum ascyron herb
+E00741	Potentilla paradoxa herb
+E00742	Wedelia prostrata herb
+E00743	Wedelia chinensis herb
+E00744	Zanthoxylum ailanthoides bark
+E00745	Kalopanax pictus bark
+E00746	Bombax malabaricum bark
+E00747	KINO;Pterocarpus resin
+E00748	Silene herb
+E00749	Melastoma candidum shaft and root
+E00750	Glochidion shaft
+E00751	Dendrobium chrysanthum stem
+E00752	Eupatorium fortunei herb
+E00753	Penthorum chinense herb
+E00754	Eupatorium herb
+E00755	Potentilla chinensis herb or root
+E00756	Globe artichoke;Artichoke
+E00757	Iceland lichen;Iceland moss;Cetraria
+E00758	Arnica
+E00759	Angelica
+E00760	Maidenhair tree;Ginkgo
+E00761	Evening promrose
+E00762	Witch hazel
+E00763	Common mallow;Mallow flowers;Blue mallow
+E00764	Echinacea
+E00765	Elder flowers
+E00766	Oats
+E00767	Olive
+E00768	Orange flowers
+E00769	Garlic
+E00770	Kava
+E00771	Guarana
+E00772	Marigold
+E00773	Cat's claw
+E00774	Java tea
+E00775	Cranberry
+E00776	Grape seed
+E00777	Goldenseal
+E00778	Coltsfoot
+E00779	Comfrey
+E00780	Psylla
+E00781	German chamomile
+E00782	Horsetail
+E00783	Sage
+E00784	SJW;St. John's wort
+E00785	Saw palmetto
+E00786	Soy bean;Black soy bean
+E00787	Thyme
+E00788	Dandelion
+E00789	Chaste tree fruit;Chaste berry
+E00790	Ginseng
+E00791	Tea tree
+E00792	Devil's claw
+E00793	Neem;Margosa
+E00794	Bitter gourd;Bitter melon
+E00795	Stinging nettle;Nettle
+E00796	Birch
+E00797	Burdock root
+E00798	Red sorrel
+E00799	Pau D'Arco;La Pacho;Ipe Roxo
+E00800	Butterbur
+E00801	Maypop;Passionflower
+E00802	Pumpkin seed
+E00803	Heather;Heath
+E00804	Bilberry
+E00805	Feverfew
+E00806	Sea kelp;Bladderwrack
+E00807	Black currant;Cassis
+E00808	Black snakeroot;Black cohosh
+E00809	Cowslip;Primrosa
+E00810	Peppermint
+E00811	Lemon verbena
+E00812	Horse chestnut;Conker tree
+E00813	Hawthorn
+E00814	Willow;White Willow
+E00815	Maitake
+E00816	Maca
+E00817	Marshmallow
+E00818	Paraguay tea
+E00819	Mulberry
+E00820	Mullein
+E00821	Mistletoe
+E00822	Milk thistle
+E00823	Melilot (non-JP)
+E00824	Milfoil;Yarrow
+E00825	Eucalayptus;Blue gum
+E00826	Raspberry leaf
+E00827	Lavender
+E00828	Lime tree flower;Linden flower
+E00829	Rooibos
+E00830	Lemon grass
+E00831	Lemon balm
+E00832	Rose
+E00833	Rose hip
+E00834	Rosemary
+E00835	Pelargonium root
+E00836	Dragon's blood;Sangre de Dragon
+E00837	Raspberry
+E00838	Erionite
+E00839	Grapefruit juice;Grapefruit
+E00840	Alcoholic beverage
+E00841	Tobacco
+E00842	Milk
+E00843	Coffee
+E00844	Aralia root (non-JP);Wakyoukatsu;Araliae cordatae radix
+E00845	Coicis fructus cum involucris;Adlay;Coix fruit with involucre (non-JP)
+E00846	Hop strobile (non-JP);Luppuli strobilus
+E00847	Boschniakia herb (non-JP);Boschniakiae herba
+E00848	Japanese yew
+E00849	Civet
+E00850	Canis male sex organ
+E00851	Lycoris radiata bulb
+E00852	Hedysarum root (JP17)
+E00853	Dextran sulfate cellulose
+E00854	Tryptophan-linked polyvinyl alcohol
+E00855	Polyethylene terephthalate
+E00856	Chlorella
+E00857	Natto
+E00858	Aojiru
+E00859	Thorn apple leaf;Daturae folium
+E00860	Chicken liver
+E00861	Allii tuberosi folium;Allium tuberosum leaf
+E00862	Allume
+E00863	Foxtail millet seed;Setariae semen
+E00864	Trichosanthes fruit
+E00865	Egg yolk;Dried egg yolk powder (non-JP)
+E00866	Dark male donkey sex organ
