@@ -971,7 +971,7 @@ class DrugBankLinker(DatabaseLinker):
         return self._convert_ids_using_target_dictionary(drug_list, "drugbank_to_pdb")
 
     def convert_drugs_to_pharmgkb(self, drug_list):
-        """ Convert a list of DrugBank drug ids to pharmgkb mocule ids
+        """ Convert a list of DrugBank drug ids to pharmgkb molecule ids
 
         Parameters
         ----------
@@ -981,7 +981,7 @@ class DrugBankLinker(DatabaseLinker):
         Returns
         -------
         list
-            a list of lists of pharmgkb mocule ids
+            a list of lists of pharmgkb molecule ids
         """
         return self._convert_ids_using_target_dictionary(drug_list, "drugbank_to_pharmgkb")
 
@@ -1030,8 +1030,8 @@ class DrugBankLinker(DatabaseLinker):
         """
         return self._convert_ids_using_target_dictionary(drug_list, "drugbank_to_ttd")
 
-    def convert_drugs_to_uniprotkb(self, drug_list):
-        """ Convert a list of DrugBank drug ids to uniprotkb ids
+    def convert_drugs_to_uniprot(self, drug_list):
+        """ Convert a list of DrugBank drug ids to uniprot accession ids
 
         Parameters
         ----------
@@ -1041,9 +1041,9 @@ class DrugBankLinker(DatabaseLinker):
         Returns
         -------
         list
-            a list of lists of uniprotkb ids
+            a list of lists of uniprot accession ids
         """
-        return self._convert_ids_using_target_dictionary(drug_list, "drugbank_to_uniprotkb")
+        return self._convert_ids_using_target_dictionary(drug_list, "drugbank_to_uniprot")
 
     def convert_drugs_to_wikipedia(self, drug_list):
         """ Convert a list of DrugBank drug ids to wikipedia entries
@@ -1271,7 +1271,7 @@ class UniprotLinker(DatabaseLinker):
         Parameters
         ----------
         acc_list : list
-            a list of Uniprot drug ids e.g. ['Q7L9L4', 'P42768']
+            a list of Uniprot protein ids e.g. ['Q7L9L4', 'P42768']
 
         Returns
         -------
@@ -1286,7 +1286,7 @@ class UniprotLinker(DatabaseLinker):
         Parameters
         ----------
         acc_list : list
-            a list of Uniprot drug ids e.g. ['Q7L9L4', 'P42768']
+            a list of Uniprot protein ids e.g. ['Q7L9L4', 'P42768']
 
         Returns
         -------
@@ -1301,7 +1301,7 @@ class UniprotLinker(DatabaseLinker):
         Parameters
         ----------
         acc_list : list
-            a list of Uniprot drug ids e.g. ['Q7L9L4', 'P42768']
+            a list of Uniprot protein ids e.g. ['Q7L9L4', 'P42768']
 
         Returns
         -------
@@ -1310,13 +1310,28 @@ class UniprotLinker(DatabaseLinker):
         """
         return self._convert_ids_using_target_dictionary(acc_list, "acc_to_dip")
 
+    def convert_uniprot_to_drugbank(self, protein_list):
+        """ Convert a list of Uniprot protein ids to Brugbank drug ids
+
+        Parameters
+        ----------
+        protein_list : list
+            a list of Uniprot protein ids e.g. ['Q7L9L4', 'P42768']
+
+        Returns
+        -------
+        list
+            a list of lists of Drugbank drug ids
+        """
+        return self._convert_ids_using_target_dictionary(protein_list, "acc_to_drugbank")
+
     def convert_uniprot_to_embl_cds(self, acc_list):
         """ Convert a list of Uniprot protein accession ids to embl-cds sequences
 
         Parameters
         ----------
         acc_list : list
-            a list of Uniprot drug ids e.g. ['Q7L9L4', 'P42768']
+            a list of Uniprot protein ids e.g. ['Q7L9L4', 'P42768']
 
         Returns
         -------
@@ -1331,7 +1346,7 @@ class UniprotLinker(DatabaseLinker):
         Parameters
         ----------
         acc_list : list
-            a list of Uniprot drug ids e.g. ['Q7L9L4', 'P42768']
+            a list of Uniprot protein ids e.g. ['Q7L9L4', 'P42768']
 
         Returns
         -------
@@ -1346,7 +1361,7 @@ class UniprotLinker(DatabaseLinker):
         Parameters
         ----------
         acc_list : list
-            a list of Uniprot drug ids e.g. ['Q7L9L4', 'P42768']
+            a list of Uniprot protein ids e.g. ['Q7L9L4', 'P42768']
 
         Returns
         -------
@@ -1361,7 +1376,7 @@ class UniprotLinker(DatabaseLinker):
         Parameters
         ----------
         acc_list : list
-            a list of Uniprot drug ids e.g. ['Q7L9L4', 'P42768']
+            a list of Uniprot protein ids e.g. ['Q7L9L4', 'P42768']
 
         Returns
         -------
@@ -1376,7 +1391,7 @@ class UniprotLinker(DatabaseLinker):
         Parameters
         ----------
         acc_list : list
-            a list of Uniprot drug ids e.g. ['Q7L9L4', 'P42768']
+            a list of Uniprot protein ids e.g. ['Q7L9L4', 'P42768']
 
         Returns
         -------
@@ -1391,7 +1406,7 @@ class UniprotLinker(DatabaseLinker):
         Parameters
         ----------
         acc_list : list
-            a list of Uniprot drug ids e.g. ['Q7L9L4', 'P42768']
+            a list of Uniprot protein ids e.g. ['Q7L9L4', 'P42768']
 
         Returns
         -------
@@ -1406,7 +1421,7 @@ class UniprotLinker(DatabaseLinker):
         Parameters
         ----------
         acc_list : list
-            a list of Uniprot drug ids e.g. ['Q7L9L4', 'P42768']
+            a list of Uniprot protein ids e.g. ['Q7L9L4', 'P42768']
 
         Returns
         -------
@@ -1421,7 +1436,7 @@ class UniprotLinker(DatabaseLinker):
         Parameters
         ----------
         acc_list : list
-            a list of Uniprot drug ids e.g. ['Q7L9L4', 'P42768']
+            a list of Uniprot protein ids e.g. ['Q7L9L4', 'P42768']
 
         Returns
         -------
@@ -1436,7 +1451,7 @@ class UniprotLinker(DatabaseLinker):
         Parameters
         ----------
         acc_list : list
-            a list of Uniprot drug ids e.g. ['Q7L9L4', 'P42768']
+            a list of Uniprot protein ids e.g. ['Q7L9L4', 'P42768']
 
         Returns
         -------
@@ -1451,7 +1466,7 @@ class UniprotLinker(DatabaseLinker):
         Parameters
         ----------
         acc_list : list
-            a list of Uniprot drug ids e.g. ['Q7L9L4', 'P42768']
+            a list of Uniprot protein ids e.g. ['Q7L9L4', 'P42768']
 
         Returns
         -------
@@ -1466,7 +1481,7 @@ class UniprotLinker(DatabaseLinker):
         Parameters
         ----------
         acc_list : list
-            a list of Uniprot drug ids e.g. ['Q7L9L4', 'P42768']
+            a list of Uniprot protein ids e.g. ['Q7L9L4', 'P42768']
 
         Returns
         -------
@@ -1481,7 +1496,7 @@ class UniprotLinker(DatabaseLinker):
         Parameters
         ----------
         acc_list : list
-            a list of Uniprot drug ids e.g. ['Q7L9L4', 'P42768']
+            a list of Uniprot protein ids e.g. ['Q7L9L4', 'P42768']
 
         Returns
         -------
@@ -1496,7 +1511,7 @@ class UniprotLinker(DatabaseLinker):
         Parameters
         ----------
         acc_list : list
-            a list of Uniprot drug ids e.g. ['Q7L9L4', 'P42768']
+            a list of Uniprot protein ids e.g. ['Q7L9L4', 'P42768']
 
         Returns
         -------
@@ -1511,7 +1526,7 @@ class UniprotLinker(DatabaseLinker):
         Parameters
         ----------
         acc_list : list
-            a list of Uniprot drug ids e.g. ['Q7L9L4', 'P42768']
+            a list of Uniprot protein ids e.g. ['Q7L9L4', 'P42768']
 
         Returns
         -------
@@ -1526,7 +1541,7 @@ class UniprotLinker(DatabaseLinker):
         Parameters
         ----------
         acc_list : list
-            a list of Uniprot drug ids e.g. ['Q7L9L4', 'P42768']
+            a list of Uniprot protein ids e.g. ['Q7L9L4', 'P42768']
 
         Returns
         -------
@@ -1541,7 +1556,7 @@ class UniprotLinker(DatabaseLinker):
         Parameters
         ----------
         acc_list : list
-            a list of Uniprot drug ids e.g. ['Q7L9L4', 'P42768']
+            a list of Uniprot protein ids e.g. ['Q7L9L4', 'P42768']
 
         Returns
         -------
@@ -1556,7 +1571,7 @@ class UniprotLinker(DatabaseLinker):
         Parameters
         ----------
         acc_list : list
-            a list of Uniprot drug ids e.g. ['Q7L9L4', 'P42768']
+            a list of Uniprot protein ids e.g. ['Q7L9L4', 'P42768']
 
         Returns
         -------
@@ -1571,7 +1586,7 @@ class UniprotLinker(DatabaseLinker):
         Parameters
         ----------
         acc_list : list
-            a list of Uniprot drug ids e.g. ['Q7L9L4', 'P42768']
+            a list of Uniprot protein ids e.g. ['Q7L9L4', 'P42768']
 
         Returns
         -------
@@ -1586,7 +1601,7 @@ class UniprotLinker(DatabaseLinker):
         Parameters
         ----------
         acc_list : list
-            a list of Uniprot drug ids e.g. ['Q7L9L4', 'P42768']
+            a list of Uniprot protein ids e.g. ['Q7L9L4', 'P42768']
 
         Returns
         -------
@@ -1601,7 +1616,7 @@ class UniprotLinker(DatabaseLinker):
         Parameters
         ----------
         acc_list : list
-            a list of Uniprot drug ids e.g. ['Q7L9L4', 'P42768']
+            a list of Uniprot protein ids e.g. ['Q7L9L4', 'P42768']
 
         Returns
         -------
@@ -1616,7 +1631,7 @@ class UniprotLinker(DatabaseLinker):
         Parameters
         ----------
         acc_list : list
-            a list of Uniprot drug ids e.g. ['Q7L9L4', 'P42768']
+            a list of Uniprot protein ids e.g. ['Q7L9L4', 'P42768']
 
         Returns
         -------
@@ -1631,6 +1646,7 @@ class UniprotLinker(DatabaseLinker):
         All available accession ids in the database
         """
         return self._get_keys_of_target_dictionary("uniprot_names")
+
 
 class GeneNameLinker(DatabaseLinker):
     """ Gene name database linker class
@@ -1658,3 +1674,1324 @@ class GeneNameLinker(DatabaseLinker):
             a list of uniprot accession codes
         """
         return self._convert_ids_using_target_dictionary(gene_name_list, "gene_name_to_uniprot")
+
+
+class ChemblLinker(DatabaseLinker):
+    """ Chembl database linker class
+    """
+
+    def __init__(self):
+        """ Initialize an object of the class KEGGLinker
+        """
+        super(ChemblLinker, self).__init__()
+        self._database_name = "chembl"
+
+        self._load_linking_dictionaries()
+
+
+    def convert_compound_to_drugbank_drugs(self, compound_list):
+        """ Convert a list of Chembl compound ids to drugbank drugs
+
+        Parameters
+        ----------
+        compound_list : list
+            a list of chembl compound ids e.g. ['CHEMBL3710408', 'CHEMBL1293296']
+
+        Returns
+        -------
+        list
+            a list of lists of drugbank drugs
+        """
+        return self._convert_ids_using_target_dictionary(compound_list, "chembl_to_drugbank")
+
+    def convert_compound_to_kegg_drugs(self, compound_list):
+        """ Convert a list of Chembl compound ids to kegg drugs
+
+        Parameters
+        ----------
+        compound_list : list
+            a list of chembl compound ids e.g. ['CHEMBL3710408', 'CHEMBL1293296']
+
+        Returns
+        -------
+        list
+            a list of lists of kegg drugs
+        """
+        return self._convert_ids_using_target_dictionary(compound_list, "chembl_to_kegg_drug")
+
+    def convert_compound_to_kegg_compound(self, compound_list):
+        """ Convert a list of Chembl compound ids to kegg compounds
+
+        Parameters
+        ----------
+        compound_list : list
+            a list of chembl compound ids e.g. ['CHEMBL3710408', 'CHEMBL1293296']
+
+        Returns
+        -------
+        list
+            a list of lists of kegg compounds
+        """
+        return self._convert_ids_using_target_dictionary(compound_list, "chembl_to_kegg_compound")
+
+    
+    def convert_compound_to_uniprot(self, compound_list):
+        """ Convert a list of Chembl compound ids to uniprot accessions
+
+        Parameters
+        ----------
+        compound_list : list
+            a list of chembl compound ids e.g. ['CHEMBL3710408', 'CHEMBL1293296']
+
+        Returns
+        -------
+        list
+            a list of lists of uniprot accession codes
+        """
+        return self._convert_ids_using_target_dictionary(compound_list, "chembl_to_uniprot")
+
+
+
+class BiogridLinker(DatabaseLinker):
+    """ Biogrid database linker class
+    """
+
+    def __init__(self):
+        """ Initialize an object of the class BiogridLinker
+        """
+        super(BiogridLinker, self).__init__()
+        self._database_name = "biogrid"
+
+        self._load_linking_dictionaries()
+
+    def convert_biogrid_to_uniprot(self, protein_list):
+        """ Convert a list of biogrid protein ids to Uniprot protein accession ids
+
+        Parameters
+        ----------
+        protein_list : list
+            a list of biogrid protein ids e.g. ['113361', '113365']
+
+        Returns
+        -------
+        list
+            a list of lists of uniprot protein accessions
+        """
+        return self._convert_ids_using_target_dictionary(protein_list, "biogrid_to_uniprot")
+
+
+class DipLinker(DatabaseLinker):
+    """ Dip database linker class
+    """
+
+    def __init__(self):
+        """ Initialize an object of the class DipLinker
+        """
+        super(DipLinker, self).__init__()
+        self._database_name = "dip"
+
+        self._load_linking_dictionaries()
+
+    def convert_dip_to_uniprot(self, protein_list):
+        """ Convert a list of dip protein ids to Uniprot protein accession ids
+
+        Parameters
+        ----------
+        protein_list : list
+            a list of dip protein ids e.g. ['DIP-36676N', 'DIP-27584N']
+
+        Returns
+        -------
+        list
+            a list of lists of uniprot protein accessions
+        """
+        return self._convert_ids_using_target_dictionary(protein_list, "dip_to_uniprot")
+
+
+class EmblLinker(DatabaseLinker):
+    """ Embl database linker class
+    """
+
+    def __init__(self):
+        """ Initialize an object of the class EmblLinker
+        """
+        super(EmblLinker, self).__init__()
+        self._database_name = "embl"
+
+        self._load_linking_dictionaries()
+
+    def convert_embl_to_uniprot(self, sequence_list):
+        """ Convert a list of embl sequence ids to Uniprot protein accession ids
+
+        Parameters
+        ----------
+        sequence_list : list
+            a list of embl sequence ids e.g. ['AK292717', 'AL008725']
+
+        Returns
+        -------
+        list
+            a list of lists of uniprot protein accessions
+        """
+        return self._convert_ids_using_target_dictionary(sequence_list, "embl_to_uniprot")
+
+
+class EmblCDSLinker(DatabaseLinker):
+    """ Embl-CDS database linker class
+    """
+
+    def __init__(self):
+        """ Initialize an object of the class EmblCDSLinker
+        """
+        super(EmblCDSLinker, self).__init__()
+        self._database_name = "embl-cds"
+
+        self._load_linking_dictionaries()
+
+    def convert_embl_to_uniprot(self, sequence_list):
+        """ Convert a list of embl-cds sequence ids to Uniprot protein accession ids
+
+        Parameters
+        ----------
+        sequence_list : list
+            a list of embl-cds sequence ids e.g. ['EAW75893.1', 'AAC50710.1']
+
+        Returns
+        -------
+        list
+            a list of lists of uniprot protein accessions
+        """
+        return self._convert_ids_using_target_dictionary(sequence_list, "embl-cds_to_uniprot")
+
+
+class EnsemblLinker(DatabaseLinker):
+    """ Ensembl database linker class
+    """
+
+    def __init__(self):
+        """ Initialize an object of the class EnsemblLinker
+        """
+        super(EnsemblLinker, self).__init__()
+        self._database_name = "ensembl"
+
+        self._load_linking_dictionaries()
+
+    def convert_ensembl_to_uniprot(self, gene_list):
+        """ Convert a list of ensembl ids to Uniprot protein accession ids
+
+        Parameters
+        ----------
+        gene_list : list
+            a list of ensembl gene ids e.g. ['EAW75893.1', 'AAC50710.1']
+
+        Returns
+        -------
+        list
+            a list of lists of uniprot protein accessions
+        """
+        return self._convert_ids_using_target_dictionary(gene_list, "ensembl_to_uniprot")
+
+    def convert_ensembl_to_kegg_gene(self, gene_list):
+        """ Convert a list of ensembl ids to Uniprot protein accession ids
+
+        Parameters
+        ----------
+        gene_list : list
+            a list of ensembl gene ids e.g. ['ENSG00000166913', 'ENSG00000175793']
+
+        Returns
+        -------
+        list
+            a list of lists of kegg gene ids
+        """
+        return self._convert_ids_using_target_dictionary(gene_list, "ensembl_to_kegg_gene")
+
+
+class GeneDBLinker(DatabaseLinker):
+    """ GeneDB database linker class
+    """
+
+    def __init__(self):
+        """ Initialize an object of the class GeneDBLinker
+        """
+        super(GeneDBLinker, self).__init__()
+        self._database_name = "genedb"
+
+        self._load_linking_dictionaries()
+
+    def convert_ensembl_to_uniprot(self, gene_list):
+        """ Convert a list of genedb gene ids to Uniprot protein accession ids
+
+        Parameters
+        ----------
+        gene_list : list
+            a list of genedb gene ids e.g. ['Smp_196150.1:pep', 'Smp_009580.1:pep']
+
+        Returns
+        -------
+        list
+            a list of lists of uniprot protein accessions
+        """
+        return self._convert_ids_using_target_dictionary(gene_list, "genedb_to_uniprot")
+
+
+class GILinker(DatabaseLinker):
+    """ GI database linker class
+    """
+
+    def __init__(self):
+        """ Initialize an object of the class GILinker
+        """
+        super(GILinker, self).__init__()
+        self._database_name = "gi"
+
+        self._load_linking_dictionaries()
+
+    def convert_gi_to_uniprot(self, gene_list):
+        """ Convert a list of gi gene ids to Uniprot protein accession ids
+
+        Parameters
+        ----------
+        gene_list : list
+            a list of gi gene ids e.g. ['377656702', '67464627']
+
+        Returns
+        -------
+        list
+            a list of lists of uniprot protein accessions
+        """
+        return self._convert_ids_using_target_dictionary(gene_list, "gi_to_uniprot")
+
+
+class HGNCLinker(DatabaseLinker):
+    """ HGNC database linker class
+    """
+
+    def __init__(self):
+        """ Initialize an object of the class HGNCLinker
+        """
+        super(HGNCLinker, self).__init__()
+        self._database_name = "hgnc"
+
+        self._load_linking_dictionaries()
+
+    def convert_hgnc_to_uniprot(self, gene_list):
+        """ Convert a list of hgnc gene ids to Uniprot protein accession ids
+
+        Parameters
+        ----------
+        gene_list : list
+            a list of hgnc gene ids e.g. ['HGNC:12849', 'HGNC:12852']
+
+        Returns
+        -------
+        list
+            a list of lists of uniprot protein accessions
+        """
+        return self._convert_ids_using_target_dictionary(gene_list, "hgnc_to_uniprot")
+
+
+class HPALinker(DatabaseLinker):
+    """ HPA database linker class
+    """
+
+    def __init__(self):
+        """ Initialize an object of the class HPALinker
+        """
+        super(HPALinker, self).__init__()
+        self._database_name = "hpa"
+
+        self._load_linking_dictionaries()
+
+    def convert_hpa_to_uniprot(self, protein_list):
+        """ Convert a list of hpa protein ids to Uniprot protein accession ids
+
+        Parameters
+        ----------
+        protein_list : list
+            a list of gi gene ids e.g. ['HPA011212', 'CAB016200']
+
+        Returns
+        -------
+        list
+            a list of lists of uniprot protein accessions
+        """
+        return self._convert_ids_using_target_dictionary(protein_list, "hpa_to_uniprot")
+
+
+class MimLinker(DatabaseLinker):
+    """ Mim database linker class
+    """
+
+    def __init__(self):
+        """ Initialize an object of the class MimLinker
+        """
+        super(MimLinker, self).__init__()
+        self._database_name = "mim"
+
+        self._load_linking_dictionaries()
+
+    def convert_mim_to_uniprot(self, entry_list):
+        """ Convert a list of mim entry ids to Uniprot protein accession ids
+
+        Parameters
+        ----------
+        entry_list : list
+            a list of mim entry ids e.g. ['605066', '601288']
+
+        Returns
+        -------
+        list
+            a list of lists of uniprot protein accessions
+        """
+        return self._convert_ids_using_target_dictionary(entry_list, "mim_to_uniprot")
+
+    def convert_mim_to_kegg_disease(self, entry_list):
+        """ Convert a list of mim entry ids to KEGG disease ids
+
+        Parameters
+        ----------
+        entry_list : list
+            a list of mim entry ids e.g. ['605066', '601288']
+
+        Returns
+        -------
+        list
+            a list of lists of KEGG disease ids
+        """
+        return self._convert_ids_using_target_dictionary(entry_list, "mim_to_kegg_disease")
+
+
+class MintLinker(DatabaseLinker):
+    """ Mint database linker class
+    """
+
+    def __init__(self):
+        """ Initialize an object of the class MintLinker
+        """
+        super(MintLinker, self).__init__()
+        self._database_name = "mint"
+
+        self._load_linking_dictionaries()
+
+    def convert_mint_to_uniprot(self, protein_list):
+        """ Convert a list of mint protein ids to Uniprot protein accession ids
+
+        Parameters
+        ----------
+        protein_list : list
+            a list of mint protein ids e.g. ['P62258', 'P31946']
+
+        Returns
+        -------
+        list
+            a list of lists of uniprot protein accessions
+        """
+        return self._convert_ids_using_target_dictionary(protein_list, "mint_to_uniprot")
+
+
+class PharmgkbLinker(DatabaseLinker):
+    """ PharmgkbLinker database linker class
+    """
+
+    def __init__(self):
+        """ Initialize an object of the class PharmgkbLinker
+        """
+        super(PharmgkbLinker, self).__init__()
+        self._database_name = "pharmgkb"
+
+        self._load_linking_dictionaries()
+
+    def convert_pharmgkb_to_uniprot(self, gene_list):
+        """ Convert a list of pharmkgb gene ids to Uniprot protein accession ids
+
+        Parameters
+        ----------
+        gene_list : list
+            a list of pharmkgb gene ids e.g. ['PA37440', 'PA37444']
+
+        Returns
+        -------
+        list
+            a list of lists of uniprot protein accessions
+        """
+        return self._convert_ids_using_target_dictionary(gene_list, "pharmgkb_to_uniprot")
+
+    def convert_pharmgkb_to_drugbank_drugs(self, molecule_list):
+        """ Convert a list of pharmkgb molecule ids to Drugbank drug ids
+
+        Parameters
+        ----------
+        molecule_list : list
+            a list of pharmkgb molecule ids e.g. ['PA10318', 'PA10032']
+
+        Returns
+        -------
+        list
+            a list of lists of uniprot protein accessions
+        """
+        return self._convert_ids_using_target_dictionary(molecule_list, "pharmgkb_to_drugbank")
+
+
+class ProteomicsDBLinker(DatabaseLinker):
+    """ProteomicsDB database linker class
+    """
+
+    def __init__(self):
+        """ Initialize an object of the class ProteomicsDBLinker
+        """
+        super(ProteomicsDBLinker, self).__init__()
+        self._database_name = "proteomicsdb"
+
+        self._load_linking_dictionaries()
+
+    def convert_proteomicsdb_to_uniprot(self, protein_list):
+        """ Convert a list of proteomicsdb protein ids to Uniprot protein accession ids
+
+        Parameters
+        ----------
+        protein_list : list
+            a list of proteomicsdb protein ids e.g. ['57377', '57378']
+
+        Returns
+        -------
+        list
+            a list of lists of Uniprot protein accession ids
+        """
+        return self._convert_ids_using_target_dictionary(protein_list, "proteomicsdb_to_uniprot")
+
+
+class RefSeqLinker(DatabaseLinker):
+    """RefSeq database linker class
+    """
+
+    def __init__(self):
+        """ Initialize an object of the class RefSeqLinker
+        """
+        super(RefSeqLinker, self).__init__()
+        self._database_name = "refseq"
+
+        self._load_linking_dictionaries()
+
+    def convert_refseq_to_uniprot(self, protein_list):
+        """ Convert a list of refseq protein ids to Uniprot protein accession ids
+
+        Parameters
+        ----------
+        protein_list : list
+            a list of refseq protein ids e.g. ['NP_003395.1', 'NP_036611.2']
+
+        Returns
+        -------
+        list
+            a list of lists of Uniprot protein accession ids
+        """
+        return self._convert_ids_using_target_dictionary(protein_list, "refseq_to_uniprot")
+
+
+class StringLinker(DatabaseLinker):
+    """String database linker class
+    """
+
+    def __init__(self):
+        """ Initialize an object of the class StringLinker
+        """
+        super(StringLinker, self).__init__()
+        self._database_name = "string"
+
+        self._load_linking_dictionaries()
+
+    def convert_string_to_uniprot(self, protein_list):
+        """ Convert a list of string protein ids to Uniprot protein accession ids
+
+        Parameters
+        ----------
+        protein_list : list
+            a list of string protein ids e.g. ['9606.ENSP00000361930', '9606.ENSP00000371267']
+
+        Returns
+        -------
+        list
+            a list of lists of Uniprot protein accession ids
+        """
+        return self._convert_ids_using_target_dictionary(protein_list, "string_to_uniprot")
+
+
+class UniparcLinker(DatabaseLinker):
+    """Uniparc database linker class
+    """
+
+    def __init__(self):
+        """ Initialize an object of the class UniparcLinker
+        """
+        super(UniparcLinker, self).__init__()
+        self._database_name = "uniparc"
+
+        self._load_linking_dictionaries()
+
+    def convert_uniparc_to_uniprot(self, protein_list):
+        """ Convert a list of uniparc protein ids to Uniprot protein accession ids
+
+        Parameters
+        ----------
+        protein_list : list
+            a list of uniparc protein ids e.g. ['UPI000059C8F6', 'UPI000013CC64']
+
+        Returns
+        -------
+        list
+            a list of lists of Uniprot protein accession ids
+        """
+        return self._convert_ids_using_target_dictionary(protein_list, "uniparc_to_uniprot")
+
+
+class UniprotKBLinker(DatabaseLinker):
+    """UniprotKB database linker class
+    """
+
+    def __init__(self):
+        """ Initialize an object of the class UniprotKBLinker
+        """
+        super(UniprotKBLinker, self).__init__()
+        self._database_name = "uniprotkb"
+
+        self._load_linking_dictionaries()
+
+    def convert_uniprotkb_to_uniprot(self, protein_list):
+        """ Convert a list of UniprotKB protein ids to Uniprot protein accession ids
+
+        Parameters
+        ----------
+        protein_list : list
+            a list of UniprotKB protein ids e.g. ['1433E_HUMAN', '1A1L1_HUMAN']
+
+        Returns
+        -------
+        list
+            a list of lists of Uniprot protein accession ids
+        """
+        return self._convert_ids_using_target_dictionary(protein_list, "uniprotkb_to_uniprot")
+
+
+class Uniref100Linker(DatabaseLinker):
+    """UniRef100 database linker class
+    """
+
+    def __init__(self):
+        """ Initialize an object of the class Uniref100Linker
+        """
+        super(Uniref100Linker, self).__init__()
+        self._database_name = "uniref100"
+
+        self._load_linking_dictionaries()
+
+    def convert_uniref100_to_uniprot(self, protein_list):
+        """ Convert a list of UniRef100 protein ids to Uniprot protein accession ids
+
+        Parameters
+        ----------
+        protein_list : list
+            a list of UniRef100 protein ids e.g. ['9606.ENSP00000361930', '9606.ENSP00000371267']
+
+        Returns
+        -------
+        list
+            a list of lists of Uniprot protein accession ids
+        """
+        return self._convert_ids_using_target_dictionary(protein_list, "uniref100_to_uniprot")
+
+
+class ThreeDMetLinker(DatabaseLinker):
+    """3DMet database linker class
+    """
+
+    def __init__(self):
+        """ Initialize an object of the class ThreeDMetLinker
+        """
+        super(ThreeDMetLinker, self).__init__()
+        self._database_name = "3dmet"
+
+        self._load_linking_dictionaries()
+
+    def convert_3dmet_to_kegg_compound(self, molecule_list):
+        """ Convert a list of 3dmet molecule ids to KEGG compound ids
+
+        Parameters
+        ----------
+        molecule_list : list
+            a list of 3dmet molecule ids e.g. ['B04559', 'B00308']
+
+        Returns
+        -------
+        list
+            a list of lists of KEGG compound ids
+        """
+        return self._convert_ids_using_target_dictionary(molecule_list, "3dmet_kegg_compound")
+
+
+class ChemspiderLinker(DatabaseLinker):
+    """Chemspider database linker class
+    """
+
+    def __init__(self):
+        """ Initialize an object of the class ChemspiderLinker
+        """
+        super(ChemspiderLinker, self).__init__()
+        self._database_name = "chemspider"
+
+        self._load_linking_dictionaries()
+
+    def convert_chemspider_to_drugbank(self, molecule_list):
+        """ Convert a list of chemspider chemical ids to DrugBank drug ids
+
+        Parameters
+        ----------
+        molecule_list : list
+            a list of chemspider chemical ids e.g. ['10482069', '4470656']
+
+        Returns
+        -------
+        list
+            a list of lists of DrugBank drug ids
+        """
+        return self._convert_ids_using_target_dictionary(molecule_list, "chemspider_to_drugbank")
+
+
+class HMDBLinker(DatabaseLinker):
+    """HMDB database linker class
+    """
+
+    def __init__(self):
+        """ Initialize an object of the class HMDBLinker
+        """
+        super(HMDBLinker, self).__init__()
+        self._database_name = "hmdb"
+
+        self._load_linking_dictionaries()
+
+    def convert_hmdb_to_kegg_drug(self, metabolite_list):
+        """ Convert a list of hmdb metabolite ids to KEGG drug ids
+
+        Parameters
+        ----------
+        metabolite_list : list
+            a list of hmdb metabolite ids e.g. ['HMDB05032', 'HMDB41011']
+
+        Returns
+        -------
+        list
+            a list of lists of KEGG drug ids
+        """
+        return self._convert_ids_using_target_dictionary(metabolite_list, "hmdb_to_kegg_drug")
+
+    def convert_hmdb_to_kegg_compound(self, metabolite_list):
+        """ Convert a list of hmdb metabolite ids to KEGG compound ids
+
+        Parameters
+        ----------
+        metabolite_list : list
+            a list of hmdb metabolite ids e.g. ['HMDB05032', 'HMDB41011']
+
+        Returns
+        -------
+        list
+            a list of lists of KEGG compound ids
+        """
+        return self._convert_ids_using_target_dictionary(metabolite_list, "hmdb_to_kegg_compound")
+
+
+class GuidePharmaLinker(DatabaseLinker):
+    """Guide to Pharmacology database linker class
+    """
+
+    def __init__(self):
+        """ Initialize an object of the class GuidePharmaLinker
+        """
+        super(GuidePharmaLinker, self).__init__()
+        self._database_name = "pharma_guide"
+
+        self._load_linking_dictionaries()
+
+    def convert_guide_pharmacology_to_drugbank(self, ligand_list):
+        """ Convert a list of Guide to Pharmacology ligand ids to DrugBank drug ids
+
+        Parameters
+        ----------
+        ligand_list : list
+            a list of Guide to Pharmacology ligand ids  e.g. ['3310', '1188']
+
+        Returns
+        -------
+        list
+            a list of lists of DrugBank drug ids
+        """
+        return self._convert_ids_using_target_dictionary(ligand_list, "pharma_guide_to_drugbank")
+
+
+class PubchemLinker(DatabaseLinker):
+    """Pubchem database linker class
+    """
+
+    def __init__(self):
+        """ Initialize an object of the class PubchemLinker
+        """
+        super(PubchemLinker, self).__init__()
+        self._database_name = "pubchem"
+
+        self._load_linking_dictionaries()
+
+    def convert_substance_to_drugbank(self, substance_list):
+        """ Convert a list of Pubchem subatance ids to DrugBank drug ids
+
+        Parameters
+        ----------
+        substance_list : list
+            a list of Pubchem subatance ids  e.g. ['46507042', '46504860']
+
+        Returns
+        -------
+        list
+            a list of lists of DrugBank drug ids
+        """
+        return self._convert_ids_using_target_dictionary(substance_list, "pubchem_substance_to_drugbank")
+
+    def convert_substance_to_kegg_drug(self, substance_list):
+        """ Convert a list of Pubchem subatance ids to KEGG drug ids
+
+        Parameters
+        ----------
+        substance_list : list
+            a list of Pubchem subatance ids  e.g. ['46507042', '46504860']
+
+        Returns
+        -------
+        list
+            a list of lists of KEGG drug ids
+        """
+        return self._convert_ids_using_target_dictionary(substance_list, "pubchem_substance_to_kegg_drug")
+
+    def convert_substance_to_kegg_compound(self, substance_list):
+        """ Convert a list of Pubchem subatance ids to KEGG compound ids
+
+        Parameters
+        ----------
+        substance_list : list
+            a list of Pubchem subatance ids  e.g. ['46507042', '46504860']
+
+        Returns
+        -------
+        list
+            a list of lists of KEGG compound ids
+        """
+        return self._convert_ids_using_target_dictionary(substance_list, "pubchem_substance_to_kegg_compound")
+
+    def convert_compound_to_drugbank(self, compound_list):
+        """ Convert a list of Pubchem compound ids to DrugBank drug ids
+
+        Parameters
+        ----------
+        compound_list : list
+            a list of Pubchem compound ids  e.g. ['45267103', '16134395']
+
+        Returns
+        -------
+        list
+            a list of lists of DrugBank drug ids
+        """
+        return self._convert_ids_using_target_dictionary(compound_list, "pubchem_compound_to_drugbank")
+
+
+class ChebiLinker(DatabaseLinker):
+    """ Chebi database linker class
+    """
+
+    def __init__(self):
+        """ Initialize an object of the class ChebiLinker
+        """
+        super(ChebiLinker, self).__init__()
+        self._database_name = "chebi"
+
+        self._load_linking_dictionaries()
+
+
+    def convert_chemical_to_drugbank_drugs(self, chemical_list):
+        """ Convert a list of Chebi chemical ids to drugbank drugs
+
+        Parameters
+        ----------
+        chemical_list : list
+            a list of chebi chemical ids e.g. ['CHEBI:16347', 'CHEBI:11060']
+
+        Returns
+        -------
+        list
+            a list of lists of drugbank drugs
+        """
+        return self._convert_ids_using_target_dictionary(chemical_list, "chebi_to_drugbank")
+
+    def convert_chemical_to_kegg_drugs(self, chemical_list):
+        """ Convert a list of Chebi chemical ids to KEGG drugs
+
+        Parameters
+        ----------
+        chemical_list : list
+            a list of chebi chemical ids e.g. ['CHEBI:16347', 'CHEBI:11060']
+
+        Returns
+        -------
+        list
+            a list of lists of KEGG drugs
+        """
+        return self._convert_ids_using_target_dictionary(chemical_list, "chebi_to_kegg_drug")
+
+    def convert_chemical_to_kegg_compounds(self, chemical_list):
+        """ Convert a list of Chebi chemical ids to KEGG compounds
+
+        Parameters
+        ----------
+        chemical_list : list
+            a list of chebi chemical ids e.g. ['CHEBI:16347', 'CHEBI:11060']
+
+        Returns
+        -------
+        list
+            a list of lists of KEGG compounds
+        """
+        return self._convert_ids_using_target_dictionary(chemical_list, "chebi_to_kegg_compound")
+
+    
+    def convert_chemical_to_sider(self, chemical_list):
+        """ Convert a list of Chebi chemical ids to SIDER drugs
+
+        Parameters
+        ----------
+        chemical_list : list
+            a list of chebi chemical ids e.g. ['CHEBI:16347', 'CHEBI:11060']
+
+        Returns
+        -------
+        list
+            a list of lists of SIDER compounds
+        """
+        return self._convert_ids_using_target_dictionary(chemical_list, "chebi_to_sider")
+
+
+class DPDLinker(DatabaseLinker):
+    """ Drug Product database linker class
+    """
+
+    def __init__(self):
+        """ Initialize an object of the class DPDLinker
+        """
+        super(DPDLinker, self).__init__()
+        self._database_name = "dpd"
+
+        self._load_linking_dictionaries()
+
+
+    def convert_drug_to_drugbank_drugs(self, drug_list):
+        """ Convert a list of DPD drug ids to drugbank drugs
+
+        Parameters
+        ----------
+        drug_list : list
+            a list of DPD drug ids e.g. ['11916', '13175']
+
+        Returns
+        -------
+        list
+            a list of lists of drugbank drugs
+        """
+        return self._convert_ids_using_target_dictionary(drug_list, "dpd_to_drugbank")
+
+
+class BindingDBLinker(DatabaseLinker):
+    """ BindingDB database linker class
+    """
+
+    def __init__(self):
+        """ Initialize an object of the class BindingDBLinker
+        """
+        super(BindingDBLinker, self).__init__()
+        self._database_name = "bindingdb"
+
+        self._load_linking_dictionaries()
+
+
+    def convert_compound_to_drugbank_drugs(self, compound_list):
+        """ Convert a list of BindingDB compound ids to drugbank drugs
+
+        Parameters
+        ----------
+        compound_list : list
+            a list of BindingDB compound ids e.g. ['50369395', '50022815']
+
+        Returns
+        -------
+        list
+            a list of lists of drugbank drugs
+        """
+        return self._convert_ids_using_target_dictionary(compound_list, "bindingdb_to_drugbank")
+
+    def convert_compound_to_sider(self, compound_list):
+        """ Convert a list of BindingDB compound ids to sider drugs
+
+        Parameters
+        ----------
+        compound_list : list
+            a list of BindingDB compound ids e.g. ['50369395', '50022815']
+
+        Returns
+        -------
+        list
+            a list of lists of sider drugs
+        """
+        return self._convert_ids_using_target_dictionary(compound_list, "bindingdb_to_sider")
+
+
+class HSDBLinker(DatabaseLinker):
+    """ HSDB database linker class
+    """
+
+    def __init__(self):
+        """ Initialize an object of the class HSDBLinker
+        """
+        super(HSDBLinker, self).__init__()
+        self._database_name = "hsdb"
+
+        self._load_linking_dictionaries()
+
+
+    def convert_substance_to_kegg_drugs(self, substance_list):
+        """ Convert a list of HSDB substance ids to KEGG drugs
+
+        Parameters
+        ----------
+        substance_list : list
+            a list of HSDB substance ids e.g. ['Donepezil', 'Efalizumab']
+
+        Returns
+        -------
+        list
+            a list of lists of KEGG drugs
+        """
+        return self._convert_ids_using_target_dictionary(substance_list, "hsdb_to_kegg_drug")
+
+    def convert_substance_to_kegg_compounds(self, substance_list):
+        """ Convert a list of HSDB substance ids to KEGG compounds
+
+        Parameters
+        ----------
+        substance_list : list
+            a list of HSDB substance ids e.g. ['Donepezil', 'Efalizumab']
+
+        Returns
+        -------
+        list
+            a list of lists of KEGG compounds
+        """
+        return self._convert_ids_using_target_dictionary(substance_list, "hsdb_to_kegg_compound")
+
+
+class IupharLinker(DatabaseLinker):
+    """ Iuphar database linker class
+    """
+
+    def __init__(self):
+        """ Initialize an object of the class IupharLinker
+        """
+        super(IupharLinker, self).__init__()
+        self._database_name = "iuphar"
+
+        self._load_linking_dictionaries()
+
+
+    def convert_ligand_to_drugbank_drugs(self, ligand_list):
+        """ Convert a list of IUPHAR ligand ids to drugbank drugs
+
+        Parameters
+        ----------
+        ligand_list : list
+            a list of IUPHAR ligand ids e.g. ['2174', '1188']
+
+        Returns
+        -------
+        list
+            a list of lists of drugbank drugs
+        """
+        return self._convert_ids_using_target_dictionary(ligand_list, "iuphar_to_drugbank")
+
+
+class KnapsackLinker(DatabaseLinker):
+    """ Knapsack database linker class
+    """
+
+    def __init__(self):
+        """ Initialize an object of the class KnapsackLinker
+        """
+        super(KnapsackLinker, self).__init__()
+        self._database_name = "knapsack"
+
+        self._load_linking_dictionaries()
+
+
+    def convert_metabolite_to_kegg_drugs(self, metabolite_list):
+        """ Convert a list of knapsack metabolite ids to KEGG drugs
+
+        Parameters
+        ----------
+        metabolite_list : list
+            a list of knapsack metabolite ids e.g. ['C00001433', 'C00007279']
+
+        Returns
+        -------
+        list
+            a list of lists of KEGG drugs
+        """
+        return self._convert_ids_using_target_dictionary(metabolite_list, "knapsack_to_kegg_drug")
+
+    def convert_substance_to_kegg_compounds(self, metabolite_list):
+        """ Convert a list of knapsack metabolite ids to KEGG compounds
+
+        Parameters
+        ----------
+        metabolite_list : list
+            a list of knapsack metabolite ids e.g. ['C00001433', 'C00007279']
+
+        Returns
+        -------
+        list
+            a list of lists of KEGG compounds
+        """
+        return self._convert_ids_using_target_dictionary(metabolite_list, "knapsack_to_kegg_compound")
+
+
+class LingandBoxLinker(DatabaseLinker):
+    """ LigandBox database linker class
+    """
+
+    def __init__(self):
+        """ Initialize an object of the class LingandBoxLinker
+        """
+        super(LingandBoxLinker, self).__init__()
+        self._database_name = "ligandbox"
+
+        self._load_linking_dictionaries()
+
+
+    def convert_ligand_to_kegg_drugs(self, ligand_list):
+        """ Convert a list of LigandBox ligand ids to KEGG drugs
+
+        Parameters
+        ----------
+        ligand_list : list
+            a list of LigandBox ligand ids e.g. ['D01109', 'D06340']
+
+        Returns
+        -------
+        list
+            a list of lists of KEGG drugs
+        """
+        return self._convert_ids_using_target_dictionary(ligand_list, "ligandbox_to_kegg_drug")
+
+
+class MassBankLinker(DatabaseLinker):
+    """ MassBank database linker class
+    """
+
+    def __init__(self):
+        """ Initialize an object of the class MassBankLinker
+        """
+        super(MassBankLinker, self).__init__()
+        self._database_name = "massbank"
+
+        self._load_linking_dictionaries()
+
+
+    def convert_accession_to_kegg_drugs(self, accession_list):
+        """ Convert a list of MassBank accession ids to KEGG drugs
+
+        Parameters
+        ----------
+        accession_list : list
+            a list of MassBank accession ids e.g. ['JP005783', 'WA002017']
+
+        Returns
+        -------
+        list
+            a list of lists of KEGG drugs
+        """
+        return self._convert_ids_using_target_dictionary(accession_list, "massbank_to_kegg_drug")
+
+    def convert_substance_to_kegg_compounds(self, accession_list):
+        """ Convert a list of MassBank accession ids to KEGG compounds
+
+        Parameters
+        ----------
+        accession_list : list
+            a list of MassBank accession ids e.g. ['JP005783', 'WA002017']
+
+        Returns
+        -------
+        list
+            a list of lists of KEGG compounds
+        """
+        return self._convert_ids_using_target_dictionary(accession_list, "massbank_to_kegg_compound")
+
+
+class NikkajiLinker(DatabaseLinker):
+    """ Nikkaji database linker class
+    """
+
+    def __init__(self):
+        """ Initialize an object of the class NikkajiLinker
+        """
+        super(NikkajiLinker, self).__init__()
+        self._database_name = "nikkaji"
+
+        self._load_linking_dictionaries()
+
+
+    def convert_chemical_to_kegg_drugs(self, chemical_list):
+        """ Convert a list of Nikkaji chemical ids to KEGG drugs
+
+        Parameters
+        ----------
+        chemical_list : list
+            a list of Nikkaji chemical ids e.g. ['J10.483C', 'J300.856H']
+
+        Returns
+        -------
+        list
+            a list of lists of KEGG drugs
+        """
+        return self._convert_ids_using_target_dictionary(chemical_list, "nikkaji_to_kegg_drug")
+
+    def convert_chemical_to_kegg_compounds(self, chemical_list):
+        """ Convert a list of Nikkaji chemical ids to KEGG compounds
+
+        Parameters
+        ----------
+        chemical_list : list
+            a list of Nikkaji chemical ids e.g. ['J10.483C', 'J300.856H']
+
+        Returns
+        -------
+        list
+            a list of lists of KEGG compounds
+        """
+        return self._convert_ids_using_target_dictionary(chemical_list, "nikkaji_to_kegg_compound")
+
+
+class PDBLinker(DatabaseLinker):
+    """ PDB database linker class
+    """
+
+    def __init__(self):
+        """ Initialize an object of the class PDBLinker
+        """
+        super(PDBLinker, self).__init__()
+        self._database_name = "pdb"
+
+        self._load_linking_dictionaries()
+
+    def convert_chemical_to_drugbank_drugs(self, chemical_list):
+        """ Convert a list of PDB chemical ids to Drugbank drugs
+
+        Parameters
+        ----------
+        chemical_list : list
+            a list of PDB chemical ids e.g. ['PLP', 'HIS']
+
+        Returns
+        -------
+        list
+            a list of lists of Drugbank drugs
+        """
+        return self._convert_ids_using_target_dictionary(chemical_list, "pdb_to_drugbank")
+
+    def convert_chemical_to_kegg_drugs(self, chemical_list):
+        """ Convert a list of PDB chemical ids to KEGG drugs
+
+        Parameters
+        ----------
+        chemical_list : list
+            a list of PDB chemical ids e.g. ['PLP', 'HIS']
+
+        Returns
+        -------
+        list
+            a list of lists of KEGG drugs
+        """
+        return self._convert_ids_using_target_dictionary(chemical_list, "pdb_to_kegg_drug")
+
+    def convert_chemical_to_kegg_compounds(self, chemical_list):
+        """ Convert a list of PDB chemical ids to KEGG compounds
+
+        Parameters
+        ----------
+        chemical_list : list
+            a list of PDB chemical ids e.g. ['PLP', 'HIS']
+
+        Returns
+        -------
+        list
+            a list of lists of KEGG compounds
+        """
+        return self._convert_ids_using_target_dictionary(chemical_list, "pdb_to_kegg_compound")
+
+
+class TTDLinker(DatabaseLinker):
+    """ TTD database linker class
+    """
+
+    def __init__(self):
+        """ Initialize an object of the class TTDLinker
+        """
+        super(TTDLinker, self).__init__()
+        self._database_name = "ttd"
+
+        self._load_linking_dictionaries()
+
+    def convert_drud_to_drugbank_drugs(self, drug_list):
+        """ Convert a list of TTD drug ids to Drugbank drugs
+
+        Parameters
+        ----------
+        drug_list : list
+            a list of TTD drug ids e.g. ['DNC000788', 'DAP000020']
+
+        Returns
+        -------
+        list
+            a list of lists of Drugbank drugs
+        """
+        return self._convert_ids_using_target_dictionary(drug_list, "ttd_to_drugbank")
+
+
+class WikipediaLinker(DatabaseLinker):
+    """ Wikipedia database linker class
+    """
+
+    def __init__(self):
+        """ Initialize an object of the class WikipediaLinker
+        """
+        super(WikipediaLinker, self).__init__()
+        self._database_name = "wikipedia"
+
+        self._load_linking_dictionaries()
+
+    def convert_entry_to_drugbank_drugs(self, entry_list):
+        """ Convert a list of Wikipedia entry ids to Drugbank drugs
+
+        Parameters
+        ----------
+        entry_list : list
+            a list of Wikipedia entry ids e.g. ['Dornase_alfa', 'Leuprolide']
+
+        Returns
+        -------
+        list
+            a list of lists of Drugbank drugs
+        """
+        return self._convert_ids_using_target_dictionary(entry_list, "wikipedia_to_drugbank")
