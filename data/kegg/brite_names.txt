@@ -77,15 +77,15 @@ br08302	USP drug classification
 br08301	Therapeutic category of drugs in Japan
 br08313	Classification of Japanese OTC drugs
 br08312	Risk category of Japanese OTC drugs
+br08304	Traditional Chinese Medicine in Japan
+br08305	Crude drugs
 br08316	Pharmaceutical additives in Japan
 br08310	Target-based classification of drugs
 br08311	Drugs listed in the Japanese Pharmacopoeia
-br08331	Animal drugs in Japan
-br08304	Traditional Chinese Medicine in Japan
-br08305	Crude drugs
 br08321	Essential oils
 br08322	Medicinal herbs
 br08323	Major components of natural products
+br08331	Animal drugs in Japan
 br08402	Human diseases
 br08401	Infectious diseases
 br08403	Human diseases in ICD-11 classification
@@ -116,17 +116,16 @@ br01601	Enzymes of 2-oxocarboxylic acid metabolism
 br01602	Dioxygenases
 br01600	Antimicrobial resistance: KEGG signatures
 br01620	Photosynthetic and chemosynthetic capacities
-br08340	Antineoplastics
-br08350	Antiinfectives
-br08317	Topical steroids potency
 br08319	New drug approvals in the USA
 br08329	New drug approvals in Europe
 br08318	New drug approvals in Japan
 br08328	New drug approvals in the USA, Europe and Japan
-br08315	Rx-to-OTC switch list in the USA
-br08314	Rx-to-OTC switch list in Japan
+br08309	Drug metabolizing enzymes and transporters
 br08341	Pharmacogenomic biomarkers
 br08324	Prodrugs
+br08317	Topical steroids potency
+br08315	Rx-to-OTC switch list in the USA
+br08314	Rx-to-OTC switch list in Japan
 br08442	Tumor markers
 br08441	Cancer-accociated carbohydrates
 br08431	Carbohydrates in viral and bacterial infections

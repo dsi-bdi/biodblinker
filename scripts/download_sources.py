@@ -1,5 +1,6 @@
 from os import makedirs
 import gzip
+import os.path
 from biolink.fileio import *
 from biolink.config import file_open
 from tqdm import tqdm
@@ -18,6 +19,7 @@ mapping_data_root_dp = "../data"
 uniprot_mappings_dp = join(mapping_data_root_dp, "uniprot")
 mapping_data_srcs_dp = join(mapping_data_root_dp, "sources")
 makedirs(mapping_data_srcs_dp) if not isdir(mapping_data_srcs_dp) else None
+makedirs(uniprot_mappings_dp) if not isdir(uniprot_mappings_dp) else None
 
 uniprot_mapping_file_url = "ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/idmapping/by_organism/HUMAN_9606_idmapping.dat.gz"
 uniprot_mapping_filepath = join(mapping_data_srcs_dp, "./uniprot_hsa_mappings.dat.gz")
@@ -63,6 +65,8 @@ class SetWriter:
         """
         self._lines = []
         self._lineset = set()
+        if not os.path.exists(os.path.dirname(path)):
+            makedirs(os.path.dirname(path))
         self._fd = open(path, 'w')
         self._clear_on_flush = True
         self._closed = False
@@ -102,7 +106,7 @@ class SetWriter:
 kegg_source_targets = {
     'drug':
     [
-        'sider', 'hsdb', 'hmdb', 'nikkaji', 'chembl',
+        'hsdb', 'hmdb', 'nikkaji', 'chembl',
         'knapsack', 'pubchem', 'chebi', 'pdb-ccd',
         'lipidbank', 'lipidmaps', 'ligandbox', 'massbank'
     ],
@@ -205,12 +209,22 @@ for source, targets in tqdm(kegg_source_targets.items(), 'Processing KEGG mappin
             source_name = source
             if source == 'hsa':
                 source_name = 'gene'
+
+            reverse_map = defaultdict(set)
             writer = SetWriter(f'../data/kegg/{source_name}_{target}.txt')
             for sid in source_ids:
                 map_ids = mapping_dict[sid]
                 if len(map_ids) == 0:
                     map_ids.add('-')
+                else:
+                    for mapped_id in map_ids:
+                        reverse_map[mapped_id].add(sid)
                 writer.write(f'{sid}\t{";".join(map_ids)}\n')
+            writer.close()
+
+            writer = SetWriter(f'../data/{target}/{target}_kegg_{source_name}.txt')
+            for tid, kids in reverse_map.items():
+                writer.write(f'{tid}\t{";".join(kids)}\n')
             writer.close()
 
 # ==============================================================================
@@ -232,7 +246,7 @@ drugbank_targets = {
     'PubChem Substance': 'pubchem_substance',
     'Therapeutic Targets Database': 'ttd',
     'Guide to Pharmacology': 'pharma_guide',
-    'UniProtKB': 'uniprotkb',
+    'UniProtKB': 'uniprot',
     'Wikipedia': 'wikipedia',
     'GenBank': 'genbank'
 }
@@ -291,13 +305,21 @@ drugbank_ids, drugbank_targets_map = map_drugbank()
 for target, target_map in tqdm(drugbank_targets_map.items(), 'Exporting Drugbank mappings'):
     if len(target_map) == 0:
         continue
-
+    reverse_map = defaultdict(set)
     writer = SetWriter(f'../data/drugbank/drugbank_{target}.txt')
     for did in sorted(drugbank_ids):
         mapped = target_map[did]
         if len(mapped) == 0:
             mapped.add('-')
+        else:
+            for mapped_id in mapped:
+                reverse_map[mapped_id].add(did)
         writer.write(f'{did}\t{";".join(mapped)}\n')
+    writer.close()
+
+    writer = SetWriter(f'../data/{target}/{target}_drugbank.txt')
+    for tid, dids in reverse_map.items():
+        writer.write(f'{tid}\t{";".join(dids)}\n')
     writer.close()
     
 # ==============================================================================
@@ -354,10 +376,20 @@ for target, target_map in tqdm(sider_target_map.items(), 'Exporting Sider mappin
     if len(target_map) == 0:
         continue
 
+    reverse_map = defaultdict(set)
     writer = SetWriter(f'../data/sider/sider_{target}.txt')
     for sid in sorted(sider_ids):
         mapped = target_map[sid]
         if len(mapped) == 0:
             mapped.add('-')
+        else:
+            for mapped_id in mapped:
+                reverse_map[mapped_id].add(sid)
         writer.write(f'{sid}\t{";".join(mapped)}\n')
     writer.close()
+
+    writer = SetWriter(f'../data/{target}/{target}_sider.txt')
+    for tid, sids in reverse_map.items():
+        writer.write(f'{tid}\t{";".join(sids)}\n')
+    writer.close()
+

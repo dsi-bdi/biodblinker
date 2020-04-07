@@ -40,6 +40,7 @@ hsa_var:1585v2	CYP11B2 deficiency
 hsa_var:1586v1	CYP17A1 deficiency
 hsa_var:1589v1	CYP21A2 deficiency
 hsa_var:1593v1	CYP27A1 deficiency
+hsa_var:1600v1	DAB1 overexpression
 hsa_var:162417v1	NAGS deficiency
 hsa_var:1629v1	DBT deficiency
 hsa_var:1630v1	DCC loss
@@ -135,6 +136,7 @@ hsa_var:282617v1	IL28B rs12979860
 hsa_var:284098v1	PIGW deficiency
 hsa_var:2876v1	GPX1 deficiency
 hsa_var:2908v1	NR3C1 mutation
+hsa_var:2911v1	GRM1 mutation
 hsa_var:2937v1	GSS deficiency
 hsa_var:2990v1	GUSB deficiency
 hsa_var:29929v1	ALG6 deficiency
@@ -146,6 +148,7 @@ hsa_var:3028v1	HSD17B10 deficiency
 hsa_var:3030v1	HADHA deficiency
 hsa_var:3032v1	HADHB deficiency
 hsa_var:3033v1	HADH deficiency
+hsa_var:3064v1	HTT mutation
 hsa_var:3081v1	HGD deficiency
 hsa_var:3082v1	HGF overexpression
 hsa_var:3145v1	HMBS deficiency
@@ -170,13 +173,18 @@ hsa_var:3480v1	IGF1R overexpression
 hsa_var:3480v2	IGF1R mutation
 hsa_var:3481v1	IGF2 overexpression
 hsa_var:34v1	ACADM deficiency
+hsa_var:351v1	APP mutation
 hsa_var:35v1	ACADS deficiency
 hsa_var:367v1	AR amplification
 hsa_var:367v2	AR mutation
 hsa_var:36v1	ACADSB deficiency
 hsa_var:3703v1	STT3A deficiency
+hsa_var:3708v1	ITPR1 activating mutation
+hsa_var:3708v2	ITPR1 reduced expression
 hsa_var:3712v1	IVD deficiency
+hsa_var:3748v1	KCNC3 mutation
 hsa_var:374v1	AREG overexpression
+hsa_var:3752v1	KCND3 mutation
 hsa_var:3762v1	KCNJ5 mutation
 hsa_var:37v1	ACADVL deficiency
 hsa_var:3814v1	KISS1 mutation
@@ -204,8 +212,10 @@ hsa_var:4221v1	MEN1 mutation
 hsa_var:4233v1	MET kinase domain mutation
 hsa_var:4233v2	MET overexpression
 hsa_var:4233v3	MET amplification
+hsa_var:4233v4	MET exon 14 skipping
 hsa_var:4247v1	MGAT2 deficiency
 hsa_var:427v1	ASAH1 deficiency
+hsa_var:4287v1	ATXN3 mutation
 hsa_var:4297v1	MLL-AF4 fusion
 hsa_var:4297v2	MLL-ENL fusion
 hsa_var:4298v1	MLL-ENL fusion
@@ -247,6 +257,7 @@ hsa_var:51604v1	PIGT deficiency
 hsa_var:51655v1	RASD1 mutation
 hsa_var:5172v1	SLC26A4 mutation
 hsa_var:51733v1	UPB1 deficiency
+hsa_var:5173v1	PDYN mutation
 hsa_var:51v1	ACOX1 deficiency
 hsa_var:5213v1	PFKM deficiency
 hsa_var:5224v1	PGAM2 deficiency
@@ -268,10 +279,14 @@ hsa_var:55624v1	POMGNT1 deficiency
 hsa_var:55650v1	PIGV deficiency
 hsa_var:5566v1	PRKACA mutation
 hsa_var:5573v1	PRKAR1A mutation
+hsa_var:5582v1	PRKCG inactivating mutation
+hsa_var:5582v2	PRKCG activating mutation
 hsa_var:56052v1	ALG1 deficiency
 hsa_var:5618v1	PRLR mutation
 hsa_var:56246v1	MRAP mutation
 hsa_var:5660v1	SAP deficiency
+hsa_var:5663v1	PSEN1 mutation
+hsa_var:5664v1	PSEN2 mutation
 hsa_var:56922v1	MCCC1 deficiency
 hsa_var:5727v1	PTCH1 mutation
 hsa_var:5728v1	PTEN deletion
@@ -292,6 +307,8 @@ hsa_var:596v1	BCL2 overepression
 hsa_var:5979v1	RET-PTC fusion
 hsa_var:60675v1	PROK2 mutation
 hsa_var:6098v1	ROS1 fusion
+hsa_var:6310v1	ATXN1 mutation
+hsa_var:6311v1	ATXN2 mutation
 hsa_var:6342v1	SCP2 deficiency
 hsa_var:64087v1	MCCC2 deficiency
 hsa_var:6448v1	SGSH deficiency
@@ -303,6 +320,7 @@ hsa_var:6567v1	SLC16A2 mutation
 hsa_var:6584v1	SLC22A5 mutation
 hsa_var:6608v1	SMO mutation
 hsa_var:6609v1	SMPD1 deficiency
+hsa_var:6712v1	SPTBN2 mutation
 hsa_var:6718v1	AKR1D1 deficiency
 hsa_var:673v1	BRAF mutation
 hsa_var:6756v1	SYT-SSX1 fusion
@@ -326,6 +344,7 @@ hsa_var:7157v1	TP53 mutation
 hsa_var:7172v1	TPMT polymorphism for poor drug metabolism
 hsa_var:7173v1	TPO mutation
 hsa_var:7201v1	TRHR mutation
+hsa_var:7222v1	TRPC3 mutation
 hsa_var:7252v1	TSHB mutation
 hsa_var:7253v1	TSHR inactivating mutation
 hsa_var:7253v2	TSHR activating mutation
@@ -339,6 +358,7 @@ hsa_var:7468v1	IGH-MMSET fusion
 hsa_var:7490v1	EWSR1-WT1 fusion
 hsa_var:7498v1	XDH deficiency
 hsa_var:7704v1	PLZF-RARA fusion
+hsa_var:773v1	CACNA1A mutation
 hsa_var:776v1	CACNA1D mutation
 hsa_var:7841v1	MOGS deficiency
 hsa_var:7849v1	PAX8-PPARG fusion

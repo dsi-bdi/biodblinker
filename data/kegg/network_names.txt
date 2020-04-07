@@ -920,6 +920,72 @@ N00947	Shigella Ipa4.5 to cGAS-STING signaling pathway
 N00948	Shigella IpaH7.8 to NLRP3 Inflammasome signaling pathway
 N00949	Shigella IpaB to NLRC4 Inflammasome signaling pathway
 N00950	Escherichia/Salmonella/Shigella FimA to crosstalk between extrinsic and intrinsic apoptotic pathways
+N00953	mGluR1-TRPC3 signaling pathway
+N00954	Mutation-activated GRM1 to mGluR1-TRPC3 signaling pathway
+N00955	Mutation-inactivated PRKCG to mGluR1-TRPC3 signaling pathway
+N00956	Mutation-activated PRKCG to mGluR1-TRPC3 signaling pathway
+N00957	Mutation-caused abberant ATXN2/3 to mGluR5-Ca2+ -apoptotic pathway
+N00958	Mutation-activated ITPR1 to mGluR1-TRPC3 signaling pathway
+N00959	ITPR1-reduced expression to mGluR1-TRPC3 signaling pathway
+N00960	Mutation-caused aberrant SPTBN2 to mGluR1-TRPC3 signaling pathway
+N00961	Mutation-activated TRPC3 to mGluR1-TRPC3 signaling pathway
+N00962	Mutation-inactivated ATXN3 to autophagy-vesicle nucleation
+N00963	RELN-VLDLR-PI3K signaling pathway
+N00964	DAB1-overexpression to RELN-VLDLR-PI3K signaling pathway
+N00965	RORA-mediated transcription
+N00966	Mutation-caused aberrant ATXN1 to RORA-mediated transcription
+N00967	VGCC-Ca2+ -apoptotic pathway
+N00968	Mutation-activated CACNA1A to VGCC-Ca2+ -apoptotic pathway
+N00969	Mutation-inactivated CACNA1A to VGCC-Ca2- -apoptotic pathway
+N00970	Transport of calcium
+N00971	Mutation-caused aberrant PDYN to transport of calcium
+N00972	Transport of potassium
+N00973	Mutation-inactivated KCNC3 to transport of potassium
+N00974	Transport of potassium
+N00975	Mutation-inactivated KCND3 to transport of potassium
+N00976	Retrograde axonal transport
+N00977	Mutation-caused aberrant Htt to retrograde axonal transport
+N00978	Anterograde axonal transport
+N00979	Mutation-caused aberrant Htt to anterograde axonal transport
+N00980	Mutation-caused aberrant Htt to REST-mediated transcriptional repression
+N00981	Mutation-caused aberrant Htt to CREB-mediated transcription
+N00982	Mutation-caused aberrant Htt to p53-mediated transcription
+N00983	Mutation-caused aberrant Htt to extrinsic apoptotic pathway
+N00984	mGluR5-Ca2+ -apoptotic pathway
+N00985	Mutation-caused aberrant Htt to mGluR5-Ca2+ -apoptotic pathway
+N00986	Mutation-caused aberrant Htt to VGCC-Ca2+ -apoptotic pathway
+N00987	Mutation-caused aberrant Htt to transport of calcium
+N00988	Electron transfer in Complex II
+N00989	Mutation-caused aberrant Htt to electron transfer in Complex II
+N00990	Electron transfer in Complex III
+N00991	Mutation-caused aberrant Htt to electron transfer in Complex III
+N00992	Mutation-caused aberrant Htt to TNF-JNK signaling pathway
+N00993	Mutation-caused aberrant Htt to autophagy-vesicle nucleation
+N00994	AGE-RAGE signaling pathway
+N00995	Electron transfer in Complex I
+N00996	Mutation-caused aberrant Abeta to AGE-RAGE signaling pathway
+N00997	Mutation-caused aberrant Abeta to electron transfer in Complex I
+N00998	Electron transfer in Complex IV
+N00999	Mutation-caused aberrant Abeta to electron transfer in Complex IV
+N01000	mAChR-Ca2+ -apoptotic pathway
+N01001	Mutation-caused aberrant Abeta to mAchR-Ca2+ -apoptotic pathway
+N01002	Mutation-caused aberrant Abeta to mGluR5-Ca2+ -apoptotic pathway
+N01003	Mutation-caused aberrant Abeta to transport of calcium
+N01004	Mutation-caused aberrant Abeta to VGCC-Ca2+ -apoptotic pathway
+N01005	Mutation-caused aberrant Abeta to crosstalk between extrinsic and intrinsic apoptotic pathways
+N01006	Mutation-caused aberrant Abeta to VGCC-Ca2+ -apoptotic pathway
+N01007	Mutation-caused aberrant PSEN to mGluR5-Ca2+ -apoptotic pathway
+N01008	Mutation-caused aberrant PSEN1 to mGluR5-Ca2+ -apoptotic pathway
+N01009	PERK-ATF4 signaling pathway
+N01010	Mutation-caused aberrant PSEN1 to PERK-ATF4 signaling pathway
+N01011	IRE1a-XBP1 signaling pathway
+N01012	Mutation-caused aberrant PSEN1 to IRE1a-XBP1 signaling pathway
+N01013	IRE1a-JNK signaling pathway
+N01014	Mutation-caused aberrant Abeta to IRE1a-JNK signaling pathway
+N01015	ATF4-mediated transcription
+N01016	Mutation-caused aberrant PSEN1 to ATF4-mediated transcription
+N01017	Mutation-caused aberrant PSEN1 to anterograde axonal transport
+N01018	Mutation-caused aberrant Abeta to anterograde axonal transport
 N10001	First-generation tyrosine kinase inhibitor to BCR-ABL fusion
 N10002	Second/third-generation tyrosine kinase inhibitor to BCR-ABL fusion
 N10003	First-generation tyrosine kinase inhibitor to ALK fusion
@@ -983,6 +1049,20 @@ nt06273	Glioma
 nt06274	Thyroid cancer
 nt06275	Acute myeloid leukemia
 nt06276	Chronic myeloid leukemia
+nt06410	Calcium signaling
+nt06411	Potassium transport
+nt06412	Unfolded protein response (UPR) signaling
+nt06413	Autophagy
+nt06414	Apoptosis
+nt06415	PI3K signaling
+nt06416	TNF signaling
+nt06417	AGE-RAGE signaling
+nt06418	Oxidative phosphorylation
+nt06419	Microtubule-based transport
+nt06440	Transcription
+nt06460	Alzheimer disease
+nt06461	Huntington disease
+nt06462	Spinocerebellar ataxia
 nt06310	CRH-ACTH-cortisol signaling
 nt06360	Cushing syndrome
 nt06316	Angiotensin-aldosterone signaling

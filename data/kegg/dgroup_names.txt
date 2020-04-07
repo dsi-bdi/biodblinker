@@ -202,7 +202,7 @@ DG00204	Amiodarone
 DG00205	Ibutilide
 DG00206	Tedisamil
 DG00207	Dronedarone
-DG00208	Moricizine;Moracizine
+DG00208	Moracizine;Moricizine
 DG00209	Cibenzoline
 DG00210	Etilefrine
 DG00211	Isoprenaline
@@ -527,7 +527,7 @@ DG00531	Temocillin
 DG00532	Hetacillin
 DG00533	Aspoxicillin
 DG00534	Benzylpenicillin;Penicillin G
-DG00535	Phenoxymethylpenicillin;Penicillin V
+DG00535	Penicillin V;Phenoxymethylpenicillin
 DG00536	Propicillin
 DG00537	Azidocillin
 DG00538	Pheneticillin
@@ -810,7 +810,7 @@ DG00814	Dihydrocodeine
 DG00815	Ketobemidone
 DG00816	Pethidine
 DG00817	Dextromoramide
-DG00818	Dextropropoxyphene;Propoxyphene
+DG00818	Propoxyphene;Dextropropoxyphene
 DG00819	Pentazocine
 DG00820	Buprenorphine
 DG00821	Butorphanol
@@ -1035,8 +1035,8 @@ DG01040	Flunisolide
 DG01041	Phenylpropanolamine
 DG01042	Pseudoephedrine
 DG01043	Gramicidin
-DG01044	Metaproterenol;Orciprenaline
-DG01045	Albuterol;Salbutamol
+DG01044	Orciprenaline;Metaproterenol
+DG01045	Salbutamol;Albuterol
 DG01046	Terbutaline
 DG01047	Hexoprenaline
 DG01048	Pirbuterol
@@ -1264,7 +1264,7 @@ DG01270	Isosorbide nitrate
 DG01271	Limaprost
 DG01272	Piroheptine
 DG01273	Diprenorphine
-DG01274	Saridegib;Patidegib
+DG01274	Patidegib;Saridegib
 DG01275	Boldenone
 DG01276	Methandriol
 DG01277	Pirlindole
@@ -1463,15 +1463,15 @@ DG01476	Dopamine D4-receptor antagonist
 DG01477	Dopamine D5-receptor antagonist
 DG01478	Dopamine antagonist
 DG01479	beta-Lactamase inhibitor
-DG01480	Penam;Penicillin
+DG01480	Penicillin;Penam
 DG01481	Histamine receptor H2 antagonist
 DG01482	Histamine receptor H1 antagonist
 DG01483	5-HT1A-receptor agonist
 DG01484	5-HT1B-receptor agonist
 DG01485	5-HT1D-receptor agonist
 DG01486	Penem
-DG01487	Oxapenam;Clavam
-DG01488	Cephalosporin;Cephem
+DG01487	Clavam;Oxapenam
+DG01488	Cephem;Cephalosporin
 DG01489	5-HT3-receptor antagonist
 DG01490	Muscarinic cholinergic receptor agonist
 DG01491	Anticholinergic agent;Muscarinic cholinergic receptor antagonist
@@ -1550,7 +1550,7 @@ DG01564	Opioid receptor agonist
 DG01565	GABA-B receptor agonist
 DG01566	Smoothened (Smo) antagonist
 DG01567	GABA-A receptor agonist
-DG01568	MAO inhibitor;Monoamine oxidase inhibitors
+DG01568	Monoamine oxidase inhibitors;MAO inhibitor
 DG01569	AMPA receptor antagonist
 DG01570	Nicotinic cholinergic receptor agonist
 DG01571	Nicotinic cholinergic receptor partial agonist
@@ -1607,7 +1607,7 @@ DG01622	ABCB1 (P-GP) inhibitor
 DG01623	Steroid-type antiandrogen
 DG01624	Flutamide-type antiandrogen
 DG01625	Alectinib
-DG01626	Acorafloxacin;Avarofloxacin
+DG01626	Avarofloxacin;Acorafloxacin
 DG01627	Batefenterol
 DG01628	Cabotegravir
 DG01629	Adrenocorticotropic hormone (ACTH)
@@ -1656,14 +1656,14 @@ DG01672	Amino acid
 DG01673	Amide type local anesthetic
 DG01674	Esterified local anesthetic
 DG01675	Local anesthetic
-DG01676	Spironolactone derivative;Aldosterone antagonist
+DG01676	Aldosterone antagonist;Spironolactone derivative
 DG01677	Alkylating agent
 DG01678	Nitrogen mustard analog
 DG01679	Platinum compound
 DG01680	Aluminum compounds antacid
 DG01681	Fasiglifam
 DG01682	Anthracycline antineoplastic
-DG01683	Thiazolidinedione;Thiazolidinedione type PPAR agonist
+DG01683	Thiazolidinedione type PPAR agonist;Thiazolidinedione
 DG01684	Biguanide antidiabetic
 DG01685	Insulin sensitizer
 DG01686	Inactivated vaccine
@@ -1688,7 +1688,7 @@ DG01704	Phenethylamine anorexic
 DG01705	Anoretic
 DG01706	Antiobesity
 DG01707	Fibrinolytic
-DG01708	Vitamin K antagonist;Coumarin anticoagulant
+DG01708	Coumarin anticoagulant;Vitamin K antagonist
 DG01709	Heparin anticoagulant
 DG01710	beta-Lactam antibiotic
 DG01711	Carbacephem
@@ -1714,7 +1714,7 @@ DG01730	Non-selective monoamine reuptake inhibitor
 DG01732	Non-thiazolidinedione type PPAR agonist
 DG01733	PPAR agonist
 DG01734	Sulfonamide type sulfonylurea receptor agonist
-DG01735	Glinide;Short acting insulin secretagogues
+DG01735	Short acting insulin secretagogues;Glinide
 DG01736	Deferitazole
 DG01737	Rauwolfia alkaloid
 DG01738	Centrally-acting antiadrenergic
@@ -1735,7 +1735,7 @@ DG01752	Interferone
 DG01753	Colony stimulating factor;Leukocyte growth factor
 DG01754	Cannabinoid receptor inverse agonist
 DG01755	Benzfetamine
-DG01756	Ondelopran;Odelepran
+DG01756	Odelepran;Ondelopran
 DG01757	Amrinone type cardiotonic
 DG01758	Pimobendan type cardiotonic
 DG01759	Dicumarol type coumarin derivative
@@ -1785,7 +1785,7 @@ DG01802	Human insulin
 DG01803	Antidiabetic, alpha-glucosidase inhibitor
 DG01804	Oxyimino beta-lactam
 DG01805	Mediator release inhibitor
-DG01806	Propranolol type antiarrhythmic;Class II antiarrhythmic agent
+DG01806	Class II antiarrhythmic agent;Propranolol type antiarrhythmic
 DG01807	Phenylalkylamine derivative
 DG01808	Thienopyridine
 DG01809	P2Y12 receptor antagonist
@@ -1795,7 +1795,7 @@ DG01812	Sanfetrinem
 DG01813	Pleuromutilin
 DG01814	Mazipredone
 DG01815	Danoprevir
-DG01816	Deldeprevir;Neceprevir
+DG01816	Neceprevir;Deldeprevir
 DG01818	Ledipasvir
 DG01819	Ombitasvir
 DG01820	Paritaprevir
@@ -1907,8 +1907,8 @@ DG01927	Sultosilic acid
 DG01928	Dihydropyridine calcium channel blocker
 DG01929	Imidocarb
 DG01930	Dihydrofolate reductase inhibitor, antineoplastic
-DG01931	Dihydrofolate reductase inhibitor, antibacterial;Trimethoprim derivative
-DG01932	Dihydrofolate reductase inhibitor, antiprotozoal;Antifolate, antiprotozoal
+DG01931	Trimethoprim derivative;Dihydrofolate reductase inhibitor, antibacterial
+DG01932	Antifolate, antiprotozoal;Dihydrofolate reductase inhibitor, antiprotozoal
 DG01933	CYP2C19 inhibitor
 DG01934	Antithyroid agent
 DG01935	Fluoropyrimidine antineoplastic
@@ -1918,14 +1918,14 @@ DG01938	CYP2D6 inducer
 DG01940	Butyrophenone derivative
 DG01941	Benzamide antipsychotic
 DG01942	Iminobenzyl antipsychotic
-DG01943	5-HT1B/1D-receptor agonist, antimigraine drug;Triptan
+DG01943	Triptan;5-HT1B/1D-receptor agonist, antimigraine drug
 DG01944	Todralazine
 DG01945	Bile acid sequestrant
 DG01946	Hypolipidemic agent
 DG01947	Anti-inflammatory drug, pyrazolone
 DG01948	Gilteritinib
 DG01949	Anti-inflammatory drug, phenylbutazones
-DG01950	Antithrombotic agent;Anticoagulant
+DG01950	Anticoagulant;Antithrombotic agent
 DG01951	Catecholamine adrenergic receptor agonist
 DG01952	Vasopressin analog
 DG01953	Thyroid preparation
@@ -1960,7 +1960,7 @@ DG01983	Glecaprevir
 DG01984	Opioid analgesics
 DG01985	Disease modifying anti-rheumatic drugs (DMARDs)
 DG01986	Estrogen
-DG01987	Eglumegad;Eglumetad
+DG01987	Eglumetad;Eglumegad
 DG01988	Ciraparantag
 DG01989	Dasotraline
 DG01990	Serine protease inhibitor
@@ -2000,13 +2000,13 @@ DG02026	Opioid anesthetics
 DG02027	General anesthetics
 DG02028	Inhalational anaesthetics
 DG02030	Anesthetics
-DG02031	Hydantoin anticonvulsants;Hydantoin antiepileptics
-DG02032	Oxazolidine anticonvulsants;Oxazolidine antiepileptics
+DG02031	Hydantoin antiepileptics;Hydantoin anticonvulsants
+DG02032	Oxazolidine antiepileptics;Oxazolidine anticonvulsants
 DG02033	Succinimide anticonvulsants;Succinimide antiepileptics
 DG02034	Carboxamide antiepileptics;Carboxamide anticonvulsants
 DG02035	Fatty acid antiepileptics;Fatty acid anticonvulsants
-DG02036	Antiepileptics, benzodiazepine derivatives;Anticonvulsants, benzodiazepine derivative
-DG02037	GABA mimetic anticonvulsants;GABA mimetic antiepileptics
+DG02036	Anticonvulsants, benzodiazepine derivative;Antiepileptics, benzodiazepine derivatives
+DG02037	GABA mimetic antiepileptics;GABA mimetic anticonvulsants
 DG02038	Piracetam antiepileptics;Piracetam anticonvulsants
 DG02039	Fiboflapon
 DG02040	Aladorian
@@ -2018,7 +2018,7 @@ DG02045	Acexamic acid
 DG02046	Hydrazinophthalazine derivative
 DG02068	Glucocorticoid
 DG02069	Atiprimod
-DG02073	Leucovorin;Folinic acid
+DG02073	Folinic acid;Leucovorin
 DG02077	Difeterol
 DG02078	Anivamersen
 DG02081	Capmatinib
@@ -2272,3 +2272,4 @@ DG03104	Vonoprazan
 DG03105	Remimazolam
 DG03106	Mivavotinib
 DG03107	Anti-HIV agent
+DG03108	Omecamtiv mecarbil
