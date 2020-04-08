@@ -1,10 +1,13 @@
-from biolink import KEGGLinker, GeneNameLinker, DrugBankLinker, UniprotLinker
+from biolink import (KEGGLinker, GeneNameLinker, DrugBankLinker,
+                     UniprotLinker, HPALinker, CellosaurusLinker)
 
 
 kegg_db = KEGGLinker()
 gene_name_db = GeneNameLinker()
 drugbank_db = DrugBankLinker()
 uniprot_db = UniprotLinker()
+hpa_db = HPALinker()
+cl_db = CellosaurusLinker()
 
 kegg_gene_ids = kegg_db.gene_ids
 kegg_drug_ids = kegg_db.drug_ids
@@ -45,5 +48,26 @@ print('Uniprot accs mapped to gene names')
 for index, acc in enumerate(uniprot_acc_ids_list):
     print(f'{acc} linked to {linked_gene_names[index]}')
 
+print()
+cells = ['CVCL_0028', 'CVCL_0025', 'CVCL_Y019']
+tissues = ['Lung', 'Brain']
+cell_tissues = cl_db.convert_cell_line_to_hpa(cells)
+cell_names = cl_db.convert_cell_line_to_name(cells)
+tissue_cells = hpa_db.convert_hpa_to_cellosaurus(tissues)
+
+print()
+print('Cellosaurus cell line ids mapped to hpa tissues')
+for index, cell in enumerate(cells):
+    print(f'{cell} linked to {cell_tissues[index]}')
+
+print()
+print('Cellosaurus cell line ids mapped to names')
+for index, cell in enumerate(cells):
+    print(f'{cell} linked to {cell_names[index]}')
 
 
+
+print()
+print('HPA tissues mapped to Cellosaurus cell line ids')
+for index, tissue in enumerate(tissues):
+    print(f'{tissue} linked to {tissue_cells[index]}')

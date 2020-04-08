@@ -1,0 +1,58 @@
+CVCL_0037	Skin
+CVCL_0023	Lung
+CVCL_0028	Breast, female reproductive system
+CVCL_U602	Sarcoma
+CVCL_0044	Miscellaneous
+CVCL_3653	Fibroblast
+CVCL_6573	Fibroblast
+CVCL_0025	Abdominal
+CVCL_0026	Abdominal
+CVCL_0008	Lymphoid
+CVCL_0029	Breast, female reproductive system
+CVCL_GZ73	Fibroblast
+CVCL_0038	Skin
+CVCL_Y019	Myeloid
+CVCL_X491	Lung
+CVCL_9Q52	Fibroblast
+CVCL_0009	Lymphoid
+CVCL_0045	Renal, urinary, male reproductive system
+CVCL_0001	Myeloid
+CVCL_0030	Breast, female reproductive system
+CVCL_0027	Abdominal
+CVCL_0002	Myeloid
+CVCL_0003	Myeloid
+CVCL_AQ44	Miscellaneous
+CVCL_JM27	Endothelial
+CVCL_3383	Breast, female reproductive system
+CVCL_9Q53	Endothelial
+CVCL_0004	Myeloid
+CVCL_0010	Lymphoid
+CVCL_8890	Sarcoma
+CVCL_0031	Breast, female reproductive system
+CVCL_0013	Lymphoid
+CVCL_0005	Myeloid
+CVCL_0034	Renal, urinary, male reproductive system
+CVCL_0035	Renal, urinary, male reproductive system
+CVCL_1650	Lymphoid
+CVCL_0041	Sarcoma
+CVCL_0014	Lymphoid
+CVCL_K278	Renal, urinary, male reproductive system
+CVCL_0036	Renal, urinary, male reproductive system
+CVCL_0024	Lung
+CVCL_0019	Brain
+CVCL_0032	Breast, female reproductive system
+CVCL_0033	Breast, female reproductive system
+CVCL_0039	Skin
+CVCL_0553	Breast, female reproductive system
+CVCL_0006	Myeloid
+CVCL_0047	Endothelial
+CVCL_0020	Brain
+CVCL_0042	Sarcoma
+CVCL_0043	Sarcoma
+CVCL_0021	Brain
+CVCL_0015	Lymphoid
+CVCL_0016	Lymphoid
+CVCL_0017	Lymphoid
+CVCL_0022	Brain
+CVCL_0007	Myeloid
+CVCL_0040	Skin
