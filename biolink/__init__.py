@@ -18,6 +18,6 @@ __all__ = [
     "PubchemLinker", "ChebiLinker", "DPDLinker", "BindingDBLinker",
     "HSDBLinker", "IupharLinker", "KnapsackLinker", "LingandBoxLinker",
     "MassBankLinker", "NikkajiLinker", "PDBLinker", "TTDLinker",
-    "WikipediaLinker",
+    "WikipediaLinker", "CellosaurusLinker",
     "__version__", "__name__", "__description__"
 ]

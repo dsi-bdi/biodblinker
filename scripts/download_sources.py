@@ -393,3 +393,48 @@ for target, target_map in tqdm(sider_target_map.items(), 'Exporting Sider mappin
         writer.write(f'{tid}\t{";".join(sids)}\n')
     writer.close()
 
+
+
+################################################################################
+# HPA
+################################################################################
+
+tissue_dict = defaultdict(set)
+cellline_dict = defaultdict(set)
+with open('../data/sources/hpa_cellines_exp.txt', 'r') as cellline_fd:
+    for line in cellline_fd:
+        parts = line.split('\t')
+        tissue,cell = parts[2].split('#')
+        if cell != 'NA':
+            tissue_dict[tissue].add(cell)
+            cellline_dict[cell].add(tissue)
+
+writer = SetWriter(f'../data/hpa/hpa_to_cellosaurus.txt')
+
+for tissue, cells in tissue_dict.items():
+    writer.write(f'{tissue}\t{";".join(cells)}\n')
+
+writer.close()
+
+writer = SetWriter(f'../data/cellosaurus/cellosaurus_to_hpa.txt')
+
+for cell, tissues in cellline_dict.items():
+    writer.write(f'{cell}\t{";".join(tissues)}\n')
+
+writer.close()
+
+################################################################################
+# Cellosaurus
+################################################################################
+cell_names = {}
+with open('../data/sources/cl_cat.txt', 'r') as cell_fd:
+    for line in cell_fd:
+        parts = line.split('\t')
+        cell_id = parts[0]
+        names = parts[1].split(',')
+        cell_names[cell_id] = names
+
+writer = SetWriter(f'../data/cellosaurus/cellosaurus_names.txt')
+for cell, names in cell_names.items():
+    writer.write(f'{cell}\t{";".join(names)}\n')
+writer.close()
