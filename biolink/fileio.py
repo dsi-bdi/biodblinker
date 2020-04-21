@@ -10,6 +10,7 @@ from tempfile import gettempdir
 from timeit import default_timer as timer
 from os.path import join, basename, isfile, isdir, dirname
 from os import mkdir
+import requests
 
 
 def download_file_with_cert(url, local_path, checksum=None, cert=None):
@@ -76,6 +77,52 @@ def download_file(url, local_path, checksum=None):
 
     urllib.request.urlretrieve(url, tmp_file)
 
+    # check the checksum if provided
+    if not (checksum is None):
+        # compute the checksum of the file
+        downloaded_file_checksum = get_file_md5(tmp_file)
+        if downloaded_file_checksum != checksum:
+            raise ValueError("invalid file checksum [%s] for file: %s" % (downloaded_file_checksum, url))
+
+    # move tmp file to desired file local path
+    shutil.move(tmp_file, local_path)
+    return local_path
+
+
+def download_file_with_auth(url, local_path, username, password, checksum=None):
+    """ download a file to disk using the given uername and password 
+    with ability to validate file checksum
+
+    Parameters
+    ----------
+    url : str
+        represents file full web url
+    local_path : str
+        represents full local path
+    username : str
+        the username to use for authentication
+    password : str
+        the password to use for authentication
+    checksum : str
+        represents the checksum of the file
+    Returns
+    -------
+    str
+        local path to downloaded file
+    """
+
+    # create a temporary file to download to
+    tmp_dir = gettempdir()
+    file_name = url.split('/')[-1]
+    tmp_file = os.path.join(tmp_dir, file_name)
+
+    with requests.get(url, auth=(username, password)) as r:
+        if r.status_code == 200:
+            with open(tmp_file, 'wb') as out:
+                for bits in r.iter_content():
+                    out.write(bits)
+        else:
+            raise ValueError(f'Error downloading {url} status: {r.status_code}')
     # check the checksum if provided
     if not (checksum is None):
         # compute the checksum of the file

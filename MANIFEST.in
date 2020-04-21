@@ -1,0 +1,3 @@
+include biolink/sources.ini
+include LICENSE
+include readme.md

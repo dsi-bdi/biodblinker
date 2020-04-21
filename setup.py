@@ -8,6 +8,9 @@ setup(
    author='INSIGHT Centre for Data Analytics',
    author_email='sameh.kamal@insight-centre.org',
    packages=[__name__],
+   include_package_data=True,
    install_requires=[
+      'tqdm',
+      'requests'
                      ],
 )
