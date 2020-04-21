@@ -1,0 +1,18 @@
+package:
+  name: biolink
+  version: 0.0.1
+
+source:
+  fn:  biolink-0.0.1.tar.gz
+  url: ../dist/biolink-0.0.1.tar.gz
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - requests
+    - tqdm
+  run:
+    - python
+    - tqdm
+    - requests
