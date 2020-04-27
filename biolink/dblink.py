@@ -1075,7 +1075,7 @@ class DrugBankLinker(DatabaseLinker):
         """
         return self._convert_ids_using_target_dictionary(drug_list, "drugbank_to_ids")
 
-    def convert_secondaryifs_to_drugs(self, secondary_list):
+    def convert_secondaryids_to_drugs(self, secondary_list):
         """ Convert a list of DrugBank secondary drug ids to drug ids
 
         Parameters
