@@ -9,6 +9,7 @@ from zipfile import ZipFile
 import xml.etree.ElementTree as ET
 import gzip
 import shutil
+import time
 
 
 class MappingGenerator():
@@ -31,12 +32,51 @@ class MappingGenerator():
         str
             the path to the mappings file
         """
-        uniprot_mapping_file_url = "ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/idmapping/by_organism/HUMAN_9606_idmapping.dat.gz"
-        uniprot_mapping_filepath = join(sources_dir, "./uniprot_hsa_mappings.dat.gz")
+        swissprot_file_url = 'ftp://ftp.ebi.ac.uk/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.xml.gz'
+        uniprot_mapping_file_url = "ftp://ftp.ebi.ac.uk/pub/databases/uniprot/current_release/knowledgebase/idmapping/idmapping.dat.gz"
+        uniprot_mapping_filepath = join(sources_dir, "./uniprot_mappings.dat.gz")
+        swissprot_mapping_filepath = join(sources_dir, "./swissprot.xml.gz")
+        
         download_file_md5_check(uniprot_mapping_file_url, uniprot_mapping_filepath)
-        return uniprot_mapping_filepath
+        download_file_md5_check(swissprot_file_url, swissprot_mapping_filepath)
+        return uniprot_mapping_filepath, swissprot_mapping_filepath
 
-    def _map_uniprot(self, uniprot_mapping_file):
+    def _get_included_accs(self, swissprot_file):
+        """ Get the set of swissprot accessions to include
+
+        Parameters
+        ----------
+        swissprot_file : str
+            the path to the swissprot xml file
+
+        Returns
+        --------
+        set
+            The set of swissprot accessions to include
+        """
+
+        ns = {'up': 'http://uniprot.org/uniprot'}
+
+        valid_species = ['ARATH', 'BACSU', 'BOVIN', 'CAEEL', 'CHICK', 'DANRE', 'DICDI', 'DROME',
+                         'ECO57', 'ECOLI', 'HUMAN', 'MOUSE', 'MYCTO', 'MYCTU', 'ORYSJ', 'PONAB',
+                         'RAT', 'SCHPO', 'XENLA', 'YEAST', 'PIG']
+
+        valid_accs = set()
+        with file_open(swissprot_file) as swissprot_fd:
+            for _, elem in tqdm(ET.iterparse(swissprot_fd), 'Processing swissprot mapping'):
+                if elem.tag == '{http://uniprot.org/uniprot}entry':
+                    uniprot_acc = elem.find('./up:accession', ns).text
+                    name = elem.find('./up:name', ns).text
+
+                    species = name.split('_')[-1]
+
+                    if species in valid_species:
+                        valid_accs.add(uniprot_acc)
+
+                    elem.clear()
+        return valid_accs
+
+    def _map_uniprot(self, uniprot_mapping_file, valid_accs):
         """ Map uniprot proteins to several databases
 
         Parameters
@@ -62,6 +102,8 @@ class MappingGenerator():
         with file_open(uniprot_mapping_file) as uniprot_map_fd:
             for line in tqdm(uniprot_map_fd, desc="Processing UNIPROT mapping file."):
                 uniprot_acc, db_tag, db_id = line.strip().split("\t")
+                if uniprot_acc not in valid_accs:
+                    continue
                 if db_tag in target_databases:
                     if uniprot_acc not in db_mapping_dictionaries_dict[db_tag]:
                         db_mapping_dictionaries_dict[db_tag][uniprot_acc] = [db_id]
@@ -128,8 +170,9 @@ class MappingGenerator():
         makedirs(sources_dp) if not isdir(sources_dp) else None
         makedirs(mappings_dp) if not isdir(mappings_dp) else None
 
-        uniprot_mapping_file = self._download_uniprot_sources(sources_dp)
-        uniprot_mappings, uniprot_mappings_rev = self._map_uniprot(uniprot_mapping_file)
+        uniprot_mapping_file, swissprot_file = self._download_uniprot_sources(sources_dp)
+        uniprot_accs = self._get_included_accs(swissprot_file)
+        uniprot_mappings, uniprot_mappings_rev = self._map_uniprot(uniprot_mapping_file, uniprot_accs)
         self._export_uniprot(uniprot_mappings, mappings_dp)
         self._export_uniprot_reverse(uniprot_mappings_rev, self._data_dir)
 
@@ -141,7 +184,7 @@ class MappingGenerator():
                     names.add(name)
                 writer.write(f'{acc}\t{";".join(names)}\n')
 
-    def _map_kegg_names(self, database, mappings_dp):
+    def _map_kegg_names(self, database, mappings_dp, file_mode='w', database_name=None):
         """ map kegg entities to their names
 
         Parameters
@@ -158,13 +201,13 @@ class MappingGenerator():
         """
         id_set = set()
         database_name = database
-        if database == 'hsa':
-            database_name = 'gene'
+        if database_name is None:
+            database_name = database
 
         resp = requests.get(f'http://rest.kegg.jp/list/{database}')
 
         if resp.ok:
-            with open(join(mappings_dp, f'{database_name}_names.txt'), 'w', encoding='utf-8') as writer:
+            with open(join(mappings_dp, f'{database_name}_names.txt'), file_mode, encoding='utf-8') as writer:
                 for line in resp.iter_lines(decode_unicode=True):
                     parts = line.strip().split('\t')
                     if len(parts) >= 2:
@@ -226,13 +269,16 @@ class MappingGenerator():
                     tid = sider_base[:len(sider_base)-len(tid)]+tid
                 mapping_dict[did].add(tid)
 
-        if is_empty:
-            print(f'Unable to link {database} to {target}')
         return mapping_dict
 
     def generate_kegg_mappings(self):
         """ Generate mappings for kegg entities """
-
+        gene_xref = ['uniprot', 'ensembl']
+        species_list = [
+            'ath', 'bsu', 'bta', 'cel', 'gga', 'dre', 'ddi',
+            'dme', 'eco', 'hsa', 'mmu', 'mtc', 'mtu', 'osa',
+            'pon', 'rno', 'spo', 'xla', 'sce', 'ssc'
+        ]
         kegg_source_targets = {
             'drug':
             [
@@ -249,10 +295,6 @@ class MappingGenerator():
                 '3dmet', 'hsdb', 'hmdb', 'nikkaji', 'chembl',
                 'knapsack', 'pubchem', 'chebi', 'pdb-ccd',
                 'lipidbank', 'lipidmaps', 'massbank'
-            ],
-            'hsa':
-            [
-                'uniprot', 'ensembl'
             ],
             'pathway': [],
             'brite': [],
@@ -272,12 +314,14 @@ class MappingGenerator():
 
         for source, targets in tqdm(kegg_source_targets.items(), 'Processing KEGG mappings'):
             source_ids = self._map_kegg_names(source, mappings_dp)
+            # Sleep between requests
+            time.sleep(0.2)
             for target in targets:
                 mapping_dict = self._link_kegg_db(source, target)
+                # Sleep between requests
+                time.sleep(0.2)
                 if len(mapping_dict) > 0:
                     source_name = source
-                    if source == 'hsa':
-                        source_name = 'gene'
 
                     reverse_map = defaultdict(set)
                     with open(join(mappings_dp, f'{source_name}_to_{target}.txt'), 'w', encoding='utf-8') as writer:
@@ -296,6 +340,37 @@ class MappingGenerator():
                         for tid, kids in reverse_map.items():
                             writer.write(f'{tid}\t{";".join(kids)}\n')
 
+        file_mode = 'w'
+        for species in tqdm(species_list, 'Processing KEGG gene mappings'):
+            source_ids = self._map_kegg_names(species, mappings_dp, file_mode, database_name='gene')
+            # Sleep between requests
+            time.sleep(0.2)
+            for target in gene_xref:
+                mapping_dict = self._link_kegg_db(species, target)
+                # Sleep between requests
+                time.sleep(0.2)
+                if len(mapping_dict) > 0:
+                    source_name = 'gene'
+
+                    reverse_map = defaultdict(set)
+                    with open(join(mappings_dp, f'{source_name}_to_{target}.txt'), file_mode, encoding='utf-8') as writer:
+                        for sid in source_ids:
+                            map_ids = mapping_dict[sid]
+                            if len(map_ids) == 0:
+                                map_ids.add('-')
+                            else:
+                                for mapped_id in map_ids:
+                                    reverse_map[mapped_id].add(sid)
+                            writer.write(f'{sid}\t{";".join(map_ids)}\n')
+
+                    target_dp = join(self._data_dir, target)
+                    makedirs(target_dp) if not isdir(target_dp) else None
+                    with open(join(target_dp, f'{target}_to_kegg_{source_name}.txt'), file_mode, encoding='utf-8') as writer:
+                        for tid, kids in reverse_map.items():
+                            writer.write(f'{tid}\t{";".join(kids)}\n')
+                # After the first iteration append to the files instead of overwriting
+                file_mode = 'a'
+
     def _download_drugbank(self, sources_dp, username, password):
         """ Download drugbank
 
@@ -313,7 +388,7 @@ class MappingGenerator():
         str
             the path to the drugbank file
         """
-        drugbank_file_url = "https://www.drugbank.ca/releases/5-1-5/downloads/all-full-database"
+        drugbank_file_url = "https://www.drugbank.ca/releases/latest/downloads/all-full-database"
         drugbank_filepath = join(sources_dp, "./drugbank_all_full_database.xml.zip")
         download_file_with_auth(drugbank_file_url, drugbank_filepath, username, password)
 
@@ -377,8 +452,6 @@ class MappingGenerator():
                                 target = drugbank_targets[source.text]
                                 target_id = ext_id.find('./db:identifier', ns).text
                                 drugbank_targets_map[target][did].add(target_id)
-                            else:
-                                print(source.text)
 
                         elem.clear()
 
