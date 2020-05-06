@@ -12,6 +12,40 @@ import shutil
 import time
 
 
+
+class Species:
+
+    def __init__(self, code, kegg_organism, node, scientific_name):
+        self.code = code
+        self.kegg_organism = kegg_organism
+        self.node = node
+        self.scientific_name = scientific_name
+
+
+VALID_SPECIES = [
+    Species('ARATH', 'ath', '3702', 'arabidopsis thaliana'),
+    Species('BACSU', 'bsu', '224308', 'bacillus subtilis (strain 168)'),
+    Species('BOVIN', 'bta', '9913', 'bos taurus'),
+    Species('CAEEL', 'cel', '6239', 'caenorhabditis elegans'),
+    Species('CHICK', 'gga', '9031', 'gallus gallus'),
+    Species('DANRE', 'dre', '7955', 'danio rerio'),
+    Species('DICDI', 'ddi', '44689', 'dictyostelium discoideum'),
+    Species('DROME', 'dme', '7227', 'drosophila melanogaster'),
+    Species('ECO57', 'ece', '83334', 'escherichia coli o157:h7'),
+    Species('ECOLI', 'eco', '83333', 'escherichia coli (strain k12)'),
+    Species('HUMAN', 'hsa', '9606', 'homo sapiens'),
+    Species('MOUSE', 'mmu', '10090', 'mus musculus'),
+    Species('MYCTO', 'mtc', '83331', 'mycobacterium tuberculosis (strain cdc 1551 / oshkosh)'),
+    Species('MYCTU', 'mtu', '83332', 'mycobacterium tuberculosis (strain atcc 25618 / h37rv)'),
+    Species('ORYSJ', 'osa', '39947', 'oryza sativa subsp. japonica'),
+    Species('PONAB', 'pon', '9601', 'pongo abelii'),
+    Species('RAT', 'rno', '10116', 'rattus norvegicus'),
+    Species('SCHPO', 'spo', '284812', 'schizosaccharomyces pombe (strain 972 / atcc 24843)'),
+    Species('XENLA', 'xla', '8355', 'xenopus laevis'),
+    Species('YEAST', 'sce', '559292', 'saccharomyces cerevisiae (strain atcc 204508 / s288c)'),
+    Species('PIG', 'ssc', '9823', 'Sus scrofa')
+]
+
 class MappingGenerator():
 
     def __init__(self):
@@ -36,7 +70,7 @@ class MappingGenerator():
         uniprot_mapping_file_url = "ftp://ftp.ebi.ac.uk/pub/databases/uniprot/current_release/knowledgebase/idmapping/idmapping.dat.gz"
         uniprot_mapping_filepath = join(sources_dir, "./uniprot_mappings.dat.gz")
         swissprot_mapping_filepath = join(sources_dir, "./swissprot.xml.gz")
-        
+
         download_file_md5_check(uniprot_mapping_file_url, uniprot_mapping_filepath)
         download_file_md5_check(swissprot_file_url, swissprot_mapping_filepath)
         return uniprot_mapping_filepath, swissprot_mapping_filepath
@@ -56,13 +90,9 @@ class MappingGenerator():
         """
 
         ns = {'up': 'http://uniprot.org/uniprot'}
-
-        valid_species = ['ARATH', 'BACSU', 'BOVIN', 'CAEEL', 'CHICK', 'DANRE', 'DICDI', 'DROME',
-                         'ECO57', 'ECOLI', 'HUMAN', 'MOUSE', 'MYCTO', 'MYCTU', 'ORYSJ', 'PONAB',
-                         'RAT', 'SCHPO', 'XENLA', 'YEAST', 'PIG']
-
-        valid_accs = set()
+        valid_species = list(map(lambda x: x.code, VALID_SPECIES))
         with file_open(swissprot_file) as swissprot_fd:
+            valid_accs = set()
             for _, elem in tqdm(ET.iterparse(swissprot_fd), 'Processing swissprot mapping'):
                 if elem.tag == '{http://uniprot.org/uniprot}entry':
                     uniprot_acc = elem.find('./up:accession', ns).text
@@ -91,7 +121,7 @@ class MappingGenerator():
         dict
             dictionary of dictionaries mapping target databases to uniprot proteins
         """
-        target_databases = {"Gene_Name", "HPA", "PharmGKB", "STRING",
+        target_databases = {"Gene_Name", "PharmGKB", "STRING",
                             "HGNC", "BioGrid", "RefSeq", "UniParc", "KEGG",
                             "Ensembl", "MIM", "MINT", "UniProtKB-ID", "EMBL-CDS",
                             "DIP", "ProteomicsDB", "UniRef100", "GI", "GeneDB",
@@ -172,6 +202,7 @@ class MappingGenerator():
 
         uniprot_mapping_file, swissprot_file = self._download_uniprot_sources(sources_dp)
         uniprot_accs = self._get_included_accs(swissprot_file)
+        print(f'Mapping {len(uniprot_accs)} uniprot proteins')
         uniprot_mappings, uniprot_mappings_rev = self._map_uniprot(uniprot_mapping_file, uniprot_accs)
         self._export_uniprot(uniprot_mappings, mappings_dp)
         self._export_uniprot_reverse(uniprot_mappings_rev, self._data_dir)
@@ -184,7 +215,7 @@ class MappingGenerator():
                     names.add(name)
                 writer.write(f'{acc}\t{";".join(names)}\n')
 
-    def _map_kegg_names(self, database, mappings_dp, file_mode='w', database_name=None):
+    def _map_kegg_names(self, database, mappings_dp, file_mode='w', is_gene_db=False, database_name=None):
         """ map kegg entities to their names
 
         Parameters
@@ -200,7 +231,7 @@ class MappingGenerator():
             the set of entity ids in the specified database
         """
         id_set = set()
-        database_name = database
+
         if database_name is None:
             database_name = database
 
@@ -215,10 +246,12 @@ class MappingGenerator():
                         _, did = source_str.split(':')
                         if did[0].isdigit():
                             did = source_str
+                        elif is_gene_db:
+                            did = source_str
                         id_set.add(did)
 
                         names = set()
-                        for name in name_str.split(';'):
+                        for name in name_str.split(';')[0].split(','):
                             name = name.strip()
                             if database == 'drug' or database == 'environw':
                                 index = name.rfind('(')
@@ -254,10 +287,8 @@ class MappingGenerator():
         """
         mapping_dict = defaultdict(set)
         resp = requests.get(f'http://rest.genome.jp/link/{target}/{database}')
-        is_empty = True
         if resp.ok:
             for line in resp.iter_lines(decode_unicode=True):
-                is_empty = False
                 source_str, target_str, _ = line.strip().split('\t')
                 _, did = source_str.split(':')
                 if did[0].isdigit():
@@ -274,11 +305,8 @@ class MappingGenerator():
     def generate_kegg_mappings(self):
         """ Generate mappings for kegg entities """
         gene_xref = ['uniprot', 'ensembl']
-        species_list = [
-            'ath', 'bsu', 'bta', 'cel', 'gga', 'dre', 'ddi',
-            'dme', 'eco', 'hsa', 'mmu', 'mtc', 'mtu', 'osa',
-            'pon', 'rno', 'spo', 'xla', 'sce', 'ssc'
-        ]
+
+        species_list = map(lambda x: x.kegg_organism, VALID_SPECIES)
         kegg_source_targets = {
             'drug':
             [
@@ -342,7 +370,7 @@ class MappingGenerator():
 
         file_mode = 'w'
         for species in tqdm(species_list, 'Processing KEGG gene mappings'):
-            source_ids = self._map_kegg_names(species, mappings_dp, file_mode, database_name='gene')
+            source_ids = self._map_kegg_names(species, mappings_dp, file_mode, True, database_name='gene')
             # Sleep between requests
             time.sleep(0.2)
             for target in gene_xref:
@@ -679,7 +707,7 @@ class MappingGenerator():
                                 writer.write(f'{accession.text.strip()}\t{name_str}\n')
                         elem.clear()
 
-    def _parse_hpa_tissues(self, hpa_fp, cello_mapping_fp, hpa_mapping_fp):
+    def _parse_hpa_tissues(self, hpa_fp, cello_mapping_fp, hpa_mapping_fp, hpa_acc_fp, acc_hpa_fp):
         """ Map hpa tissues to cellosaurus cell lines
 
         Parameters
@@ -693,11 +721,28 @@ class MappingGenerator():
         """
         hpa_to_cellosaurus = defaultdict(set)
         cellosaurus_to_hpa = defaultdict(set)
+        hpa_to_uniprot = defaultdict(set)
+        uniprot_to_hpa = defaultdict(set)
         with gzip.open(hpa_fp) as xmlfile:
             for _, elem in tqdm(ET.iterparse(xmlfile), 'Processing HPA'):
                 if elem.tag == 'entry' and len(elem) > 2:
                     id_elem = elem.find('identifier')
                     if len(id_elem) >= 1:
+                        uniprot_ids = set()
+
+                        xrefs = id_elem.findall('xref')
+                        for xref in xrefs:
+                            if xref.get('db') == 'Uniprot/SWISSPROT':
+                                uniprot_ids.add(xref.get('id'))
+                        if len(uniprot_ids) > 0:
+                            antibodies = elem.findall('antibody')
+                            if antibodies is not None:
+                                for antibody in antibodies:
+                                    ab_id = antibody.get('id')
+                                    for uniprot_id in uniprot_ids:
+                                        hpa_to_uniprot[ab_id].add(uniprot_id)
+                                        uniprot_to_hpa[uniprot_id].add(ab_id)
+
                         rna_expression_list = elem.findall('rnaExpression')
                         if rna_expression_list is not None:
                             for rna_expression in rna_expression_list:
@@ -722,11 +767,22 @@ class MappingGenerator():
                 if len(organs) > 0:
                     writer.write(f'{cell}\t{";".join(organs)}\n')
 
+        with open(acc_hpa_fp, 'w', encoding='utf-8') as writer:
+            for acc, antibodies in uniprot_to_hpa.items():
+                if len(antibodies) > 0:
+                    writer.write(f'{acc}\t{";".join(antibodies)}\n')
+
+        with open(hpa_acc_fp, 'w', encoding='utf-8') as writer:
+            for antibody, accs in hpa_to_uniprot.items():
+                if len(accs) > 0:
+                    writer.write(f'{antibody}\t{";".join(accs)}\n')
+
     def generate_cellosaurus_mappings(self):
         """ Generate mappings for cellosaurus celllines"""
         sources_dp = join(self._data_dir, 'sources')
         cello_mappings_dp = join(self._data_dir, 'cellosaurus')
         hpa_mappings_dp = join(self._data_dir, 'hpa')
+        uniprot_mappings_dp = join(self._data_dir, 'uniprot')
         makedirs(sources_dp) if not isdir(sources_dp) else None
         makedirs(cello_mappings_dp) if not isdir(cello_mappings_dp) else None
         makedirs(hpa_mappings_dp) if not isdir(hpa_mappings_dp) else None
@@ -736,7 +792,9 @@ class MappingGenerator():
         self._parse_hpa_tissues(
             hpa_fp,
             join(cello_mappings_dp, 'cellosaurus_to_hpa.txt'),
-            join(hpa_mappings_dp, 'hpa_to_cellosaurus.txt')
+            join(hpa_mappings_dp, 'hpa_to_cellosaurus.txt'),
+            join(hpa_mappings_dp, 'hpa_to_acc.txt'),
+            join(uniprot_mappings_dp, 'acc_to_hpa.txt')
         )
 
     def _clear_sources(self):
@@ -745,7 +803,7 @@ class MappingGenerator():
         if exists(sources_dp):
             shutil.rmtree(sources_dp)
 
-    def generate_mappings(self, drugbank_user, drugbank_password):
+    def generate_mappings(self, drugbank_user, drugbank_password, delete_sources=True):
         """ Generate mappings required by the biolink linkers
 
         Paramaters
@@ -760,4 +818,5 @@ class MappingGenerator():
         self.generate_kegg_mappings()
         self.generate_drugbank_mappings(drugbank_user, drugbank_password)
         self.generate_uniprot_mappings()
-        self._clear_sources()
+        if delete_sources:
+            self._clear_sources()
