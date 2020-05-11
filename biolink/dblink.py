@@ -2018,21 +2018,6 @@ class HPALinker(DatabaseLinker):
         """
         return self._convert_ids_using_target_dictionary(protein_list, "hpa_to_uniprot")
 
-    def convert_hpa_to_cellosaurus(self, tissue_list):
-        """ Convert a list of hpa tissues to Cellosaurus cell line ids
-
-        Parameters
-        ----------
-        tissue_list : list
-            a list of gi gene ids e.g. ['Brain', 'Skin']
-
-        Returns
-        -------
-        list
-            a list of lists ofCellosaurus cell line ids 
-        """
-        return self._convert_ids_using_target_dictionary(tissue_list, "hpa_to_cellosaurus")
-
 
 class MimLinker(DatabaseLinker):
     """ Mim database linker class
@@ -3023,21 +3008,6 @@ class CellosaurusLinker(DatabaseLinker):
         self._database_name = "cellosaurus"
 
         self._load_linking_dictionaries()
-
-    def convert_cell_line_to_hpa(self, cellline_list):
-        """ Convert a list of Cellosaurus cell line ids to HPA tissues
-
-        Parameters
-        ----------
-        cellline_list : list
-            a list of Cellosaurus cell line ids e.g. ['CVCL_U602', 'CVCL_0023']
-
-        Returns
-        -------
-        list
-            a list of lists of hpa tissues
-        """
-        return self._convert_ids_using_target_dictionary(cellline_list, "cellosaurus_to_hpa")
 
     def convert_cell_line_to_name(self, cellline_list):
         """ Convert a list of Cellosaurus cell line ids to their names

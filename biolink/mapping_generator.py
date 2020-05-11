@@ -657,7 +657,7 @@ class MappingGenerator():
                     writer.write(f'{tid}\t{";".join(sids)}\n')
 
     def _download_cellosaurus_files(self, source_dir):
-        """ Download cellosaurus and HPA files
+        """ Download cellosaurus file
 
         Parameters
         ----------
@@ -668,16 +668,11 @@ class MappingGenerator():
         -------
         str
             the path to the cellosaurus file
-        str
-            the path to the HPA file
         """
         cello_file_url = 'ftp://ftp.expasy.org/databases/cellosaurus/cellosaurus.xml'
         cello_filepath = join(source_dir, "./cellosaurus.xml")
         download_file_md5_check(cello_file_url, cello_filepath)
-        hpa_file_url = 'https://www.proteinatlas.org/download/proteinatlas.xml.gz'
-        hpa_filepath = join(source_dir, "./proteinatlas.xml.gz")
-        download_file_md5_check(hpa_file_url, hpa_filepath)
-        return cello_filepath, hpa_filepath
+        return cello_filepath
 
     def _map_cello_names(self, cello_fp, mapping_fp):
         """ Map cellosaurus accessions to their names
@@ -707,20 +702,47 @@ class MappingGenerator():
                                 writer.write(f'{accession.text.strip()}\t{name_str}\n')
                         elem.clear()
 
-    def _parse_hpa_tissues(self, hpa_fp, cello_mapping_fp, hpa_mapping_fp, hpa_acc_fp, acc_hpa_fp):
+    def generate_cellosaurus_mappings(self):
+        """ Generate mappings for cellosaurus celllines"""
+        sources_dp = join(self._data_dir, 'sources')
+        cello_mappings_dp = join(self._data_dir, 'cellosaurus')
+        
+        makedirs(sources_dp) if not isdir(sources_dp) else None
+        makedirs(cello_mappings_dp) if not isdir(cello_mappings_dp) else None
+
+        cello_fp = self._download_cellosaurus_files(sources_dp)
+        self._map_cello_names(cello_fp, join(cello_mappings_dp, 'cellosaurus_names.txt'))
+
+    def _download_hpa_files(self, source_dir):
+        """ Download HPA file
+
+        Parameters
+        ----------
+        sources_dir : str
+            the path to save the files
+
+        Returns
+        -------
+        str
+            the path to the HPA file
+        """
+        hpa_file_url = 'https://www.proteinatlas.org/download/proteinatlas.xml.gz'
+        hpa_filepath = join(source_dir, "./proteinatlas.xml.gz")
+        download_file_md5_check(hpa_file_url, hpa_filepath)
+        return hpa_filepath
+
+    def _parse_hpa_antibodies(self, hpa_fp, hpa_acc_fp, acc_hpa_fp):
         """ Map hpa tissues to cellosaurus cell lines
 
         Parameters
         ----------
         hap_fp : str
             the path to the hpa file
-        cello_mapping_fp : str
-            the path to output mappings from cellosaurus to hpa
-        hpa_mapping_fp : str
-            the path to output mappings from hpa to cellosaurus
+        hpa_acc_fp : str
+            the path to output mappings from hpa antibodies to uniprot
+        acc_hpa_fp : str
+            the path to output mappings from uniprot to hpa antibodies
         """
-        hpa_to_cellosaurus = defaultdict(set)
-        cellosaurus_to_hpa = defaultdict(set)
         hpa_to_uniprot = defaultdict(set)
         uniprot_to_hpa = defaultdict(set)
         with gzip.open(hpa_fp) as xmlfile:
@@ -742,30 +764,8 @@ class MappingGenerator():
                                     for uniprot_id in uniprot_ids:
                                         hpa_to_uniprot[ab_id].add(uniprot_id)
                                         uniprot_to_hpa[uniprot_id].add(ab_id)
-
-                        rna_expression_list = elem.findall('rnaExpression')
-                        if rna_expression_list is not None:
-                            for rna_expression in rna_expression_list:
-                                data_elements = rna_expression.findall('data')
-                                for el in data_elements:
-                                    cell_line = el.find('cellLine')
-                                    if cell_line is not None:
-                                        cello_id = cell_line.attrib['cellosaurusID']
-                                        organ = cell_line.attrib['organ']
-                                        if cello_id != '':
-                                            hpa_to_cellosaurus[organ].add(cello_id)
-                                            cellosaurus_to_hpa[cello_id].add(organ)
                     elem.clear()
 
-        with open(hpa_mapping_fp, 'w', encoding='utf-8') as writer:
-            for organ, cells in hpa_to_cellosaurus.items():
-                if len(cells) > 0:
-                    writer.write(f'{organ}\t{";".join(cells)}\n')
-
-        with open(cello_mapping_fp, 'w', encoding='utf-8') as writer:
-            for cell, organs in cellosaurus_to_hpa.items():
-                if len(organs) > 0:
-                    writer.write(f'{cell}\t{";".join(organs)}\n')
 
         with open(acc_hpa_fp, 'w', encoding='utf-8') as writer:
             for acc, antibodies in uniprot_to_hpa.items():
@@ -777,22 +777,19 @@ class MappingGenerator():
                 if len(accs) > 0:
                     writer.write(f'{antibody}\t{";".join(accs)}\n')
 
-    def generate_cellosaurus_mappings(self):
-        """ Generate mappings for cellosaurus celllines"""
+    def generate_hpa_mappings(self):
+        """ Generate mappings for hpa"""
         sources_dp = join(self._data_dir, 'sources')
-        cello_mappings_dp = join(self._data_dir, 'cellosaurus')
+        
         hpa_mappings_dp = join(self._data_dir, 'hpa')
         uniprot_mappings_dp = join(self._data_dir, 'uniprot')
         makedirs(sources_dp) if not isdir(sources_dp) else None
-        makedirs(cello_mappings_dp) if not isdir(cello_mappings_dp) else None
         makedirs(hpa_mappings_dp) if not isdir(hpa_mappings_dp) else None
+        makedirs(uniprot_mappings_dp) if not isdir(uniprot_mappings_dp) else None
 
-        cello_fp, hpa_fp = self._download_cellosaurus_files(sources_dp)
-        self._map_cello_names(cello_fp, join(cello_mappings_dp, 'cellosaurus_names.txt'))
-        self._parse_hpa_tissues(
+        hpa_fp = self._download_hpa_files(sources_dp)
+        self._parse_hpa_antibodies(
             hpa_fp,
-            join(cello_mappings_dp, 'cellosaurus_to_hpa.txt'),
-            join(hpa_mappings_dp, 'hpa_to_cellosaurus.txt'),
             join(hpa_mappings_dp, 'hpa_to_acc.txt'),
             join(uniprot_mappings_dp, 'acc_to_hpa.txt')
         )
@@ -814,6 +811,7 @@ class MappingGenerator():
             drugbank password
         """
         self.generate_cellosaurus_mappings()
+        self.generate_hpa_mappings()
         self.generate_sider_mappings()
         self.generate_kegg_mappings()
         self.generate_drugbank_mappings(drugbank_user, drugbank_password)
