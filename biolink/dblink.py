@@ -311,6 +311,36 @@ class KEGGLinker(DatabaseLinker):
         """
         return self._convert_ids_using_target_dictionary(drug_list, "drug_to_sider")
 
+    def convert_drugid_to_drugbank(self, drug_list):
+        """ Convert a list of KEGG drug ids to drugbank drug ids
+
+        Parameters
+        ----------
+        drug_list : list
+            a list of KEGG drug ids e.g. ['D07630', 'D02238']
+
+        Returns
+        -------
+        list
+            a list of lists of drugbank drug ids
+        """
+        return self._convert_ids_using_target_dictionary(drug_list, "drug_to_drugbank")
+
+    def convert_compund_to_drugbank(self, compound_list):
+        """ Convert a list of KEGG compound ids to drugbank drug ids
+
+        Parameters
+        ----------
+        drug_list : list
+            a list of KEGG drug ids e.g. ['C17612', 'C21587']
+
+        Returns
+        -------
+        list
+            a list of lists of drugbank drug ids
+        """
+        return self._convert_ids_using_target_dictionary(drug_list, "compound_to_drugbank")
+
     def convert_compound_to_3dmet(self, compound_list):
         """ Convert a list of KEGG compound ids to 3dmet molecule ids
 
@@ -3045,3 +3075,4 @@ class CellosaurusLinker(DatabaseLinker):
         All available cellline ids in the database
         """
         return self._get_keys_of_target_dictionary("cellosaurus_to_names")
+

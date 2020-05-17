@@ -304,7 +304,7 @@ class MappingGenerator():
 
     def generate_kegg_mappings(self):
         """ Generate mappings for kegg entities """
-        gene_xref = ['uniprot', 'ensembl']
+        gene_xref = ['ensembl']
 
         species_list = map(lambda x: x.kegg_organism, VALID_SPECIES)
         kegg_source_targets = {
@@ -418,7 +418,7 @@ class MappingGenerator():
         """
         drugbank_file_url = "https://www.drugbank.ca/releases/latest/downloads/all-full-database"
         drugbank_filepath = join(sources_dp, "./drugbank_all_full_database.xml.zip")
-        download_file_with_auth(drugbank_file_url, drugbank_filepath, username, password)
+        download_file_md5_check(drugbank_file_url, drugbank_filepath, username=username, password=password)
 
         return drugbank_filepath
 

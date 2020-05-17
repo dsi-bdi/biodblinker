@@ -194,7 +194,7 @@ def extract_tgz_file(file_path, extraction_dir):
     fd.close()
 
 
-def download_file_md5_check(download_url, filepath):
+def download_file_md5_check(download_url, filepath, username=None, password=None):
     """ Download file if not existing and have valid md5
 
     Parameters
@@ -226,7 +226,10 @@ def download_file_md5_check(download_url, filepath):
     if require_download:
         print(dwn_sym + "downloading file (%-40s) ..." % filename, end="", flush=True)
         start = timer()
-        download_file(download_url, filepath)
+        if username is None or password is None:
+            download_file(download_url, filepath)
+        else:
+            download_file_with_auth(download_url, filepath, username, password)
         download_time = timer() - start
         print(done_sym + " %1.2f Seconds." % download_time, end="", flush=True)
         file_computed_md5 = get_file_md5(filepath)
@@ -235,6 +238,7 @@ def download_file_md5_check(download_url, filepath):
         md5_fd.write(file_computed_md5)
         md5_fd.close()
         print(hsh_sym + "md5 hash saved (%s)." % file_computed_md5, flush=True)
+
 
 
 def export_file_md5(filepath):
