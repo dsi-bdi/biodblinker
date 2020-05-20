@@ -52,6 +52,7 @@ class MappingGenerator():
         """
         """
         self._data_dir = join(get_data_directory(), 'data')
+        self._source_dir = join(get_data_directory(), 'sources')
 
     def _download_uniprot_sources(self, sources_dir):
         """ Download uniprot mappings file
@@ -67,7 +68,8 @@ class MappingGenerator():
             the path to the mappings file
         """
         swissprot_file_url = 'ftp://ftp.ebi.ac.uk/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.xml.gz'
-        uniprot_mapping_file_url = "ftp://ftp.ebi.ac.uk/pub/databases/uniprot/current_release/knowledgebase/idmapping/idmapping.dat.gz"
+        #uniprot_mapping_file_url = "ftp://ftp.ebi.ac.uk/pub/databases/uniprot/current_release/knowledgebase/idmapping/idmapping.dat.gz"
+        uniprot_mapping_file_url = 'file:///home/briawal/newkg/current_bio/biolink/examples/idmappings_SWISSPORT.dat.gz'
         uniprot_mapping_filepath = join(sources_dir, "./uniprot_mappings.dat.gz")
         swissprot_mapping_filepath = join(sources_dir, "./swissprot.xml.gz")
 
@@ -99,12 +101,20 @@ class MappingGenerator():
                     name = elem.find('./up:name', ns).text
 
                     species = name.split('_')[-1]
-
-                    if species in valid_species:
-                        valid_accs.add(uniprot_acc)
+                    valid_accs.add(uniprot_acc)
+                    # if species in valid_species:
+                    #     valid_accs.add(uniprot_acc)
 
                     elem.clear()
         return valid_accs
+
+    def _filter_uniprot_mappings(self, uniprot_mapping_file, valid_accs):
+        with gzip.open('./idmappings_SWISSPORT.dat.gz', 'wt') as output:
+            with file_open(uniprot_mapping_file) as uniprot_mapping_fd:
+                for line in tqdm(uniprot_mapping_fd, 'Filtering Uniprot mappings'):
+                    acc = line.split('\t')[0]
+                    if acc in valid_accs:
+                        output.write(line)
 
     def _map_uniprot(self, uniprot_mapping_file, valid_accs):
         """ Map uniprot proteins to several databases
@@ -194,7 +204,7 @@ class MappingGenerator():
     def generate_uniprot_mappings(self):
         """ Generate mappings from uniprot proteins """
 
-        sources_dp = join(self._data_dir, 'sources')
+        sources_dp = self._source_dir
         mappings_dp = join(self._data_dir, 'uniprot')
 
         makedirs(sources_dp) if not isdir(sources_dp) else None
@@ -203,6 +213,8 @@ class MappingGenerator():
         uniprot_mapping_file, swissprot_file = self._download_uniprot_sources(sources_dp)
         uniprot_accs = self._get_included_accs(swissprot_file)
         print(f'Mapping {len(uniprot_accs)} uniprot proteins')
+        #self._filter_uniprot_mappings(uniprot_mapping_file, uniprot_accs)
+        #return
         uniprot_mappings, uniprot_mappings_rev = self._map_uniprot(uniprot_mapping_file, uniprot_accs)
         self._export_uniprot(uniprot_mappings, mappings_dp)
         self._export_uniprot_reverse(uniprot_mappings_rev, self._data_dir)
@@ -322,8 +334,8 @@ class MappingGenerator():
         return diseases_filepath
 
     def parse_disease_mappings(self, diseases_fp, mappings_dp):
-        disease_mapping_dict = {'mesh':{}, 'icd_10':{}, 'icd_11':{}}
-        rev_disease_mapping_dict = {'mesh':{}, 'icd_10':{}, 'icd_11':{}}
+        disease_mapping_dict = {'mesh': {}, 'icd_10': {}, 'icd_11': {}}
+        rev_disease_mapping_dict = {'mesh': {}, 'icd_10': {}, 'icd_11': {}}
         disease_id = ''
         current_section = ''
         with open(diseases_fp, 'r') as diseases_fd:
@@ -367,8 +379,7 @@ class MappingGenerator():
                             disease_mapping_dict['mesh'][disease_id] = []
                         
                         for target in target_ids:
-                            if target.startswith('D'):
-                                disease_mapping_dict['mesh'][disease_id].append(target)
+                            disease_mapping_dict['mesh'][disease_id].append(target)
                             if target not in rev_disease_mapping_dict['mesh']:
                                 rev_disease_mapping_dict['mesh'][target] = []
                             rev_disease_mapping_dict['mesh'][target].append(disease_id)
@@ -414,7 +425,7 @@ class MappingGenerator():
             'network': []
         }
 
-        sources_dp = join(self._data_dir, 'sources')
+        sources_dp = self._source_dir
         mappings_dp = join(self._data_dir, 'kegg')
         makedirs(sources_dp) if not isdir(sources_dp) else None
         makedirs(mappings_dp) if not isdir(mappings_dp) else None
@@ -627,7 +638,7 @@ class MappingGenerator():
             'GenBank': 'genbank'
         }
 
-        sources_dp = join(self._data_dir, 'sources')
+        sources_dp = self._source_dir
         mappings_dp = join(self._data_dir, 'drugbank')
 
         makedirs(sources_dp) if not isdir(sources_dp) else None
@@ -736,7 +747,7 @@ class MappingGenerator():
             'ATC': 'atc'
         }
 
-        sources_dp = join(self._data_dir, 'sources')
+        sources_dp = self._source_dir
         mappings_dp = join(self._data_dir, 'sider')
 
         makedirs(sources_dp) if not isdir(sources_dp) else None
@@ -815,7 +826,7 @@ class MappingGenerator():
 
     def generate_cellosaurus_mappings(self):
         """ Generate mappings for cellosaurus celllines"""
-        sources_dp = join(self._data_dir, 'sources')
+        sources_dp = self._source_dir
         cello_mappings_dp = join(self._data_dir, 'cellosaurus')
         
         makedirs(sources_dp) if not isdir(sources_dp) else None
@@ -890,7 +901,7 @@ class MappingGenerator():
 
     def generate_hpa_mappings(self):
         """ Generate mappings for hpa"""
-        sources_dp = join(self._data_dir, 'sources')
+        sources_dp = self._source_dir
         
         hpa_mappings_dp = join(self._data_dir, 'hpa')
         uniprot_mappings_dp = join(self._data_dir, 'uniprot')
