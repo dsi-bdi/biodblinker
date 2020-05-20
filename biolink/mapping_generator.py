@@ -1,7 +1,7 @@
-from os import makedirs
-from os.path import join, isdir, exists
+from os import makedirs, remove
+from os.path import join, isdir, exists, isfile
 from biolink.fileio import *
-from biolink.config import file_open, get_data_directory
+from biolink.config import file_open, get_data_directory, get_all_mappings_sources
 from tqdm import tqdm
 import requests
 from collections import defaultdict
@@ -302,9 +302,100 @@ class MappingGenerator():
 
         return mapping_dict
 
+    def _download_kegg_diseases(self, sources_dp):
+        """ Download kegg medicus diseases
+
+        Parameters
+        ----------
+        sources_dp : str
+            the path to output the diseases file
+
+        Returns
+        --------
+        str
+            the path to the diseases file
+        """
+        diseases_file_url = "ftp://ftp.genome.jp/pub/kegg/medicus/disease/disease"
+        diseases_filepath = join(sources_dp, "./kegg_diseases.txt")
+        download_file_md5_check(diseases_file_url, diseases_filepath)
+
+        return diseases_filepath
+
+    def parse_disease_mappings(self, diseases_fp, mappings_dp):
+        disease_mapping_dict = {'mesh':{}, 'icd_10':{}, 'icd_11':{}}
+        rev_disease_mapping_dict = {'mesh':{}, 'icd_10':{}, 'icd_11':{}}
+        disease_id = ''
+        current_section = ''
+        with open(diseases_fp, 'r') as diseases_fd:
+            for line in diseases_fd:
+                section = line.split(' ')[0]
+                # New Section
+                if len(section.strip()) > 0:
+                    current_section = section.strip()
+
+                if line.startswith('///'):
+                    disease_id = ''
+                elif current_section == 'ENTRY':
+                    disease_id = line.split()[1]
+                elif current_section == 'DBLINKS':
+                    if len(disease_id) == 0:
+                        raise Exception('DiseseID not set for link')
+
+                    line = line.replace(section, '')
+                    parts = line.split()
+                    db = parts[0]
+                    target_ids = parts[1:]
+
+                    if db == 'ICD-11:':
+                        if disease_id not in disease_mapping_dict['icd_11']:
+                            disease_mapping_dict['icd_11'][disease_id] = []
+                        disease_mapping_dict['icd_11'][disease_id].extend(target_ids)
+                        for target in target_ids:
+                            if target not in rev_disease_mapping_dict['icd_11']:
+                                rev_disease_mapping_dict['icd_11'][target] = []
+                            rev_disease_mapping_dict['icd_11'][target].append(disease_id)
+                    elif db == 'ICD-10:':
+                        if disease_id not in disease_mapping_dict['icd_10']:
+                            disease_mapping_dict['icd_10'][disease_id] = []
+                        disease_mapping_dict['icd_10'][disease_id].extend(target_ids)
+                        for target in target_ids:
+                            if target not in rev_disease_mapping_dict['icd_10']:
+                                rev_disease_mapping_dict['icd_10'][target] = []
+                            rev_disease_mapping_dict['icd_10'][target].append(disease_id)
+                    elif db == 'MeSH:':
+                        if disease_id not in disease_mapping_dict['mesh']:
+                            disease_mapping_dict['mesh'][disease_id] = []
+                        
+                        for target in target_ids:
+                            if target.startswith('D'):
+                                disease_mapping_dict['mesh'][disease_id].append(target)
+                            if target not in rev_disease_mapping_dict['mesh']:
+                                rev_disease_mapping_dict['mesh'][target] = []
+                            rev_disease_mapping_dict['mesh'][target].append(disease_id)
+
+            for db, mapping in disease_mapping_dict.items():
+                with open(join(mappings_dp, f'disease_to_{db}.txt'), 'w', encoding='utf-8') as writer:
+                    for disease, map_ids in mapping.items():
+                        map_ids = set(map_ids)
+                        if len(map_ids) == 0:
+                            map_ids.add('-')
+                        else:
+                            writer.write(f'{disease}\t{";".join(map_ids)}\n')
+
+            for db, mapping in rev_disease_mapping_dict.items():
+                target_dp = join(self._data_dir, db)
+                makedirs(target_dp) if not isdir(target_dp) else None
+                with open(join(target_dp, f'{db}_to_kegg_disease.txt'), 'w', encoding='utf-8') as writer:
+                    for target_id, map_ids in mapping.items():
+                        map_ids = set(map_ids)
+                        if len(map_ids) == 0:
+                            map_ids.add('-')
+                        else:
+                            writer.write(f'{target_id}\t{";".join(map_ids)}\n')
+
     def generate_kegg_mappings(self):
         """ Generate mappings for kegg entities """
-        gene_xref = ['ensembl']
+        gene_xref = ['uniprot', 'ensembl']
 
         species_list = map(lambda x: x.kegg_organism, VALID_SPECIES)
         kegg_source_targets = {
@@ -318,28 +409,20 @@ class MappingGenerator():
             [
                 'omim', 'pubmed'
             ],
-            'compound':
-            [
-                '3dmet', 'hsdb', 'hmdb', 'nikkaji', 'chembl',
-                'knapsack', 'pubchem', 'chebi', 'pdb-ccd',
-                'lipidbank', 'lipidmaps', 'massbank'
-            ],
             'pathway': [],
-            'brite': [],
-            'module': [],
-            'ko': [],
             'glycan': [],
-            'reaction': [],
-            'enzyme': [],
-            'network': [],
-            'variant': [],
-            'dgroup': [],
-            'environ': []
+            'network': []
         }
 
+        sources_dp = join(self._data_dir, 'sources')
         mappings_dp = join(self._data_dir, 'kegg')
+        makedirs(sources_dp) if not isdir(sources_dp) else None
         makedirs(mappings_dp) if not isdir(mappings_dp) else None
 
+
+        diseases_fp = self._download_kegg_diseases(sources_dp)
+        self.parse_disease_mappings(diseases_fp, mappings_dp)
+        
         for source, targets in tqdm(kegg_source_targets.items(), 'Processing KEGG mappings'):
             source_ids = self._map_kegg_names(source, mappings_dp)
             # Sleep between requests
@@ -398,6 +481,35 @@ class MappingGenerator():
                             writer.write(f'{tid}\t{";".join(kids)}\n')
                 # After the first iteration append to the files instead of overwriting
                 file_mode = 'a'
+
+        kegg_to_mesh = {}
+        kegg_to_omim = {}
+        with open(join(mappings_dp, 'disease_to_mesh.txt'), 'r') as fd:
+            for line in fd:
+                if line.strip().split('\t') == '-':
+                    continue
+                kegg_id, mesh_ids = line.strip().split('\t')
+                mesh_ids = mesh_ids.split(';')
+                kegg_to_mesh[kegg_id] = mesh_ids
+        with open(join(mappings_dp, 'disease_to_omim.txt'), 'r') as fd:
+            for line in fd:
+                if line.strip().split('\t') == '-':
+                    continue
+                kegg_id, omim_ids = line.strip().split('\t')
+                omim_ids = omim_ids.split(';')
+                kegg_to_omim[kegg_id] = omim_ids
+        
+        with open(join(self._data_dir, 'mesh', 'mesh_to_omim.txt'), 'w') as fd:
+            for kegg_id, mesh_mappings in kegg_to_mesh.items():
+                if kegg_id in kegg_to_omim:
+                    for mesh_id in mesh_mappings:
+                        fd.write(f'{mesh_id}\t{";".join(kegg_to_omim[kegg_id])}\n')
+
+        with open(join(self._data_dir, 'omim', 'omim_to_mesh.txt'), 'w') as fd:
+            for kegg_id, omim_mappings in kegg_to_omim.items():
+                if kegg_id in kegg_to_mesh:
+                    for omim_id in omim_mappings:
+                        fd.write(f'{omim_id}\t{";".join(kegg_to_mesh[kegg_id])}\n')
 
     def _download_drugbank(self, sources_dp, username, password):
         """ Download drugbank
@@ -502,7 +614,6 @@ class MappingGenerator():
             'ChemSpider': 'chemspider',
             'Drugs Product Database (DPD)': 'dpd',
             'IUPHAR': 'iuphar',
-            'KEGG Compound': 'kegg_compound',
             'KEGG Drug': 'kegg_drug',
             'PDB': 'pdb',
             'PDRhealth': 'pdrhealth',
@@ -606,7 +717,7 @@ class MappingGenerator():
                     continue
                 (mole, _, target, target_id) = line.strip().split('\t')
                 sid = 'CID1'+mole[4:]
-                if target in sider_targets:
+                if target in sider_targets and sid in sider_ids:
                     target_name = sider_targets[target]
                     sider_target_map[target_name][sid].add(target_id)
 
@@ -620,8 +731,8 @@ class MappingGenerator():
             'ChEMBL': 'chembl',
             'DrugBank': 'drugbank',
             'KEGG': 'kegg',
-            'pc': 'pubchem_compound',
-            'ps': 'pubchem_substance',
+            'PC': 'pubchem_compound',
+            'PS': 'pubchem_substance',
             'ATC': 'atc'
         }
 
@@ -799,6 +910,37 @@ class MappingGenerator():
         sources_dp = join(self._data_dir, 'sources')
         if exists(sources_dp):
             shutil.rmtree(sources_dp)
+
+    def download_mappings_zip(self, mappings_uri):
+        biolink_data = get_data_directory()
+        mappings_fp = join(biolink_data, "./biolink_mappings.zip")
+        download_file_md5_check(mappings_uri, mappings_fp)
+        
+        with ZipFile(mappings_fp, 'r') as map_zip:
+            map_zip.extractall(path=biolink_data)
+        
+        os.remove(mappings_fp)
+        
+
+    def verify_mappings(self):
+        all_exist = True
+        biolink_data = get_data_directory()
+        mapping_sources = get_all_mappings_sources()
+        for database, mappings in mapping_sources.items():
+            for map_name, short_path in mappings.items():
+                map_path = join(biolink_data, short_path)
+                valid_map = exists(map_path) & isfile(map_path)
+                if not exists(map_path):
+                    print(f'{database}:{map_name} mapping file {map_path} does not exist')
+                    all_exist = False
+                elif not isfile(map_path):
+                    print(f'{map_name} mapping file {map_path} is not a file')
+                    all_exist = False
+        
+        if all_exist:
+            print(f'All mappings file found')
+        else:
+            print(f'Could not find all mapping files')
 
     def generate_mappings(self, drugbank_user, drugbank_password, delete_sources=True):
         """ Generate mappings required by the biolink linkers

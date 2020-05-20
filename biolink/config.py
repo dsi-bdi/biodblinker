@@ -85,6 +85,28 @@ def get_database_mapping_sources(database_name):
             raise ValueError(f"Database name ({database_name}) could not be found in the source.ini file.")
 
 
+def get_all_mappings_sources():
+    """ Get all database mapping files
+
+    Parameters
+    ----------
+
+    Returns
+    -------
+    dict
+        file sources key names and paths
+    """
+    config = configparser.ConfigParser()
+    mapping_sources = {}
+    with pkg_resources.resource_stream(biolink.__name__, 'sources.ini') as stream:
+        config.read_file(codecs.getreader("utf-8")(stream))
+        for section in set(config.sections()):
+            if section == 'default':
+                continue
+            mapping_dict = dict(config[section])
+            mapping_sources[section] = {map_name: map_short_path for map_name, map_short_path in mapping_dict.items()}
+    return mapping_sources
+
 _data_dir = None
 
 
