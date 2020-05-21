@@ -311,230 +311,20 @@ class KEGGLinker(DatabaseLinker):
         """
         return self._convert_ids_using_target_dictionary(drug_list, "drug_to_sider")
 
-    def convert_compound_to_3dmet(self, compound_list):
-        """ Convert a list of KEGG compound ids to 3dmet molecule ids
+    def convert_drugid_to_drugbank(self, drug_list):
+        """ Convert a list of KEGG drug ids to drugbank drug ids
 
         Parameters
         ----------
-        compound_list : list
-            a list of KEGG compound ids e.g. ['C17612', 'C21587']
+        drug_list : list
+            a list of KEGG drug ids e.g. ['D07630', 'D02238']
 
         Returns
         -------
         list
-            a list of lists of 3dmet molecule ids
+            a list of lists of drugbank drug ids
         """
-        return self._convert_ids_using_target_dictionary(compound_list, "compound_to_3dmet")
-
-    def convert_compound_to_chebi(self, compound_list):
-        """ Convert a list of KEGG compound ids to chebi chemical ids
-
-        Parameters
-        ----------
-        compound_list : list
-            a list of KEGG compound ids e.g. ['C17612', 'C21587']
-
-        Returns
-        -------
-        list
-            a list of lists of chebi chemical ids
-        """
-        return self._convert_ids_using_target_dictionary(compound_list, "compound_to_chebi")
-
-    def convert_compound_to_chembl(self, compound_list):
-        """ Convert a list of KEGG compound ids to chembl compound ids
-
-        Parameters
-        ----------
-        compound_list : list
-            a list of KEGG compound ids e.g. ['C17612', 'C21587']
-
-        Returns
-        -------
-        list
-            a list of lists of chembl compound ids
-        """
-        return self._convert_ids_using_target_dictionary(compound_list, "compound_to_chembl")
-
-    def convert_compound_to_hmdb(self, compound_list):
-        """ Convert a list of KEGG compound ids to hmdb metabolite ids
-
-        Parameters
-        ----------
-        compound_list : list
-            a list of KEGG compound ids e.g. ['C17612', 'C21587']
-
-        Returns
-        -------
-        list
-            a list of lists of hmdb metabolite ids
-        """
-        return self._convert_ids_using_target_dictionary(compound_list, "compound_to_hmdb")
-
-    def convert_compound_to_hsdb(self, compound_list):
-        """ Convert a list of KEGG compound ids to hsdb substance ids
-
-        Parameters
-        ----------
-        compound_list : list
-            a list of KEGG compound ids e.g. ['C17612', 'C21587']
-
-        Returns
-        -------
-        list
-            a list of lists of hsdb substance ids
-        """
-        return self._convert_ids_using_target_dictionary(compound_list, "compound_to_hsdb")
-
-    def convert_compound_to_knapsack(self, compound_list):
-        """ Convert a list of KEGG compound ids to knapsack metabolite ids
-
-        Parameters
-        ----------
-        compound_list : list
-            a list of KEGG compound ids e.g. ['C17612', 'C21587']
-
-        Returns
-        -------
-        list
-            a list of lists of knapsack metabolite ids
-        """
-        return self._convert_ids_using_target_dictionary(compound_list, "compound_to_knapsack")
-
-    def convert_compound_to_lipidbank(self, compound_list):
-        """ Convert a list of KEGG compound ids to lipidbank lipid ids
-
-        Parameters
-        ----------
-        compound_list : list
-            a list of KEGG compound ids e.g. ['C17612', 'C21587']
-
-        Returns
-        -------
-        list
-            a list of lists of lipidbank lipid ids
-        """
-        return self._convert_ids_using_target_dictionary(compound_list, "compound_to_lipidbank")
-
-    def convert_compound_to_lipidmaps(self, compound_list):
-        """ Convert a list of KEGG compound ids to lipidmaps lipid ids
-
-        Parameters
-        ----------
-        compound_list : list
-            a list of KEGG compound ids e.g. ['C17612', 'C21587']
-
-        Returns
-        -------
-        list
-            a list of lists of lipidmaps lipid ids
-        """
-        return self._convert_ids_using_target_dictionary(compound_list, "compound_to_lipidmaps")
-
-    def convert_compound_to_massbank(self, compound_list):
-        """ Convert a list of KEGG compound ids to massbank accessions ids
-
-        Parameters
-        ----------
-        compound_list : list
-            a list of KEGG compound ids e.g. ['C17612', 'C21587']
-
-        Returns
-        -------
-        list
-            a list of lists of massbank accessions ids
-        """
-        return self._convert_ids_using_target_dictionary(compound_list, "compound_to_massbank")
-
-    def convert_compound_to_names(self, compound_list):
-        """ Convert a list of KEGG compound ids to names
-
-        Parameters
-        ----------
-        compound_list : list
-            a list of KEGG compound ids e.g. ['C17612', 'C21587']
-
-        Returns
-        -------
-        list
-            a list of lists of compound names
-        """
-        return self._convert_ids_using_target_dictionary(compound_list, "compound_to_names")
-
-    def convert_compound_to_nikkaji(self, compound_list):
-        """ Convert a list of KEGG compound ids to nikkaji chemical ids
-
-        Parameters
-        ----------
-        compound_list : list
-            a list of KEGG compound ids e.g. ['C17612', 'C21587']
-
-        Returns
-        -------
-        list
-            a list of lists of nikkaji chemical ids
-        """
-        return self._convert_ids_using_target_dictionary(compound_list, "compound_to_nikkaji")
-
-    def convert_compound_to_pdb_ccd(self, compound_list):
-        """ Convert a list of KEGG compound ids to pdb chemical component ids
-
-        Parameters
-        ----------
-        compound_list : list
-            a list of KEGG compound ids e.g. ['C17612', 'C21587']
-
-        Returns
-        -------
-        list
-            a list of lists of pdb chemical component ids
-        """
-        return self._convert_ids_using_target_dictionary(compound_list, "compound_to_pdb-ccd")
-
-    def convert_compound_to_pubchem_substance(self, compound_list):
-        """ Convert a list of KEGG compound ids to pubchem substance ids
-
-        Parameters
-        ----------
-        compound_list : list
-            a list of KEGG compound ids e.g. ['C17612', 'C21587']
-
-        Returns
-        -------
-        list
-            a list of lists of pubchem substance ids
-        """
-        return self._convert_ids_using_target_dictionary(compound_list, "compound_to_pubchem")
-
-    def convert_brite_to_names(self, brite_list):
-        """ Convert a list of KEGG brite ids to brite names
-
-        Parameters
-        ----------
-        brite_list : list
-            a list of KEGG brite ids e.g. ['br08901', 'br08902']
-
-        Returns
-        -------
-        list
-            a list of lists of brite names
-        """
-        return self._convert_ids_using_target_dictionary(brite_list, "brite_to_names")
-
-    def convert_drug_group_to_names(self, drug_group_list):
-        """ Convert a list of KEGG drug group ids to drug group names
-
-        Parameters
-        ----------
-        drug_group_list : list
-            a list of KEGG drug group ids e.g. ['DG00001', 'DG00002']
-
-        Returns
-        -------
-        list
-            a list of lists of drug group names
-        """
-        return self._convert_ids_using_target_dictionary(drug_group_list, "dgroup_to_names")
+        return self._convert_ids_using_target_dictionary(drug_list, "drug_to_drugbank")
 
     def convert_disease_to_names(self, disease_list):
         """ Convert a list of KEGG disease ids to disease names
@@ -566,6 +356,51 @@ class KEGGLinker(DatabaseLinker):
         """
         return self._convert_ids_using_target_dictionary(disease_list, "disease_to_omim")
 
+    def convert_disease_to_mesh(self, disease_list):
+        """ Convert a list of KEGG disease ids to mesh disease ids
+
+        Parameters
+        ----------
+        disease_list : list
+            a list of KEGG disease ids e.g. ['H00001', 'H00002']
+
+        Returns
+        -------
+        list
+            a list of lists of mesh disease ids
+        """
+        return self._convert_ids_using_target_dictionary(disease_list, "disease_to_mesh")
+
+    def convert_disease_to_icd_10(self, disease_list):
+        """ Convert a list of KEGG disease ids to icd 10 disease ids
+
+        Parameters
+        ----------
+        disease_list : list
+            a list of KEGG disease ids e.g. ['H00001', 'H00002']
+
+        Returns
+        -------
+        list
+            a list of lists of icd 10 disease ids
+        """
+        return self._convert_ids_using_target_dictionary(disease_list, "disease_to_icd_10")
+    
+    def convert_disease_to_icd_11(self, disease_list):
+        """ Convert a list of KEGG disease ids to icd 11 disease ids
+
+        Parameters
+        ----------
+        disease_list : list
+            a list of KEGG disease ids e.g. ['H00001', 'H00002']
+
+        Returns
+        -------
+        list
+            a list of lists of icd 11 disease ids
+        """
+        return self._convert_ids_using_target_dictionary(disease_list, "disease_to_icd_11")
+
     def convert_disease_to_pubmed(self, disease_list):
         """ Convert a list of KEGG disease ids to pubmed article ids
 
@@ -581,36 +416,6 @@ class KEGGLinker(DatabaseLinker):
         """
         return self._convert_ids_using_target_dictionary(disease_list, "disease_to_pubmed")
 
-    def convert_environ_to_names(self, environ_list):
-        """ Convert a list of KEGG environ ids to environ names
-
-        Parameters
-        ----------
-        environ_list : list
-            a list of KEGG environ ids e.g. ['E00001', 'E00002']
-
-        Returns
-        -------
-        list
-            a list of lists of environ names
-        """
-        return self._convert_ids_using_target_dictionary(environ_list, "environ_to_names")
-
-    def convert_enzyme_to_names(self, enzyme_list):
-        """ Convert a list of KEGG enzyme ids to enzyme names
-
-        Parameters
-        ----------
-        enzyme_list : list
-            a list of KEGG enzyme ids e.g. ['ec:1.1.1.5', 'ec:1.1.1.7']
-
-        Returns
-        -------
-        list
-            a list of lists of enzyme names
-        """
-        return self._convert_ids_using_target_dictionary(enzyme_list, "enzyme_to_names")
-
     def convert_glycan_to_names(self, glycan_list):
         """ Convert a list of KEGG glycan ids to glycan names
 
@@ -624,37 +429,7 @@ class KEGGLinker(DatabaseLinker):
         list
             a list of lists of glycan namess
         """
-        return self._convert_ids_using_target_dictionary(glycan_list, "glycan_to_names(")
-
-    def convert_ko_to_names(self, ontology_list):
-        """ Convert a list of KEGG ontology entry ids to ontology entry names
-
-        Parameters
-        ----------
-        ontology_list : list
-            a list of KEGG ontology entry ids e.g. ['K00001', 'K00002']
-
-        Returns
-        -------
-        list
-            a list of lists of ontology entry names
-        """
-        return self._convert_ids_using_target_dictionary(ontology_list, "ko_to_names")
-
-    def convert_module_to_names(self, module_list):
-        """ Convert a list of KEGG module ids to module names
-
-        Parameters
-        ----------
-        module_list : list
-            a list of KEGG module ids e.g. ['M00001', 'M00002']
-
-        Returns
-        -------
-        list
-            a list of lists of module namess
-        """
-        return self._convert_ids_using_target_dictionary(module_list, "module_to_names")
+        return self._convert_ids_using_target_dictionary(glycan_list, "glycan_to_names")
 
     def convert_network_to_names(self, network_list):
         """ Convert a list of KEGG network ids to network names
@@ -686,35 +461,6 @@ class KEGGLinker(DatabaseLinker):
         """
         return self._convert_ids_using_target_dictionary(pathway_list, "pathway_to_names")
 
-    def convert_reaction_to_names(self, reaction_list):
-        """ Convert a list of KEGG reaction ids to reaction names
-
-        Parameters
-        ----------
-        reaction_list : list
-            a list of KEGG reaction ids e.g. ['R00001', 'R00002']
-
-        Returns
-        -------
-        list
-            a list of lists of reaction names
-        """
-        return self._convert_ids_using_target_dictionary(reaction_list, "reaction_to_names")
-
-    def convert_variant_to_names(self, variant_list):
-        """ Convert a list of KEGG variant ids to variant names
-
-        Parameters
-        ----------
-        variant_list : list
-            a list of KEGG variant ids e.g. ['hsa_var:100v1', 'hsa_var:1019v1']
-
-        Returns
-        -------
-        list
-            a list of lists of variant names
-        """
-        return self._convert_ids_using_target_dictionary(variant_list, "variant_to_names")
     @property
     def gene_ids(self):
         """
@@ -730,39 +476,11 @@ class KEGGLinker(DatabaseLinker):
         return self._get_keys_of_target_dictionary("drug_to_names")
 
     @property
-    def brite_ids(self):
-        """
-        All available brite ids in the database
-        """
-        return self._get_keys_of_target_dictionary("brite_to_names")
-
-    @property
-    def compound_ids(self):
-        """
-        All available compound ids in the database
-        """
-        return self._get_keys_of_target_dictionary("compound_to_names")
-
-    @property
     def disease_ids(self):
         """
         All available disease ids in the database
         """
         return self._get_keys_of_target_dictionary("disease_to_names")
-
-    @property
-    def environ_ids(self):
-        """
-        All available environ ids in the database
-        """
-        return self._get_keys_of_target_dictionary("environ_to_names")
-
-    @property
-    def enzyme_ids(self):
-        """
-        All available enzyme ids in the database
-        """
-        return self._get_keys_of_target_dictionary("enzyme_to_names")
 
     @property
     def network_ids(self):
@@ -777,20 +495,6 @@ class KEGGLinker(DatabaseLinker):
         All available pathway ids in the database
         """
         return self._get_keys_of_target_dictionary("pathway_to_names")
-
-    @property
-    def reaction_ids(self):
-        """
-        All available reaction ids in the database
-        """
-        return self._get_keys_of_target_dictionary("reaction_to_names")
-
-    @property
-    def variant_ids(self):
-        """
-        All available variant ids in the database
-        """
-        return self._get_keys_of_target_dictionary("variant_to_names")
 
 
 class DrugBankLinker(DatabaseLinker):
@@ -924,21 +628,6 @@ class DrugBankLinker(DatabaseLinker):
             a list of lists of iuphar ligand ids
         """
         return self._convert_ids_using_target_dictionary(drug_list, "drugbank_to_iuphar")
-
-    def convert_drugs_to_kegg_compound(self, drug_list):
-        """ Convert a list of DrugBank drug ids to kegg compound ids
-
-        Parameters
-        ----------
-        drug_list : list
-            a list of DrugBank drug ids e.g. ['DB00001', 'DB00002']
-
-        Returns
-        -------
-        list
-            a list of lists of kegg compound ids
-        """
-        return self._convert_ids_using_target_dictionary(drug_list, "drugbank_to_kegg_compound")
 
     def convert_drugs_to_kegg_drug(self, drug_list):
         """ Convert a list of DrugBank drug ids to kegg drug ids
@@ -1126,7 +815,7 @@ class SiderLinker(DatabaseLinker):
         self._load_linking_dictionaries()
 
     def convert_drugs_to_bindingdb(self, drug_list):
-        """ Convert a list of Sider drug ids to kegg drug ids
+        """ Convert a list of Sider drug ids to bindingdb drug ids
 
         Parameters
         ----------
@@ -1475,21 +1164,6 @@ class UniprotLinker(DatabaseLinker):
         """
         return self._convert_ids_using_target_dictionary(acc_list, "acc_to_hpa")
 
-    def convert_uniprot_to_ko(self, acc_list):
-        """ Convert a list of Uniprot protein accession ids to kegg ontology ids
-
-        Parameters
-        ----------
-        acc_list : list
-            a list of Uniprot protein ids e.g. ['Q7L9L4', 'P42768']
-
-        Returns
-        -------
-        list
-            a list of lists of kegg ontology ids
-        """
-        return self._convert_ids_using_target_dictionary(acc_list, "acc_to_ko")
-
     def convert_uniprot_to_kegg(self, acc_list):
         """ Convert a list of Uniprot protein accession ids to kegg gene ids
 
@@ -1696,7 +1370,7 @@ class ChemblLinker(DatabaseLinker):
     """
 
     def __init__(self):
-        """ Initialize an object of the class KEGGLinker
+        """ Initialize an object of the class ChemblLinker
         """
         super(ChemblLinker, self).__init__()
         self._database_name = "chembl"
@@ -1733,22 +1407,6 @@ class ChemblLinker(DatabaseLinker):
             a list of lists of kegg drugs
         """
         return self._convert_ids_using_target_dictionary(compound_list, "chembl_to_kegg_drug")
-
-    def convert_compound_to_kegg_compound(self, compound_list):
-        """ Convert a list of Chembl compound ids to kegg compounds
-
-        Parameters
-        ----------
-        compound_list : list
-            a list of chembl compound ids e.g. ['CHEMBL3710408', 'CHEMBL1293296']
-
-        Returns
-        -------
-        list
-            a list of lists of kegg compounds
-        """
-        return self._convert_ids_using_target_dictionary(compound_list, "chembl_to_kegg_compound")
-
     
     def convert_compound_to_uniprot(self, compound_list):
         """ Convert a list of Chembl compound ids to uniprot accessions
@@ -2076,6 +1734,21 @@ class MimLinker(DatabaseLinker):
         """
         return self._convert_ids_using_target_dictionary(entry_list, "mim_to_kegg_disease")
 
+    def convert_mim_to_mesh(self, entry_list):
+        """ Convert a list of mim entry ids to MeSH disease ids"
+
+        Parameters
+        ----------
+        entry_list : list
+            a list of mim entry ids e.g. ['605066', '601288']
+
+        Returns
+        -------
+        list
+            a list of lists of mesh disease ids
+        """
+        return self._convert_ids_using_target_dictionary(entry_list, "mim_to_mesh")
+
 
 class MintLinker(DatabaseLinker):
     """ Mint database linker class
@@ -2316,34 +1989,6 @@ class Uniref100Linker(DatabaseLinker):
         return self._convert_ids_using_target_dictionary(protein_list, "uniref100_to_uniprot")
 
 
-class ThreeDMetLinker(DatabaseLinker):
-    """3DMet database linker class
-    """
-
-    def __init__(self):
-        """ Initialize an object of the class ThreeDMetLinker
-        """
-        super(ThreeDMetLinker, self).__init__()
-        self._database_name = "3dmet"
-
-        self._load_linking_dictionaries()
-
-    def convert_3dmet_to_kegg_compound(self, molecule_list):
-        """ Convert a list of 3dmet molecule ids to KEGG compound ids
-
-        Parameters
-        ----------
-        molecule_list : list
-            a list of 3dmet molecule ids e.g. ['B04559', 'B00308']
-
-        Returns
-        -------
-        list
-            a list of lists of KEGG compound ids
-        """
-        return self._convert_ids_using_target_dictionary(molecule_list, "3dmet_kegg_compound")
-
-
 class ChemspiderLinker(DatabaseLinker):
     """Chemspider database linker class
     """
@@ -2398,21 +2043,6 @@ class HMDBLinker(DatabaseLinker):
             a list of lists of KEGG drug ids
         """
         return self._convert_ids_using_target_dictionary(metabolite_list, "hmdb_to_kegg_drug")
-
-    def convert_hmdb_to_kegg_compound(self, metabolite_list):
-        """ Convert a list of hmdb metabolite ids to KEGG compound ids
-
-        Parameters
-        ----------
-        metabolite_list : list
-            a list of hmdb metabolite ids e.g. ['HMDB05032', 'HMDB41011']
-
-        Returns
-        -------
-        list
-            a list of lists of KEGG compound ids
-        """
-        return self._convert_ids_using_target_dictionary(metabolite_list, "hmdb_to_kegg_compound")
 
 
 class GuidePharmaLinker(DatabaseLinker):
@@ -2485,21 +2115,6 @@ class PubchemLinker(DatabaseLinker):
         """
         return self._convert_ids_using_target_dictionary(substance_list, "pubchem_substance_to_kegg_drug")
 
-    def convert_substance_to_kegg_compound(self, substance_list):
-        """ Convert a list of Pubchem subatance ids to KEGG compound ids
-
-        Parameters
-        ----------
-        substance_list : list
-            a list of Pubchem subatance ids  e.g. ['46507042', '46504860']
-
-        Returns
-        -------
-        list
-            a list of lists of KEGG compound ids
-        """
-        return self._convert_ids_using_target_dictionary(substance_list, "pubchem_substance_to_kegg_compound")
-
     def convert_compound_to_drugbank(self, compound_list):
         """ Convert a list of Pubchem compound ids to DrugBank drug ids
 
@@ -2514,6 +2129,36 @@ class PubchemLinker(DatabaseLinker):
             a list of lists of DrugBank drug ids
         """
         return self._convert_ids_using_target_dictionary(compound_list, "pubchem_compound_to_drugbank")
+
+    def convert_substance_to_sider(self, substance_list):
+        """ Convert a list of Pubchem subatance ids to SIDER drug ids
+
+        Parameters
+        ----------
+        substance_list : list
+            a list of Pubchem subatance ids  e.g. ['46507042', '46504860']
+
+        Returns
+        -------
+        list
+            a list of lists of SIDER drug ids
+        """
+        return self._convert_ids_using_target_dictionary(substance_list, "pubchem_substance_to_sider")
+
+    def convert_compound_to_sider(self, compound_list):
+        """ Convert a list of Pubchem compound ids to SIDER drug ids
+
+        Parameters
+        ----------
+        compound_list : list
+            a list of Pubchem compound ids  e.g. ['45267103', '16134395']
+
+        Returns
+        -------
+        list
+            a list of lists of SIDER drug ids
+        """
+        return self._convert_ids_using_target_dictionary(compound_list, "pubchem_compound_to_sider")
 
 
 class ChebiLinker(DatabaseLinker):
@@ -2559,22 +2204,6 @@ class ChebiLinker(DatabaseLinker):
         """
         return self._convert_ids_using_target_dictionary(chemical_list, "chebi_to_kegg_drug")
 
-    def convert_chemical_to_kegg_compounds(self, chemical_list):
-        """ Convert a list of Chebi chemical ids to KEGG compounds
-
-        Parameters
-        ----------
-        chemical_list : list
-            a list of chebi chemical ids e.g. ['CHEBI:16347', 'CHEBI:11060']
-
-        Returns
-        -------
-        list
-            a list of lists of KEGG compounds
-        """
-        return self._convert_ids_using_target_dictionary(chemical_list, "chebi_to_kegg_compound")
-
-    
     def convert_chemical_to_sider(self, chemical_list):
         """ Convert a list of Chebi chemical ids to SIDER drugs
 
@@ -2692,21 +2321,6 @@ class HSDBLinker(DatabaseLinker):
         """
         return self._convert_ids_using_target_dictionary(substance_list, "hsdb_to_kegg_drug")
 
-    def convert_substance_to_kegg_compounds(self, substance_list):
-        """ Convert a list of HSDB substance ids to KEGG compounds
-
-        Parameters
-        ----------
-        substance_list : list
-            a list of HSDB substance ids e.g. ['Donepezil', 'Efalizumab']
-
-        Returns
-        -------
-        list
-            a list of lists of KEGG compounds
-        """
-        return self._convert_ids_using_target_dictionary(substance_list, "hsdb_to_kegg_compound")
-
 
 class IupharLinker(DatabaseLinker):
     """ Iuphar database linker class
@@ -2764,21 +2378,6 @@ class KnapsackLinker(DatabaseLinker):
             a list of lists of KEGG drugs
         """
         return self._convert_ids_using_target_dictionary(metabolite_list, "knapsack_to_kegg_drug")
-
-    def convert_substance_to_kegg_compounds(self, metabolite_list):
-        """ Convert a list of knapsack metabolite ids to KEGG compounds
-
-        Parameters
-        ----------
-        metabolite_list : list
-            a list of knapsack metabolite ids e.g. ['C00001433', 'C00007279']
-
-        Returns
-        -------
-        list
-            a list of lists of KEGG compounds
-        """
-        return self._convert_ids_using_target_dictionary(metabolite_list, "knapsack_to_kegg_compound")
 
 
 class LingandBoxLinker(DatabaseLinker):
@@ -2838,21 +2437,6 @@ class MassBankLinker(DatabaseLinker):
         """
         return self._convert_ids_using_target_dictionary(accession_list, "massbank_to_kegg_drug")
 
-    def convert_substance_to_kegg_compounds(self, accession_list):
-        """ Convert a list of MassBank accession ids to KEGG compounds
-
-        Parameters
-        ----------
-        accession_list : list
-            a list of MassBank accession ids e.g. ['JP005783', 'WA002017']
-
-        Returns
-        -------
-        list
-            a list of lists of KEGG compounds
-        """
-        return self._convert_ids_using_target_dictionary(accession_list, "massbank_to_kegg_compound")
-
 
 class NikkajiLinker(DatabaseLinker):
     """ Nikkaji database linker class
@@ -2881,21 +2465,6 @@ class NikkajiLinker(DatabaseLinker):
             a list of lists of KEGG drugs
         """
         return self._convert_ids_using_target_dictionary(chemical_list, "nikkaji_to_kegg_drug")
-
-    def convert_chemical_to_kegg_compounds(self, chemical_list):
-        """ Convert a list of Nikkaji chemical ids to KEGG compounds
-
-        Parameters
-        ----------
-        chemical_list : list
-            a list of Nikkaji chemical ids e.g. ['J10.483C', 'J300.856H']
-
-        Returns
-        -------
-        list
-            a list of lists of KEGG compounds
-        """
-        return self._convert_ids_using_target_dictionary(chemical_list, "nikkaji_to_kegg_compound")
 
 
 class PDBLinker(DatabaseLinker):
@@ -2939,21 +2508,6 @@ class PDBLinker(DatabaseLinker):
             a list of lists of KEGG drugs
         """
         return self._convert_ids_using_target_dictionary(chemical_list, "pdb_to_kegg_drug")
-
-    def convert_chemical_to_kegg_compounds(self, chemical_list):
-        """ Convert a list of PDB chemical ids to KEGG compounds
-
-        Parameters
-        ----------
-        chemical_list : list
-            a list of PDB chemical ids e.g. ['PLP', 'HIS']
-
-        Returns
-        -------
-        list
-            a list of lists of KEGG compounds
-        """
-        return self._convert_ids_using_target_dictionary(chemical_list, "pdb_to_kegg_compound")
 
 
 class TTDLinker(DatabaseLinker):
@@ -3045,3 +2599,103 @@ class CellosaurusLinker(DatabaseLinker):
         All available cellline ids in the database
         """
         return self._get_keys_of_target_dictionary("cellosaurus_to_names")
+
+
+class MESHLinker(DatabaseLinker):
+    """ MESH database linker class
+    """
+
+    def __init__(self):
+        """ Initialize an object of the class MESHLinker
+        """
+        super(MESHLinker, self).__init__()
+        self._database_name = "mesh"
+
+        self._load_linking_dictionaries()
+
+    def convert_disease_to_kegg_disease(self, disease_list):
+        """ Convert a list of MESH disease ids to KEGG disease ids
+
+        Parameters
+        ----------
+        disease_list : list
+            a list of MESH disease ids e.g. ['D054198', 'D054218']
+
+        Returns
+        -------
+        list
+            a list of lists of KEGG disease ids
+        """
+        return self._convert_ids_using_target_dictionary(disease_list, "mesh_to_kegg_disease")
+
+    def convert_disease_to_omim(self, disease_list):
+        """ Convert a list of MESH disease ids to omim ids
+
+        Parameters
+        ----------
+        disease_list : list
+            a list of MESH disease ids e.g. ['D054198', 'D054218']
+
+        Returns
+        -------
+        list
+            a list of lists of omim ids
+        """
+        return self._convert_ids_using_target_dictionary(disease_list, "mesh_to_omim")
+
+class ICD10Linker(DatabaseLinker):
+    """ ICD10 database linker class
+    """
+
+    def __init__(self):
+        """ Initialize an object of the class ICD10Linker
+        """
+        super(ICD10Linker, self).__init__()
+        self._database_name = "icd10"
+
+        self._load_linking_dictionaries()
+
+    def convert_disease_to_kegg_disease(self, disease_list):
+        """ Convert a list of MESH disease ids to KEGG disease ids
+
+        Parameters
+        ----------
+        disease_list : list
+            a list of MESH disease ids e.g. ['C91.0', 'C83.5']
+
+        Returns
+        -------
+        list
+            a list of lists of KEGG disease ids
+        """
+        return self._convert_ids_using_target_dictionary(disease_list, "icd_10_to_kegg_disease")
+
+
+class ICD11Linker(DatabaseLinker):
+    """ ICD11 database linker class
+    """
+
+    def __init__(self):
+        """ Initialize an object of the class ICD11Linker
+        """
+        super(ICD11Linker, self).__init__()
+        self._database_name = "icd11"
+
+        self._load_linking_dictionaries()
+
+    def convert_disease_to_kegg_disease(self, disease_list):
+        """ Convert a list of MESH disease ids to KEGG disease ids
+
+        Parameters
+        ----------
+        disease_list : list
+            a list of MESH disease ids e.g. ['2A70', '2A71']
+
+        Returns
+        -------
+        list
+            a list of lists of KEGG disease ids
+        """
+        return self._convert_ids_using_target_dictionary(disease_list, "icd_11_to_kegg_disease")
+
+
