@@ -10,6 +10,59 @@ This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 Int
 
 `python setup.py`
 
+# Usage
+```python
+from biodblinker import UniprotLinker
+
+uniprot_linker = UniprotLinker()
+
+# Get list of all included uniprot accessions
+uniprot_accessions = uniprot_linker.uniprot_ids
+
+select_accessions = ['P31946', 'P62258', 'Q04917']
+
+# Get the list of names for each accession in select_accessions
+select_names = uniprot_linker.convert_uniprot_to_names(select_accessions)
+
+# Get the list of kegg gene ids for each accession in select_accessions
+select_genes = uniprot_linker.convert_uniprot_to_kegg(select_accessions)
+
+```
+
+# Use Case - Linking uniprot proteins and mesh diseases via KEGG
+
+```python
+import requests
+from biodblinker import KEGGLinker
+
+linker = KEGGLinker()
+unique_pairs = set()
+
+url = 'http://rest.kegg.jp/link/hsa/disease'
+resp = requests.get(url)
+
+if resp.ok:
+    for line in resp.iter_lines(decode_unicode=True):
+        kegg_disease, kegg_gene = line.strip().split('\t')
+        # strip the prefix from the disease
+        kegg_disease = kegg_disease.split(':')[1]
+        
+        # prefix is retained for genes as the ids an numeric
+        uniprot_protein = linker.convert_geneid_to_uniprot([kegg_gene])
+        mesh_disease = linker.convert_disease_to_mesh([kegg_disease])
+        if len(uniprot_protein[0]) == 0:
+            continue
+        if len(mesh_disease[0]) == 0:
+            continue
+        for protein in uniprot_protein[0]:
+            for disease in mesh_disease[0]:
+                unique_pairs.add((protein, disease))
+
+for protein, disease in unique_pairs:
+    print(f'{protein}\tRELATED_DISEASE\t{disease}')
+
+```
+
 # Downloading mappings
 
 When a biodblinker is initialized it verifies that all necessary mapping files are present and if not downloads the precompiled mappings
@@ -20,12 +73,13 @@ It is also possible to generate the mappings from their sources
 
 * Note this process will take several hours and requires a large ammount of disk space due to the size of the source files. The source files are removed once the mappings are generated
 
-```
+```python
 import biodblinker
 
 gen = biodblinker.MappingGenerator()
 gen.generate_mappings(<drugbank_username>, <drugbank_password>)
 ```
+
 
 # Mapping sources and licenses
 BioDBLinker uses multiple sources to generate the mappings. BioDBLinker must be used in compliance with these licenses and citation policies where applicable
