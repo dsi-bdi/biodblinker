@@ -156,9 +156,9 @@ def verify_mappings():
 
 def download_mappings():
     biodblinker_data = get_data_directory()
-    checksum_uri = f'https://github.com/dsi-bdi/biodblinker_mappings/releases/download/v{biodblinker.__version__}/biodblinker_mappings.zip.md5'
+    checksum_uri = f'https://github.com/dsi-bdi/biodblinker_mappings/releases/download/v{biodblinker.__data_version__}/biodblinker_mappings.zip.md5'
     checksum = read_remote_checksum(checksum_uri)
-    mappings_uri = f'https://github.com/dsi-bdi/biodblinker_mappings/releases/download/v{biodblinker.__version__}/biodblinker_mappings.zip'
+    mappings_uri = f'https://github.com/dsi-bdi/biodblinker_mappings/releases/download/v{biodblinker.__data_version__}/biodblinker_mappings.zip'
 
     mappings_fp = join(biodblinker_data, "./biodblinker_mappings.zip")
     download_file(mappings_uri, mappings_fp, checksum)

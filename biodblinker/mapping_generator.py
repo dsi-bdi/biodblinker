@@ -108,14 +108,6 @@ class MappingGenerator():
                     elem.clear()
         return valid_accs
 
-    def _filter_uniprot_mappings(self, uniprot_mapping_file, valid_accs):
-        with gzip.open('./idmappings_SWISSPORT.dat.gz', 'wt') as output:
-            with file_open(uniprot_mapping_file) as uniprot_mapping_fd:
-                for line in tqdm(uniprot_mapping_fd, 'Filtering Uniprot mappings'):
-                    acc = line.split('\t')[0]
-                    if acc in valid_accs:
-                        output.write(line)
-
     def _map_uniprot(self, uniprot_mapping_file, valid_accs):
         """ Map uniprot proteins to several databases
 
@@ -212,9 +204,7 @@ class MappingGenerator():
 
         uniprot_mapping_file, swissprot_file = self._download_uniprot_sources(sources_dp)
         uniprot_accs = self._get_included_accs(swissprot_file)
-        print(f'Mapping {len(uniprot_accs)} uniprot proteins')
-        #self._filter_uniprot_mappings(uniprot_mapping_file, uniprot_accs)
-        #return
+
         uniprot_mappings, uniprot_mappings_rev = self._map_uniprot(uniprot_mapping_file, uniprot_accs)
         self._export_uniprot(uniprot_mappings, mappings_dp)
         self._export_uniprot_reverse(uniprot_mappings_rev, self._data_dir)
@@ -377,7 +367,7 @@ class MappingGenerator():
                     elif db == 'MeSH:':
                         if disease_id not in disease_mapping_dict['mesh']:
                             disease_mapping_dict['mesh'][disease_id] = []
-                        
+
                         for target in target_ids:
                             disease_mapping_dict['mesh'][disease_id].append(target)
                             if target not in rev_disease_mapping_dict['mesh']:
@@ -430,10 +420,9 @@ class MappingGenerator():
         makedirs(sources_dp) if not isdir(sources_dp) else None
         makedirs(mappings_dp) if not isdir(mappings_dp) else None
 
-
         diseases_fp = self._download_kegg_diseases(sources_dp)
         self.parse_disease_mappings(diseases_fp, mappings_dp)
-        
+
         for source, targets in tqdm(kegg_source_targets.items(), 'Processing KEGG mappings'):
             source_ids = self._map_kegg_names(source, mappings_dp)
             # Sleep between requests
@@ -509,7 +498,7 @@ class MappingGenerator():
                 kegg_id, omim_ids = line.strip().split('\t')
                 omim_ids = omim_ids.split(';')
                 kegg_to_omim[kegg_id] = omim_ids
-        
+
         with open(join(self._data_dir, 'mesh', 'mesh_to_omim.txt'), 'w') as fd:
             for kegg_id, mesh_mappings in kegg_to_mesh.items():
                 if kegg_id in kegg_to_omim:
