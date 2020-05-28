@@ -1,7 +1,7 @@
-from os import makedirs, remove
+from os import makedirs, remove, walk
 from os.path import join, isdir, exists, isfile
-from biolink.fileio import *
-from biolink.config import file_open, get_data_directory, get_all_mappings_sources
+from biodblinker.fileio import *
+from biodblinker.config import file_open, get_data_directory, get_all_mappings_sources
 from tqdm import tqdm
 import requests
 from collections import defaultdict
@@ -68,8 +68,8 @@ class MappingGenerator():
             the path to the mappings file
         """
         swissprot_file_url = 'ftp://ftp.ebi.ac.uk/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.xml.gz'
-        #uniprot_mapping_file_url = "ftp://ftp.ebi.ac.uk/pub/databases/uniprot/current_release/knowledgebase/idmapping/idmapping.dat.gz"
-        uniprot_mapping_file_url = 'file:///home/briawal/newkg/current_bio/biolink/examples/idmappings_SWISSPORT.dat.gz'
+        uniprot_mapping_file_url = "ftp://ftp.ebi.ac.uk/pub/databases/uniprot/current_release/knowledgebase/idmapping/idmapping.dat.gz"
+
         uniprot_mapping_filepath = join(sources_dir, "./uniprot_mappings.dat.gz")
         swissprot_mapping_filepath = join(sources_dir, "./swissprot.xml.gz")
 
@@ -921,25 +921,32 @@ class MappingGenerator():
         sources_dp = join(self._data_dir, 'sources')
         if exists(sources_dp):
             shutil.rmtree(sources_dp)
+        
+    def compress_mappings(self):
+        filecount = 0
+        mapping_sources = get_all_mappings_sources()
+        for database, mappings in mapping_sources.items():
+            filecount += len(mappings)
 
-    def download_mappings_zip(self, mappings_uri):
-        biolink_data = get_data_directory()
-        mappings_fp = join(biolink_data, "./biolink_mappings.zip")
-        download_file_md5_check(mappings_uri, mappings_fp)
+        t = tqdm(total=filecount, desc = 'Compressing mapping files')
         
-        with ZipFile(mappings_fp, 'r') as map_zip:
-            map_zip.extractall(path=biolink_data)
-        
-        os.remove(mappings_fp)
-        
+        for root, dirs, files in walk(self._data_dir):
+            for fp in files:
+                src_fp = join(root, fp)
+                dst_fp = join(root, fp+'.gz')
+                with open(src_fp, 'rb') as f_in, gzip.open(dst_fp, 'wb') as f_out:
+                    f_out.writelines(f_in)
+                remove(src_fp)
+                t.update(n=1)
+        t.close()
 
     def verify_mappings(self):
         all_exist = True
-        biolink_data = get_data_directory()
+        biodblinker_data = get_data_directory()
         mapping_sources = get_all_mappings_sources()
         for database, mappings in mapping_sources.items():
             for map_name, short_path in mappings.items():
-                map_path = join(biolink_data, short_path)
+                map_path = join(biodblinker_data, short_path)
                 valid_map = exists(map_path) & isfile(map_path)
                 if not exists(map_path):
                     print(f'{database}:{map_name} mapping file {map_path} does not exist')
@@ -954,7 +961,7 @@ class MappingGenerator():
             print(f'Could not find all mapping files')
 
     def generate_mappings(self, drugbank_user, drugbank_password, delete_sources=True):
-        """ Generate mappings required by the biolink linkers
+        """ Generate mappings required by the biodblinker linkers
 
         Paramaters
         ----------
@@ -971,3 +978,4 @@ class MappingGenerator():
         self.generate_uniprot_mappings()
         if delete_sources:
             self._clear_sources()
+        self.compress_mappings()

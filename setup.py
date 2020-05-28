@@ -1,5 +1,5 @@
 from setuptools import setup
-from biolink import __version__, __name__, __description__
+from biodblinker import __version__, __name__, __description__
 
 setup(
    name=__name__,

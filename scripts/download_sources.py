@@ -1,8 +1,8 @@
 from os import makedirs
 import gzip
 import os.path
-from biolink.fileio import *
-from biolink.config import file_open
+from biodblinker.fileio import *
+from biodblinker.config import file_open
 from tqdm import tqdm
 import requests
 from collections import defaultdict

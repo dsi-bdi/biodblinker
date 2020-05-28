@@ -1,4 +1,4 @@
-from biolink import (KEGGLinker, GeneNameLinker, DrugBankLinker,
+from biodblinker import (KEGGLinker, GeneNameLinker, DrugBankLinker,
                      UniprotLinker, HPALinker, CellosaurusLinker)
 
 

@@ -89,6 +89,26 @@ def download_file(url, local_path, checksum=None):
     return local_path
 
 
+def read_remote_checksum(url):
+    """ download and read a remote checksum file
+
+    Parameters
+    ----------
+    url : str
+        represents file full web url
+    Returns
+    -------
+    bytes
+        the checksum
+    """
+    checksum = None
+    with requests.get(url) as r:
+        if r.status_code == 200:
+            checksum = r.text
+        else:
+            raise ValueError(f'Error downloading {url} status: {r.status_code}')
+    return checksum
+
 def download_file_with_auth(url, local_path, username, password, checksum=None):
     """ download a file to disk using the given uername and password 
     with ability to validate file checksum
