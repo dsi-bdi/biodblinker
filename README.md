@@ -47,7 +47,7 @@ if resp.ok:
         # strip the prefix from the disease
         kegg_disease = kegg_disease.split(':')[1]
         
-        # prefix is retained for genes as the ids an numeric
+        # prefix is retained for genes as the ids are numeric
         uniprot_protein = linker.convert_geneid_to_uniprot([kegg_gene])
         mesh_disease = linker.convert_disease_to_mesh([kegg_disease])
         if len(uniprot_protein[0]) == 0:
