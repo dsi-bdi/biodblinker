@@ -94,3 +94,5 @@ BioDBLinker uses multiple sources to generate the mappings. BioDBLinker must be 
 | [HPA](https://www.proteinatlas.org/)               | CC BY SA 3.0 | https://www.proteinatlas.org/about/licence         |
 | [Cellosaurus](https://web.expasy.org/cellosaurus/) | CC BY 4.0    | https://web.expasy.org/cgi-bin/cellosaurus/faq#Q22 |
 
+# Funding
+The development of this module has been fully supported by the CLARIFY project that has received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No 875160.
