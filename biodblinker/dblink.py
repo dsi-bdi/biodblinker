@@ -102,21 +102,6 @@ class KEGGLinker(DatabaseLinker):
         """
         return self._convert_ids_using_target_dictionary(gene_list, "gene_to_uniprot")
 
-    def convert_names_to_geneids(self, name_list):
-        """ Convert a list of KEGG gene namse to gene ids
-
-        Parameters
-        ----------
-        name_list : list
-            a list of KEGG gene ids e.g. ['GRF2', 'ND6']
-
-        Returns
-        -------
-        list
-            a list of lists of kegg gene
-        """
-        return self._convert_ids_using_target_dictionary(name_list, "names_to_genes")
-
     def convert_geneid_to_names(self, gene_list):
         """ Convert a list of KEGG gene ids to gene names
 
@@ -267,21 +252,6 @@ class KEGGLinker(DatabaseLinker):
         """
         return self._convert_ids_using_target_dictionary(drug_list, "drug_to_names")
 
-    def convert_names_to_drugids(self, name_list):
-        """ Convert a list of KEGG drug names to drug ids
-
-        Parameters
-        ----------
-        name_list : list
-            a list of KEGG drug names e.g. ['Danicamtiv', 'Balstilimab']
-
-        Returns
-        -------
-        list
-            a list of lists of drug ids
-        """
-        return self._convert_ids_using_target_dictionary(name_list, "names_to_drugs")
-
     def convert_drugid_to_nikkaji(self, drug_list):
         """ Convert a list of KEGG drug ids to nikkaji chemical ids
 
@@ -371,21 +341,6 @@ class KEGGLinker(DatabaseLinker):
             a list of lists of disease names
         """
         return self._convert_ids_using_target_dictionary(disease_list, "disease_to_names")
-
-    def convert_names_to_diseases(self, name_list):
-        """ Convert a list of KEGG disease names to disease ids
-
-        Parameters
-        ----------
-        name_list : list
-            a list of KEGG disease names e.g. ['Trichosporonosis', 'Erdheim-Chester disease']
-
-        Returns
-        -------
-        list
-            a list of lists of disease ids
-        """
-        return self._convert_ids_using_target_dictionary(name_list, "names_to_disease")
 
     def convert_disease_to_omim(self, disease_list):
         """ Convert a list of KEGG disease ids to omim disease ids
@@ -477,21 +432,6 @@ class KEGGLinker(DatabaseLinker):
         """
         return self._convert_ids_using_target_dictionary(glycan_list, "glycan_to_names")
 
-    def convert_names_to_glycans(self, name_list):
-        """ Convert a list of KEGG glycan names to glycan ids
-
-        Parameters
-        ----------
-        name_list : list
-            a list of KEGG glycan names e.g. ['(GlcNAc)2 (Man)1 (PP-Dol)1', 'N-Acetyl-D-glucosaminyldiphosphodolichol']
-
-        Returns
-        -------
-        list
-            a list of lists of glycan ids
-        """
-        return self._convert_ids_using_target_dictionary(name_list, "names_to_glycans")
-
     def convert_network_to_names(self, network_list):
         """ Convert a list of KEGG network ids to network names
 
@@ -507,21 +447,6 @@ class KEGGLinker(DatabaseLinker):
         """
         return self._convert_ids_using_target_dictionary(network_list, "network_to_names")
 
-    def convert_names_to_networks(self, name_list):
-        """ Convert a list of KEGG network names to network ids
-
-        Parameters
-        ----------
-        name_list : list
-            a list of KEGG network names e.g. ['Hepatitis B virus (HBV)', 'Epstein-Barr virus (EBV)']
-
-        Returns
-        -------
-        list
-            a list of lists of network ids
-        """
-        return self._convert_ids_using_target_dictionary(name_list, "names_to_networks")
-
     def convert_pathway_to_names(self, pathway_list):
         """ Convert a list of KEGG pathway ids to pathway names
 
@@ -536,21 +461,6 @@ class KEGGLinker(DatabaseLinker):
             a list of lists of pathway names
         """
         return self._convert_ids_using_target_dictionary(pathway_list, "pathway_to_names")
-
-    def convert_names_to_pathways(self, name_list):
-        """ Convert a list of KEGG pathway names to pathway ids
-
-        Parameters
-        ----------
-        name_list : list
-            a list of KEGG pathway ids e.g. ['Galactose metabolism', 'Fatty acid biosynthesis']
-
-        Returns
-        -------
-        list
-            a list of lists of pathway ids
-        """
-        return self._convert_ids_using_target_dictionary(name_list, "names_to_pathways")
 
     @property
     def gene_ids(self):
@@ -885,21 +795,6 @@ class DrugBankLinker(DatabaseLinker):
         """
         return self._convert_ids_using_target_dictionary(drug_list, "drugbank_to_names")
 
-    def convert_names_to_drugs(self, name_list):
-        """ Convert a list of DrugBank drug names to drug ids
-
-        Parameters
-        ----------
-        name_list : list
-            a list of DrugBank drug ids e.g. ['Lepirudin', 'Cetuximab']
-
-        Returns
-        -------
-        list
-            a list of lists of drug ids
-        """
-        return self._convert_ids_using_target_dictionary(name_list, "names_to_drugbank")
-
     @property
     def drug_ids(self):
         """
@@ -1054,21 +949,6 @@ class SiderLinker(DatabaseLinker):
             a list of lists of drug names
         """
         return self._convert_ids_using_target_dictionary(drug_list, "sider_to_names")
-
-    def convert_names_to_drugs(self, name_list):
-        """ Convert a list of Sider drug names to drug ids
-
-        Parameters
-        ----------
-        name_list : list
-            a list of Sider drug names e.g. ['carnitine', 'prostacyclin']
-
-        Returns
-        -------
-        list
-            a list of lists of drug ids
-        """
-        return self._convert_ids_using_target_dictionary(drug_list, "names_to_sider")
 
     @property
     def drug_ids(self):
@@ -1449,21 +1329,6 @@ class UniprotLinker(DatabaseLinker):
             a list of lists of protein names
         """
         return self._convert_ids_using_target_dictionary(acc_list, "uniprot_names")
-
-    def convert_names_to_uniprot(self, name_list):
-        """ Convert a list of protein names to Uniprot protein accession ids
-
-        Parameters
-        ----------
-        name_list : list
-            a list of Uniprot protein ids e.g. ['001R', '003L']
-
-        Returns
-        -------
-        list
-            a list of lists of protein accessions
-        """
-        return self._convert_ids_using_target_dictionary(name_list, "names_to_uniprot")
 
     @property
     def uniprot_ids(self):
