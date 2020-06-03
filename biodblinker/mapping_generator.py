@@ -101,9 +101,9 @@ class MappingGenerator():
                     name = elem.find('./up:name', ns).text
 
                     species = name.split('_')[-1]
-                    valid_accs.add(uniprot_acc)
-                    # if species in valid_species:
-                    #     valid_accs.add(uniprot_acc)
+                    
+                    if species in valid_species:
+                        valid_accs.add(uniprot_acc)
 
                     elem.clear()
         return valid_accs
@@ -131,11 +131,23 @@ class MappingGenerator():
 
         db_mapping_dictionaries_dict = {dbname: dict() for dbname in target_databases}
         db_mapping_dictionaries_reverse_dict = {dbname: dict() for dbname in target_databases}
+        current_acc = ''
+        t = tqdm(total=len(valid_accs), desc = 'Extracting uniprot mappings')
         with file_open(uniprot_mapping_file) as uniprot_map_fd:
-            for line in tqdm(uniprot_map_fd, desc="Processing UNIPROT mapping file."):
+            for line in uniprot_map_fd:
                 uniprot_acc, db_tag, db_id = line.strip().split("\t")
                 if uniprot_acc not in valid_accs:
+                    if current_acc in valid_accs:
+                        valid_accs.remove(current_acc)
+                        t.update(n=1)
+                    if len(valid_accs) == 0:
+                        break
                     continue
+                elif uniprot_acc != current_acc:
+                    if current_acc in valid_accs:
+                        valid_accs.remove(current_acc)
+                        t.update(n=1)
+                    current_acc = uniprot_acc
                 if db_tag in target_databases:
                     if uniprot_acc not in db_mapping_dictionaries_dict[db_tag]:
                         db_mapping_dictionaries_dict[db_tag][uniprot_acc] = [db_id]
@@ -146,7 +158,7 @@ class MappingGenerator():
                         db_mapping_dictionaries_reverse_dict[db_tag][db_id] = [uniprot_acc]
                     else:
                         db_mapping_dictionaries_reverse_dict[db_tag][db_id].append(uniprot_acc)
-
+        t.close()
         return db_mapping_dictionaries_dict, db_mapping_dictionaries_reverse_dict
 
     def _export_uniprot(self, db_mapping_dictionaries_dict, uniprot_mappings_dp):
@@ -205,6 +217,7 @@ class MappingGenerator():
         uniprot_mapping_file, swissprot_file = self._download_uniprot_sources(sources_dp)
         uniprot_accs = self._get_included_accs(swissprot_file)
 
+        print(f'{len(uniprot_accs)} valid accs')
         uniprot_mappings, uniprot_mappings_rev = self._map_uniprot(uniprot_mapping_file, uniprot_accs)
         self._export_uniprot(uniprot_mappings, mappings_dp)
         self._export_uniprot_reverse(uniprot_mappings_rev, self._data_dir)
@@ -213,8 +226,9 @@ class MappingGenerator():
             for acc, ids in uniprot_mappings['UniProtKB-ID'].items():
                 names = set()
                 for pid in ids:
-                    name = "_".join(pid.split('_')[:-1])
-                    names.add(name)
+                    #name = "_".join(pid.split('_')[:-1])
+                    #names.add(name)
+                    names.add(pid)
                 writer.write(f'{acc}\t{";".join(names)}\n')
 
     def _map_kegg_names(self, database, mappings_dp, file_mode='w', is_gene_db=False, database_name=None):
