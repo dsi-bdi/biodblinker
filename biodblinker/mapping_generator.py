@@ -226,8 +226,6 @@ class MappingGenerator():
             for acc, ids in uniprot_mappings['UniProtKB-ID'].items():
                 names = set()
                 for pid in ids:
-                    #name = "_".join(pid.split('_')[:-1])
-                    #names.add(name)
                     names.add(pid)
                 writer.write(f'{acc}\t{";".join(names)}\n')
 
