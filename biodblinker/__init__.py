@@ -7,8 +7,9 @@ __LIB_ROOT__DIR__ = dirname(file_dp)
 
 __name__ = "biodblinker"
 __description__ = "A library for linking entities of biological knowledge bases."
-__version__ = "0.0.3"
-__data_version__ = "0.0.1"
+__version__ = "0.0.4"
+__data_version__ = "0.0.4"
+__min_data_version__ = '0.0.4'
 __all__ = [
     "GeneNameLinker", "KEGGLinker", 'DrugBankLinker', 'SiderLinker',
     'UniprotLinker', "BiogridLinker", "ChemblLinker", "DipLinker",
