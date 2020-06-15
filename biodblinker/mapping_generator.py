@@ -1,7 +1,7 @@
 from os import makedirs, remove, walk
 from os.path import join, isdir, exists, isfile
 from biodblinker.fileio import *
-from biodblinker.config import file_open, get_data_directory, get_all_mappings_sources
+from biodblinker.config import file_open, get_data_directory, get_all_mappings_sources, write_mappings_config
 from tqdm import tqdm
 import requests
 from collections import defaultdict
@@ -10,7 +10,7 @@ import xml.etree.ElementTree as ET
 import gzip
 import shutil
 import time
-
+import re
 
 
 class Species:
@@ -45,6 +45,25 @@ VALID_SPECIES = [
     Species('YEAST', 'sce', '559292', 'saccharomyces cerevisiae (strain atcc 204508 / s288c)'),
     Species('PIG', 'ssc', '9823', 'Sus scrofa')
 ]
+
+
+def sanatize_text(text):
+    """ Replace non alphanumeric characters in text with '_'
+
+    Parameters
+    ----------
+    text : str
+        text to sanatize
+
+    Returns
+    -------
+    text
+        the sanatized text
+    """
+    if text is None:
+        return text
+    return re.sub('[^a-zA-Z0-9]', '_', text.strip()).lower()
+
 
 class MappingGenerator():
 
@@ -148,6 +167,8 @@ class MappingGenerator():
                         valid_accs.remove(current_acc)
                         t.update(n=1)
                     current_acc = uniprot_acc
+                if db_id == '-':
+                    continue
                 if db_tag in target_databases:
                     if uniprot_acc not in db_mapping_dictionaries_dict[db_tag]:
                         db_mapping_dictionaries_dict[db_tag][uniprot_acc] = [db_id]
@@ -590,6 +611,12 @@ class MappingGenerator():
                             for synonym in synonyms:
                                 drugbank_targets_map['names'][did].add(synonym.text.strip())
 
+                        products = elem.find('./db:products', ns)
+                        if products is not None:
+                            for product in products:
+                                name = product.find('./db:name', ns)
+                                drugbank_targets_map['names'][did].add(name.text.strip())
+
                         id_elems = elem.findall('./db:drugbank-id', ns)
 
                         if id_elems is not None:
@@ -658,7 +685,10 @@ class MappingGenerator():
                         mapped.add('-')
                     else:
                         for mapped_id in mapped:
-                            reverse_map[mapped_id].add(did)
+                            if target == 'names':
+                                reverse_map[sanatize_text(mapped_id)].add(did)    
+                            else:
+                                reverse_map[mapped_id].add(did)
                     writer.write(f'{did}\t{";".join(mapped)}\n')
 
             target_dp = join(self._data_dir, target)
@@ -731,6 +761,8 @@ class MappingGenerator():
                 sid = 'CID1'+mole[4:]
                 if target in sider_targets and sid in sider_ids:
                     target_name = sider_targets[target]
+                    if target_name == 'kegg' and target_id.startswith('C'):
+                        continue
                     sider_target_map[target_name][sid].add(target_id)
 
         return sider_ids, sider_target_map
@@ -742,10 +774,10 @@ class MappingGenerator():
             'ChEBI': 'chebi',
             'ChEMBL': 'chembl',
             'DrugBank': 'drugbank',
-            'KEGG': 'kegg',
             'PC': 'pubchem_compound',
             'PS': 'pubchem_substance',
-            'ATC': 'atc'
+            'ATC': 'atc',
+            'KEGG': 'kegg'
         }
 
         sources_dp = self._source_dir
@@ -919,9 +951,8 @@ class MappingGenerator():
 
     def _clear_sources(self):
         """Delete the source files used to generate the mappings"""
-        sources_dp = join(self._data_dir, 'sources')
-        if exists(sources_dp):
-            shutil.rmtree(sources_dp)
+        if exists(self._source_dir):
+            shutil.rmtree(self._source_dir)
         
     def compress_mappings(self):
         filecount = 0
@@ -980,3 +1011,4 @@ class MappingGenerator():
         if delete_sources:
             self._clear_sources()
         self.compress_mappings()
+        write_mappings_config()

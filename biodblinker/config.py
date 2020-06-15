@@ -10,6 +10,9 @@ import os
 from zipfile import ZipFile
 from os import remove
 from biodblinker.fileio import download_file, read_remote_checksum
+from datetime import datetime
+from packaging import version
+import shutil
 
 def file_open(filepath, *args, ** kwargs):
     """ Open a file (plain or compressed)
@@ -162,7 +165,10 @@ def download_mappings():
 
     mappings_fp = join(biodblinker_data, "./biodblinker_mappings.zip")
     download_file(mappings_uri, mappings_fp, checksum)
-
+    data_dir = join(biodblinker_data, 'data')
+    # Remove old mappings if they exist
+    if exists(data_dir):
+        shutil.rmtree(data_dir)
     with ZipFile(mappings_fp, 'r') as map_zip:
         map_zip.extractall(path=biodblinker_data)
 
@@ -177,6 +183,55 @@ def verify_biodblinker():
     if _config_verified:
         return
     if not verify_mappings():
-        print('biodblinker mappings do not exist, downloading mappings size 128MB')
+        print('biodblinker mappings do not exist, downloading mappings size 50MB')
         download_mappings()
         _config_verified = True
+    else:
+        # Mappings exist check they are compatible
+        validate_mappings_config()
+        _config_verified = True
+
+
+def write_mappings_config():
+    config = configparser.ConfigParser()
+    config['MAPPINGS'] = {
+        'source': 'Generated',
+        'created': datetime.now(),
+        'version': biodblinker.__version__,
+    }
+    data_dir = get_data_directory()
+    with open(join(data_dir, 'mappings.ini'), 'w') as configfile:
+        config.write(configfile)
+
+
+def read_mappings_config():
+    data_dir = get_data_directory()
+    config = configparser.ConfigParser()
+    if exists(join(data_dir, 'mappings.ini')):
+        config.read(join(data_dir, 'mappings.ini'))
+    else:
+        config['MAPPINGS'] = {
+            'version': '0.0.0',
+        }
+    return config
+
+
+def validate_mappings_config():
+    config = read_mappings_config()
+    mappings_version = config['MAPPINGS']['version']
+    if version.parse(mappings_version) < version.parse(biodblinker.__min_data_version__):
+        # Invalid version
+        print(f'''Current mappings are incompatible with current version \
+of biodblinker {mappings_version} < {biodblinker.__min_data_version__}
+Continuing with the current mappings may result in errors or incorrect mappings
+Please re-generate the mappings or download the latest mappings using \
+the download_mappings() function.
+        ''', file=sys.stderr)
+        return False
+    return True
+
+
+def print_mappings_config():
+    config = read_mappings_config()
+    for key, value in config['MAPPINGS'].items():
+        print(f'{key}: {value}')

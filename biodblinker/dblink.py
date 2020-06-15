@@ -1,5 +1,24 @@
 from biodblinker.config import load_data_map, get_database_mapping_sources, verify_biodblinker
 from abc import ABC, abstractmethod
+import re
+
+
+def sanatize_text(text):
+    """ Replace non alphanumeric characters in text with '_'
+
+    Parameters
+    ----------
+    text : str
+        text to sanatize
+
+    Returns
+    -------
+    text
+        the sanatized text
+    """
+    if text is None:
+        return text
+    return re.sub('[^a-zA-Z0-9]', '_', text.strip()).lower()
 
 
 class DatabaseLinker(ABC):
@@ -497,6 +516,12 @@ class KEGGLinker(DatabaseLinker):
         """
         return self._get_keys_of_target_dictionary("pathway_to_names")
 
+    @property
+    def glycan_ids(self):
+        """
+        All available pathway ids in the database
+        """
+        return self._get_keys_of_target_dictionary("glycan_to_names")
 
 class DrugBankLinker(DatabaseLinker):
     """ Drugbank database linker class
@@ -705,6 +730,21 @@ class DrugBankLinker(DatabaseLinker):
         """
         return self._convert_ids_using_target_dictionary(drug_list, "drugbank_to_pubchem_substance")
 
+    def convert_drugs_to_sider(self, drug_list):
+        """ Convert a list of DrugBank drug ids to Sider drugs
+
+        Parameters
+        ----------
+        drug_list : list
+            a list of DrugBank drug ids e.g. ['DB00001', 'DB00002']
+
+        Returns
+        -------
+        list
+            a list of lists of sider drugs
+        """
+        return self._convert_ids_using_target_dictionary(drug_list, "drugbank_to_sider")
+
     def convert_drugs_to_ttd(self, drug_list):
         """ Convert a list of DrugBank drug ids to therapeutic targets database drug ids
 
@@ -794,6 +834,22 @@ class DrugBankLinker(DatabaseLinker):
             a list of lists of drug names
         """
         return self._convert_ids_using_target_dictionary(drug_list, "drugbank_to_names")
+
+    def convert_names_to_drugs(self, drug_name_list):
+        """ Convert a list of DrugBank drug names to drug ids
+
+        Parameters
+        ----------
+        drug_list : list
+            a list of DrugBank drug ids e.g. ['DB00001', 'DB00002']
+
+        Returns
+        -------
+        list
+            a list of DrugBank drug ids
+        """
+        drug_name_list = [sanatize_text(x) for x in drug_name_list]
+        return self._convert_ids_using_target_dictionary(drug_name_list, "names_to_drugbank")
 
     @property
     def drug_ids(self):

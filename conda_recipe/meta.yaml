@@ -1,10 +1,10 @@
 package:
   name: biodblinker
-  version: 0.0.3
+  version: 0.0.4
 
 source:
-  fn:  biodblinker-0.0.3.tar.gz
-  url: ../dist/biodblinker-0.0.3.tar.gz
+  fn:  biodblinker-0.0.4.tar.gz
+  url: ../dist/biodblinker-0.0.4.tar.gz
 
 requirements:
   build:
@@ -12,7 +12,9 @@ requirements:
     - setuptools
     - requests
     - tqdm
+    - packaging
   run:
     - python
     - tqdm
     - requests
+    - setuptools
